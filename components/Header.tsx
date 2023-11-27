@@ -85,7 +85,7 @@ const Header = () => {
                         <div className="grid grid-cols-1 gap-x-2 gap-y-0 md:grid-cols-2">
                           {categories.map((res:any, index) => {
                             return (
-                              <Link key={index} onClick={() => redirectToCategory()} href={`/category/${res.url}`}>
+                              <Link key={index} onClick={() => redirectToCategory()} href={`/reports/${res.url}`}>
                                 <div className="mb-3 cursor-pointer hover:font-bold">
                                   {res.name}
                                 </div>
@@ -96,7 +96,7 @@ const Header = () => {
                     }
                   </div >
                   <div className="relative">
-                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/all-press-release/agriculture">Press Release</Link>
+                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/press-releases/agriculture">Press Release</Link>
                   </div>
                   <div className="relative">
                     <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/offering">Offerings</Link>

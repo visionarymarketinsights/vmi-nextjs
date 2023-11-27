@@ -25,7 +25,7 @@ export default class Methodology extends Component {
                 </div>
 
                 <div className='flex items-center justify-center'>
-                    <img loading='lazy' src="/others/methodology_image.png" alt="methodology-img" className='w-3/4 py-4' />
+                    <img loading='lazy' src="/assets/others/methodology_image.png" alt="methodology-img" className='w-3/4 py-4' />
                 </div>
                 <div className='mb-2'>
                     <div className='font-bold'>

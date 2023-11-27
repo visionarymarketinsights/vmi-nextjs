@@ -3,16 +3,16 @@ import React from 'react'
 export default function Clients() {
 
   const LOGOS = [
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/basf.png'} alt="basf" />,
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/total.png'} alt="total" />,
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/pfizer.png'} alt="pfizer" />,
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/atos.png'} alt="atos" />,
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/sanofi.png'} alt="sanofi" />,
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/microsoft.png'} alt="microsoft" />,
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/hcl.png'} alt="hcl" />,
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/nestle.png'} alt="nestle" />,
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/vmware.png'} alt="vmware" />,
-    <img loading="lazy" className='pointer-events-none w-36' src={'/client_logos/ranstad.png'} alt="randstad" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/basf.png'} alt="basf" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/total.png'} alt="total" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/pfizer.png'} alt="pfizer" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/atos.png'} alt="atos" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/sanofi.png'} alt="sanofi" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/microsoft.png'} alt="microsoft" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/hcl.png'} alt="hcl" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/nestle.png'} alt="nestle" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/vmware.png'} alt="vmware" />,
+    <img loading="lazy" className='pointer-events-none w-36' src={'/assets/client_logos/ranstad.png'} alt="randstad" />,
   ];
 
   return (
