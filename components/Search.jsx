@@ -3,7 +3,7 @@ import React, { Component, useState } from 'react'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 import { notifyError } from '@/app/layout';
-import { getCategories } from '../constants';
+import { getCategories } from '@/constants';
 import { useEffect } from 'react';
 
 export default function Search() {

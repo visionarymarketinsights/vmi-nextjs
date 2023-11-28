@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
 import axios from 'axios';
-import { apiUrl, toCapitalCase } from '../constants';
+import { apiUrl, toCapitalCase } from '@/constants';
 import { notifyError } from '@/app/layout';
 
 export default function LatestReports() {

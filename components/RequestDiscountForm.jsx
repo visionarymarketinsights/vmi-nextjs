@@ -1,6 +1,6 @@
 import React from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
-import { reCaptchaKey } from '../constants';
+import { reCaptchaKey } from '@/constants';
 import { motion } from 'framer-motion';
 
 export default function RequestDiscountForm({ onSubmit }) {

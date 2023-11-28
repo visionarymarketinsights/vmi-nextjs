@@ -16,7 +16,7 @@ export const notifyInfo = (value: any) => toast.info(value);
 
 export const metadata: Metadata = {
   title: 'Congruence Market Insights',
-  description: 'Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence. Our expert analysts deliver actionable data, empowering businesses to make informed decisions in a dynamic marketplace. Trust us to navigate your path to success.',
+  description: 'Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence.',
 }
 
 export default function RootLayout({

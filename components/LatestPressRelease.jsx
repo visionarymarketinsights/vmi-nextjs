@@ -1,9 +1,8 @@
 'use client'
 import axios from 'axios';
-import { motion } from 'framer-motion';
-import React, { Component, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
-import { apiUrl, toCapitalCase } from '../constants';
+import { apiUrl, toCapitalCase } from '@/constants';
 import { notifyError } from '@/app/layout';
 import moment from 'moment';
 

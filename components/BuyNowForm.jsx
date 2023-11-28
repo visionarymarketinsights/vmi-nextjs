@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
-import { apiUrl, reCaptchaKey } from '../constants';
+import { apiUrl, reCaptchaKey } from '@/constants';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { notifySuccess, notifyError } from '@/app/layout';

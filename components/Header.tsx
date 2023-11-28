@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getCategories } from "../constants";
+import { getCategories } from "@/constants";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);

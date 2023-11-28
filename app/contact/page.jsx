@@ -1,5 +1,5 @@
 'use client'
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
 import CreateEmail from '@/utils/CreateEmail';
 import { apiUrl, reCaptchaKey } from '@/constants';
