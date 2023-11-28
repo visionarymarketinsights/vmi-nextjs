@@ -2,7 +2,7 @@
 import React, { Component, useState } from 'react'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
-// import { notifyError } from '../App';
+import { notifyError } from '@/app/layout';
 import { getCategories } from '../constants';
 import { useEffect } from 'react';
 
@@ -41,7 +41,7 @@ export default function Search() {
         if (keyword) {
             router.push(`/search/${keyword}`)
         } else {
-            // notifyError('Enter search keyword')
+            notifyError('Enter search keyword')
         }
     }
 

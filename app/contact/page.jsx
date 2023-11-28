@@ -4,7 +4,7 @@ import axios from 'axios';
 import CreateEmail from '@/utils/CreateEmail';
 import { apiUrl, reCaptchaKey } from '@/constants';
 import { useForm } from 'react-hook-form';
-// import { notifyError, notifySuccess } from '../App';
+import { notifyError, notifySuccess } from '@/app/layout';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Contact() {

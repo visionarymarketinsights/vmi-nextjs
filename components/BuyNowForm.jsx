@@ -3,7 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { apiUrl, reCaptchaKey } from '../constants';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { notifySuccess, notifyError } from '../App';
+import { notifySuccess, notifyError } from '@/app/layout';
 import CreateEmail from '../utils/CreateEmail';
 import axios from 'axios';
 

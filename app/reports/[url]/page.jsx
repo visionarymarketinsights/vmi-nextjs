@@ -1,12 +1,12 @@
 'use client'
+import Link from 'next/link';
 import {
     useEffect, useState
   } from 'react';
-  import Link from 'next/link';
   import { apiUrl } from '@/constants'
   import axios from 'axios';
   import moment from 'moment';
-//   import { notifyError } from '../App';
+import { notifyError } from '@/app/layout';
   
   const AllReport = ({params}) => {
   
@@ -46,7 +46,7 @@ import {
             setReportList(reportList)
           } else {
             setReportList([])
-            // notifyError('No reports for this category')
+            notifyError('No reports for this category')
           }
         })
       }
@@ -88,7 +88,7 @@ import {
                   <div className="px-4 mb-4 text-xl font-semibold">Research Reports in {category.name}</div>
                   {reportList.map((res, key) => {
                     return (
-                      <Link href={`/industry-report/${res.url}`} key={key}>
+                      <Link href={`/report/${res.url}`} key={key}>
                         <div className='group' >
                           <div className='flex flex-col gap-2 p-4 border-b-2 cursor-pointer group-hover:bg-slate-50'>
                             <div className="font-semibold group-hover:text-primary group-hover:underline">{res.title.split('').filter((res, i) => i < 160).join('')}... </div>

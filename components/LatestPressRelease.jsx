@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import React, { Component, useEffect, useState } from 'react'
 import Link from 'next/link';
 import { apiUrl, toCapitalCase } from '../constants';
-// import { notifyError } from '/';
+import { notifyError } from '@/app/layout';
 import moment from 'moment';
 
 export default function LatestPressRelease() {
@@ -18,7 +18,7 @@ export default function LatestPressRelease() {
                 setPressReleaseList(reportList)
             } else {
                 setPressReleaseList([])
-                // notifyError('No latest reports')
+                notifyError('No latest reports')
             }
         })
     }, []);

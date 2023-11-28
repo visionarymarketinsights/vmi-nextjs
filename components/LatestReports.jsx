@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
 import axios from 'axios';
 import { apiUrl, toCapitalCase } from '../constants';
-// import { notifyError } from '../App';
+import { notifyError } from '@/app/layout';
 
 export default function LatestReports() {
 
@@ -19,7 +19,7 @@ export default function LatestReports() {
                 setReportList(res.data.data)
             } else {
                 setReportList([])
-                // notifyError('No latest reports')
+                notifyError('No latest reports')
             }
         })
     }, []);
@@ -82,7 +82,7 @@ export default function LatestReports() {
                                             </div>
                                         </div>
                                         <div className='flex justify-center md:justify-end'>
-                                            <Link href={`/industry-report/${val.url}`}>
+                                            <Link href={`/report/${val.url}`}>
                                                 <button type="button" className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white transition-all bg-indigo-500 border border-transparent rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
                                                     Read Me
                                                 </button>

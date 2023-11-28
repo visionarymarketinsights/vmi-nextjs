@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
-import { apiUrl, reCaptchaKey } from '../constants';
+import { apiUrl, reCaptchaKey } from '@/constants';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { notifySuccess, notifyError } from '../App';
+import { notifySuccess, notifyError } from '@/app/layout';
 import axios from 'axios';
-import CreateEmail from '../utils/CreateEmail'
+import CreateEmail from '@/utils/CreateEmail'
 
 
 export default function RequestSample({ reportTitle, enquiryType, closeModal }) {
