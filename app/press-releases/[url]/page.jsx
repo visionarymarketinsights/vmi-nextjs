@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { apiUrl, toCapitalCase } from '@/constants'
 import axios from 'axios';
-import { notifyError, notifySuccess } from '@/app/layout';
+// import { notifyError, notifySuccess } from '@/app/layout';
 import moment from 'moment';
 
 
@@ -47,7 +47,7 @@ export default function PressReleases({ params }) {
                     setPressReleaseList(reportList)
                 } else {
                     setPressReleaseList([])
-                      notifyError('No press releases for this category')
+                    //   notifyError('No press releases for this category')
                 }
             })
         }

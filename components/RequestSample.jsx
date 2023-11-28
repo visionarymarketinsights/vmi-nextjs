@@ -3,7 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { apiUrl, reCaptchaKey } from '@/constants';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { notifySuccess, notifyError } from '@/app/layout';
+// import { notifySuccess, notifyError } from '@/app/layout';
 import axios from 'axios';
 import CreateEmail from '@/utils/CreateEmail'
 
@@ -55,14 +55,14 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
                     closeModal()
                     setCaptchaChecked(false)
                     reset();
-                    notifySuccess("We'll contact you soon!!!");
+                    // notifySuccess("We'll contact you soon!!!");
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    notifyError('Email us at congruencemarketresearch@gmail.com');
+                    // notifyError('Email us at congruencemarketresearch@gmail.com');
                 });
         } else {
-            notifyError('Check the reCaptcha checkbox')
+            // notifyError('Check the reCaptcha checkbox')
         }
     }
     return (

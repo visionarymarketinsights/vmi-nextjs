@@ -3,7 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { apiUrl, reCaptchaKey } from '@/constants';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { notifySuccess, notifyError } from '@/app/layout';
+// import { notifySuccess, notifyError } from '@/app/layout';
 import CreateEmail from '../utils/CreateEmail';
 import axios from 'axios';
 
@@ -57,14 +57,14 @@ export default function BuyNowForm({ reportTitle, license }) {
                 .then(response => {
                     console.log(response.data);
                     reset();
-                    notifySuccess("We'll contact you soon!!!");
+                    // notifySuccess("We'll contact you soon!!!");
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    notifyError('Email us at congruencemarketresearch@gmail.com');
+                    // notifyError('Email us at congruencemarketresearch@gmail.com');
                 });
         } else {
-            notifyError('Check the reCaptcha checkbox')
+            // notifyError('Check the reCaptcha checkbox')
         }
     }
 

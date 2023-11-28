@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { apiUrl } from '@/constants'
 import axios from 'axios';
 import moment from 'moment';
-  import { notifyError } from '@/app/layout';
+  // import { notifyError } from '@/app/layout';
 
 const SearchList = ({ params }) => {
 
@@ -27,7 +27,7 @@ const SearchList = ({ params }) => {
         setReportList(reportList)
       } else {
         setReportList([])
-          notifyError('No reports for this category')
+          // notifyError('No reports for this category')
       }
     })
   }, []);

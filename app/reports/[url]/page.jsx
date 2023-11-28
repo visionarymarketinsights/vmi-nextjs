@@ -6,7 +6,7 @@ import {
   import { apiUrl } from '@/constants'
   import axios from 'axios';
   import moment from 'moment';
-import { notifyError } from '@/app/layout';
+// import { notifyError } from '@/app/layout';
   
   const AllReport = ({params}) => {
   
@@ -46,7 +46,7 @@ import { notifyError } from '@/app/layout';
             setReportList(reportList)
           } else {
             setReportList([])
-            notifyError('No reports for this category')
+            // notifyError('No reports for this category')
           }
         })
       }

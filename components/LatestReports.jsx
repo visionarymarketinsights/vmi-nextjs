@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
 import axios from 'axios';
 import { apiUrl, toCapitalCase } from '@/constants';
-import { notifyError } from '@/app/layout';
+// import { notifyError } from '@/app/layout';
 
 export default function LatestReports() {
 
@@ -19,7 +19,7 @@ export default function LatestReports() {
                 setReportList(res.data.data)
             } else {
                 setReportList([])
-                notifyError('No latest reports')
+                // notifyError('No latest reports')
             }
         })
     }, []);
