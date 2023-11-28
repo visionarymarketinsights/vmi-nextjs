@@ -7,12 +7,16 @@ const inter = Inter({ subsets: ['latin'] })
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-export const notifySuccess = (value: any) => toast.success(value);
-export const notifyWarning = (value: any) => toast.warning(value);
-export const notifyError = (value: any) => toast.error(value);
-export const notifyInfo = (value: any) => toast.info(value);
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// export const notifySuccess = (value: any) => toast.success(value);
+// export const notifyWarning = (value: any) => toast.warning(value);
+// export const notifyError = (value: any) => toast.error(value);
+// export const notifyInfo = (value: any) => toast.info(value);
+export const notifySuccess = (value: any) => ()=>{};
+export const notifyWarning = (value: any) => ()=>{};
+export const notifyError = (value: any) => ()=>{};
+export const notifyInfo = (value: any) => ()=>{};
 
 export const metadata: Metadata = {
   title: 'Congruence Market Insights',
@@ -29,10 +33,10 @@ export default function RootLayout({
       <body className={`${inter.className} dark custom-bg`}>
         <Header></Header>
         {children}
-        <ToastContainer
+        {/* <ToastContainer
           position='top-center'
           theme='light'
-          hideProgressBar />
+          hideProgressBar /> */}
         <Footer></Footer>
       </body>
     </html>
