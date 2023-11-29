@@ -150,7 +150,7 @@ export default function Contact() {
                       <h4 className="text-[#652E7E] mb-1 text-xl font-bold text-dark">
                         Email Address
                       </h4>
-                      <p className="text-sm text-body-color md:text-base ">
+                      <p className="text-sm text-blue-500 underline text-body-color md:text-base ">
                         sales@congruencemarketinsights.com
                       </p>
                     </div>

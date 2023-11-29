@@ -33,9 +33,10 @@ const Footer = () => {
   const [formOpen, setFormOpen] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [details, setDetails] = useState(detailsList[0]);
+  const [email, setEmail] = useState('');
   const handleFormOpen = () => setFormOpen(true);
-  const handleFormClose = () => setFormOpen(false);
-  const handleDetailsOpen = (title:any) => {
+  const handleFormClose = () => { setFormOpen(false); setEmail('') };
+  const handleDetailsOpen = (title: any) => {
     setDetails(detailsList.find(r => r.title === title) as typeof details)
     setDetailsOpen(true)
   };
@@ -80,7 +81,7 @@ const Footer = () => {
                 <Link href='/contact'>
                   <div className="mb-2">Contact Us</div>
                 </Link>
-                <Link href='/press-releases/agriculture'>
+                <Link href='/press-releases/all'>
                   <div className="mb-2">Press Release</div>
                 </Link>
               </div>
@@ -102,7 +103,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex items-center justify-between mt-4 text-black bg-white rounded-full md:mt-8 md:w-3/4">
-              <input className="w-full p-2 ml-3 outline-0" placeholder="Enter your email..." />
+              <input className="w-full p-2 ml-3 outline-0" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email..." />
               <div onClick={handleFormOpen} className="p-4 md:p-4 rounded-full bg-[#6f32be] hover:bg-[#763dc0] scale-110">
                 <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-narrow-right" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none" strokeLinecap="round" strokeLinejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -118,7 +119,7 @@ const Footer = () => {
         <div className="text-sm border-t cursor-default border-slate-600">
           <div className="px-12 py-8 text-justify md:w-3/5">Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence. Our expert analysts deliver actionable data, empowering businesses to make informed decisions in a dynamic marketplace. Trust us to navigate your path to success.</div>
           <div className="flex flex-col gap-8 px-12 py-8 md:flex-row md:items-end">
-            <div>© 2023 Congruence</div>
+            <div>© 2023 Congruence Market Insights</div>
             {detailsList.map((r, i) => {
               return <div className="cursor-pointer" key={i} onClick={() => handleDetailsOpen(r.title)}>{r.title}</div>
             })}
