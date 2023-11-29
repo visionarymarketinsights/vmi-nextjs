@@ -2,7 +2,8 @@
 import React, { Component, useState } from 'react'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
-// import { notifyError } from '@/app/layout';
+import { notifyError } from '@/utils/CustomToastContainer';
+import CustomToastContainer from '@/utils/CustomToastContainer';
 import { getCategories } from '@/constants';
 import { useEffect } from 'react';
 
@@ -41,7 +42,7 @@ export default function Search() {
         if (keyword) {
             router.push(`/search/${keyword}`)
         } else {
-            // notifyError('Enter search keyword')
+            notifyError('Enter search keyword')
         }
     }
 
@@ -62,7 +63,7 @@ export default function Search() {
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-0 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-45 text-white`}>
         <div className={`relative mx-auto py-12 bg-cover overflow-clip bg-bottom flex justify-center items-center bg-gradient text-white`}>
-             <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
+            <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample.mp4"} type="video/mp4" src={"/assets/sample.mp4"} />
             </video>
             <video className='absolute top-0 z-10 block w-full brightness-[0.4] md:hidden' autoPlay muted loop id="myVideo">
@@ -118,6 +119,7 @@ export default function Search() {
                     ))}
                 </div>
             </div>
+            <CustomToastContainer />
         </div>
     )
 }
