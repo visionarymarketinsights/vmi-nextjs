@@ -56,7 +56,7 @@ export default function PressReleases({ params }) {
     return (
         <div>
             <div className="mb-6 md:text-3xl overflow-clip relative text-lg h-[200px] md:h-[300px] font-extrabold flex items-center justify-center bg-gradient text-white">
-                {category.back_cover && <img loading="lazy" className='absolute flex items-center justify-center w-auto h-auto md:object-contain md:w-full' src={'/assets/' + category.back_cover} alt="" />}
+                {category.back_cover && <img loading="lazy" className='absolute flex items-center justify-center w-auto h-auto md:object-contain md:w-full' src={'/assets/'+category.back_cover.replace('.jpg','.webp')} alt="" />}
                 {
                     (category.name &&
                         <div className='z-10 px-4 py-2 bg-slate-800 drop-shadow'>

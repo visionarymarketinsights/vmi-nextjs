@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { getCategories } from "@/constants";
 
-const Header = () => {
+export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isCategoryOpen, setCategoryOpen] = useState(false);
   const [categories, setCategories] = useState([]);
@@ -15,7 +15,7 @@ const Header = () => {
 
   useEffect(() => {
     getCategoryList();
-    document.addEventListener('mouseup', function (e:any) {
+    document.addEventListener('mouseup', function (e: any) {
       const categoryDropDown = document.getElementById('openedCategoryDropDown');
       if (categoryDropDown && !categoryDropDown.contains(e.target)) {
         setCategoryOpen(false)
@@ -24,7 +24,7 @@ const Header = () => {
   }, [])
 
   const getCategoryList = () => {
-    getCategories().then((data:any) => {
+    getCategories().then((data: any) => {
       setCategories(data)
     });
   }
@@ -83,7 +83,7 @@ const Header = () => {
                       isCategoryOpen &&
                       <div id='openedCategoryDropDown' className={`absolute z-20 bg-white py-6 px-10  shadow-2xl rounded-md top-[100%] md:top-[170%] left-[-35%] md:left-[-120%] text-sm w-[300px] md:w-[550px]`}>
                         <div className="grid grid-cols-1 gap-x-2 gap-y-0 md:grid-cols-2">
-                          {categories.map((res:any, index) => {
+                          {categories.map((res: any, index) => {
                             return (
                               <Link key={index} onClick={() => redirectToCategory()} href={`/reports/${res.url}`}>
                                 <div className="mb-3 cursor-pointer hover:font-bold">
@@ -117,4 +117,3 @@ const Header = () => {
   );
 };
 
-export default Header;
