@@ -12,8 +12,18 @@ import moment from 'moment';
 import Link from 'next/link';
 import Methodology from '@/components/Methodology';
 
-export default function Report({ params }) {
+// async function getData() {
+//     try {
+//         const response = await axios.get(apiUrl+'/reports');
+//         return JSON.stringify(response.data);
+//     } catch (error) {
+//         console.error('Error fetching data:', error.message);
+//         throw error;
+//     }
+// }
 
+export default function Report({ params }) {
+    // const ndata = await getData(); //Won't work on Client Component
     const [selectedTitle, setSelectedTitle] = useState('Description');
     const [report, setReport] = useState({});
     const [relatedReportList, setRelatedReportList] = useState([]);

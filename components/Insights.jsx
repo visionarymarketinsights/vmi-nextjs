@@ -1,5 +1,5 @@
 'use client'
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import CountUpUtil from '../utils/CountUpUtil';
 
 export default function Insights() {
@@ -17,31 +17,31 @@ export default function Insights() {
                 <div className='flex flex-col justify-between gap-10 md:gap-4 md:flex-row'>
                     <div className='flex flex-col gap-1 md:w-1/5'>
                         <div className='text-5xl font-bold'>
-                            <CountUpUtil startValue={reportsPublished  - 50 } endValue={reportsPublished} />
+                            <CountUpUtil startValue={reportsPublished  - 10 } endValue={reportsPublished} />
                             <span className='text-4xl text-blue-500'>+</span></div>
                         <div className='text-sm font-semibold'>Reports Published</div>
                     </div>
                     <div className='flex flex-col gap-1 md:w-1/5'>
                         <div className='text-5xl font-bold'>
-                            <CountUpUtil startValue={clientsServed / 1.6} endValue={clientsServed} />
+                            <CountUpUtil startValue={clientsServed / 1.1} endValue={clientsServed} />
                             <span className='text-4xl text-blue-500'>+</span></div>
                         <div className='text-sm font-semibold'>Clients Served</div>
                     </div>
                     <div className='flex flex-col gap-1 md:w-1/5'>
                         <div className='text-5xl font-bold'>
-                            <CountUpUtil startValue={consultingProjectsPerMonth / 1.6} endValue={consultingProjectsPerMonth} />
+                            <CountUpUtil startValue={consultingProjectsPerMonth / 1.1} endValue={consultingProjectsPerMonth} />
                             <span className='text-4xl text-blue-500'>+</span></div>
                         <div className='text-sm font-semibold'>Consulting Projects <br /> </div>
                     </div>
                     <div className='flex flex-col gap-1 md:w-1/5'>
                         <div className='text-5xl font-bold'>
-                            <CountUpUtil startValue={repeatCustomers / 1.6} endValue={repeatCustomers} />
+                            <CountUpUtil startValue={repeatCustomers / 1.1} endValue={repeatCustomers} />
                             <span className='text-4xl text-blue-500'>%</span></div>
                         <div className='text-sm font-semibold'>Repeat Customers</div>
                     </div>
                     <div className='flex flex-col gap-1 md:w-1/5'>
                         <div className='text-5xl font-bold'>
-                            <CountUpUtil startValue={analystHoursPerReport / 1.6} endValue={analystHoursPerReport} />
+                            <CountUpUtil startValue={analystHoursPerReport / 1.1} endValue={analystHoursPerReport} />
                             <span className='text-4xl text-blue-500'>+</span></div>
                         <div className='text-sm font-semibold'>Analyst Hours <br /> per Report</div>
                     </div>
