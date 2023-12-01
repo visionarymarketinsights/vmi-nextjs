@@ -4,34 +4,15 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 import { notifyError } from '@/utils/CustomToastContainer';
 import CustomToastContainer from '@/utils/CustomToastContainer';
-{/* <CustomToastContainer /> */}
+{/* <CustomToastContainer /> */ }
 import { getCategories } from '@/constants';
 import { useEffect } from 'react';
 
 export default function Search() {
     const router = useRouter()
-    const [triple, setTriple] = useState(0);
     const [keyword, setKeyword] = useState('');
     const [categories, setCategories] = useState([]);
 
-    const redirectToReportList = () => {
-        setTriple(triple + 1)
-        if (triple === 2) {
-            router.push('/report/list')
-        }
-    }
-    const redirectToPressReleaseList = () => {
-        setTriple(triple + 1)
-        if (triple === 2) {
-            router.push('/press-release/list')
-        }
-    }
-    const redirectToPriceList = () => {
-        setTriple(triple + 1)
-        if (triple === 2) {
-            router.push('/price/list')
-        }
-    }
 
     const handleEnterSearch = (e) => {
         if (e.key === 'Enter') {
@@ -72,11 +53,11 @@ export default function Search() {
             </video>
 
             <div className='z-10 flex flex-col gap-8 px-4 text-center md:px-16 md:gap-8'>
-                <div className="text-3xl font-semibold md:text-4xl" onClick={redirectToReportList}>
+                <div className="text-3xl font-semibold md:text-4xl" >
                     Navigating Trends, Illuminating Insights
                 </div>
                 <div className='flex justify-center'>
-                    <div className="text-sm text-center md:w-5/6 md:text-lg" onClick={redirectToPressReleaseList}>Empower your business with data-driven strategies. Discover trends, analyze markets, and seize opportunities for sustainable success. Explore limitless possibilities today!</div>
+                    <div className="text-sm text-center md:w-5/6 md:text-lg" >Empower your business with data-driven strategies. Discover trends, analyze markets, and seize opportunities for sustainable success. Explore limitless possibilities today!</div>
                 </div>
                 <div className='flex items-center justify-center'>
                     <div className='flex items-center justify-between overflow-hidden bg-white rounded-lg focus-within:shadow-lg'>
@@ -102,7 +83,7 @@ export default function Search() {
 
                     </div>
                 </div>
-                <div className='flex items-center justify-center gap-2 py-4' onClick={redirectToPriceList}>
+                <div className='flex items-center justify-center gap-2 py-4' >
                     <div className='text-xl text-center'>
                         Browse By Industry
                     </div>

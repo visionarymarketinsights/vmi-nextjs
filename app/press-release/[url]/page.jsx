@@ -6,12 +6,10 @@ import PressReleaseRequestSample from '../../../components/PressReleaseRequestSa
 
 export async function generateMetadata({ params, searchParams }, parent) {
     const url = params.url
-    console.log('1' + url);
-    const pr = await fetch(`${apiUrl}/press_release/url/${url}`);
+    const pr = await fetch(`${apiUrl}/press_release/meta/${url}`);
     const response = await pr.json();
-    // console.log(response.data);
     return {
-        title: toCapitalCase(response.data.url),
+        title: toCapitalCase(response.data.meta_title),
         description: response.data.meta_desc,
         keywords: response.data.meta_keyword,
     }

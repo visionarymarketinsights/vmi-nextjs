@@ -23,7 +23,6 @@ const SearchList = ({ params }) => {
 
   useEffect(() => {
     axios.get(`${apiUrl}/reports/search?page=1&per_page=10&keyword=${keyword}`).then(res => {
-      console.log(res)
       let reportList = res.data.data;
       setSearchComplete(true)
       if (reportList.length) {

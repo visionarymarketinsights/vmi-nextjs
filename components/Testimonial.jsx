@@ -45,8 +45,8 @@ export default function Testimonial() {
                             set_my_swiper(ev)
                         }}
                         slidesPerView={1}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log('swiper')}
+                        onSlideChange={() => {}}
+                        onSwiper={(swiper) => {}}
                     >
 
                         {testimonials.map((testimonial, index) =>
@@ -56,7 +56,7 @@ export default function Testimonial() {
                                 <div className='-translate-x-2 -translate-y-2 w-36'>
 
                                 </div>
-                                <div className='md:text-justify -translate-y-2'>{testimonial.testimonial}</div>
+                                <div className='-translate-y-2 md:text-justify'>{testimonial.testimonial}</div>
                             </div></SwiperSlide>
                         )}
                     </Swiper>

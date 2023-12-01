@@ -21,7 +21,6 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
     const [captchaToken, setCaptchaToken] = useState('')
 
     function onChange(value) {
-        console.log("Captcha value:", value);
         if (value) {
             setCaptchaChecked(true)
             setCaptchaToken(value)
@@ -35,7 +34,6 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
     }
     function onSubmit(formData) {
         formData = { report: reportTitle, ...formData }
-        console.log(CreateEmail(enquiryType, formData))
         if (captchaChecked) {
             window.grecaptcha.reset();
 
@@ -52,7 +50,6 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
                 },
             })
                 .then(response => {
-                    console.log(response.data);
                     closeModal()
                     setCaptchaChecked(false)
                     reset();

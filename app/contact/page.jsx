@@ -43,7 +43,6 @@ export default function Contact() {
         },
       })
         .then(response => {
-          console.log(response.data);
           setCaptchaChecked(false)
           reset();
           notifySuccess("We'll contact you soon!!!");
@@ -59,7 +58,6 @@ export default function Contact() {
 
   
   function onChange(value) {
-    console.log("Captcha value:", value);
     if (value) {
       setCaptchaChecked(true)
       setCaptchaToken(value)

@@ -9,7 +9,6 @@ async function getRelatedReports(category_url, currentReportId) {
   if (response.data.length) {
     let filterData = response.data.filter(res => res.id !== currentReportId);
     filterData = filterData.filter((r, i) => i < 2);
-    console.log(filterData)
     return filterData;
   } else {
     return []

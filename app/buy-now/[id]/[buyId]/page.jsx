@@ -14,7 +14,6 @@ export default function BuyNow({ params }) {
     useEffect(() => {
         const { id, buyId } = { params };
         axios.get(`${apiUrl}/reports/${params['id']}`).then(res => {
-            console.log(res.data.data);
             setReport(res.data.data);
             getPriceList(params['buyId']);
         })

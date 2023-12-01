@@ -23,12 +23,12 @@ const AllReport = ({ params }) => {
   useEffect(() => {
     // setCategory(categories.find(res => res.url === params.url))
     axios.get(`${apiUrl}/reports/category/category_count`).then(res => {
-      let rc = 0;
+      let localRef = 0;
       let categoryList = res.data.data.map(res => {
-        rc += res.count;
+        localRef += params.url == res.category_url ? 1 : 0;
         return res;
       })
-      setReportCount(rc)
+      setReportCount(localRef)
       setCategoryList(categoryList)
     })
 
@@ -54,7 +54,7 @@ const AllReport = ({ params }) => {
 
   return (
     <div>
-      <CustomToastContainer/>
+      <CustomToastContainer />
       <div className="mb-6 md:text-3xl overflow-clip relative text-lg h-[200px] md:h-[300px] font-extrabold flex items-center justify-center bg-gradient text-white">
         {category.back_cover && <img loading="lazy" className='absolute flex items-center justify-center w-auto h-auto md:object-contain md:w-full' src={'/assets/' + category.back_cover.replace('.jpg', '.webp')} alt="" />}
         {
@@ -73,9 +73,6 @@ const AllReport = ({ params }) => {
                   <div className="mb-2 text-xl font-semibold">Reports by Industry</div>
                   <div className='flex flex-col gap-2'>
                     {categoryList.map((res, key) => {
-                      if (res.category_url === params.url) {
-                        console.log(res.category_url, params.url);
-                      }
                       return (
                         <Link key={key} href={`/reports/${res.category_url}`} onClick={scrollToTop}>
                           <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === String(params.url) && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name} ({res.count})</div>
@@ -119,14 +116,14 @@ const AllReport = ({ params }) => {
                       <li>
                         <div className={`flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 `}>{page}</div>
                       </li>
-                      {(page + 1) <= (reportCount / 8) && <li>
+                      {(page + 1) <= Number(reportCount / 8) && <li>
                         <div onClick={() => setPage(page + 1)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page + 1}</div>
                       </li>}
-                      {(page + 2) <= (reportCount / 8) && <li>
+                      {(page + 2) <= Number(reportCount / 8) && <li>
                         <div onClick={() => setPage(page + 2)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page + 2}</div>
                       </li>}
                       <li>
-                        <div onClick={() => (page + 1) <= (reportCount / 8) ? setPage(page + 1) : ''} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">Next</div>
+                        <div onClick={() => (page + 1) <= Number(reportCount / 8) ? setPage(page + 1) : ''} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">Next</div>
                       </li>
                     </ul>
                   </nav>

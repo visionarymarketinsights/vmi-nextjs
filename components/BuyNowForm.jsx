@@ -24,7 +24,6 @@ export default function BuyNowForm({ reportTitle, license }) {
 
 
     function onChange(value) {
-        console.log("Captcha value:", value);
         if (value) {
             setCaptcha(true)
             setCaptchaToken(value)
@@ -39,7 +38,6 @@ export default function BuyNowForm({ reportTitle, license }) {
 
     function onSubmit(formData) {
         formData = { report: reportTitle, license: license.license, price: license.price, ...formData }
-        console.log(CreateEmail('Buy Now', formData))
         if (captchaChecked) {
             window.grecaptcha.reset();
 
@@ -56,7 +54,6 @@ export default function BuyNowForm({ reportTitle, license }) {
                 },
             })
                 .then(response => {
-                    console.log(response.data);
                     reset();
                     notifySuccess("We'll contact you soon!!!");
                 })

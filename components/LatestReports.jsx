@@ -63,8 +63,8 @@ export default function LatestReports() {
                                 slidesPerView: 2
                             },
                         }}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log('swiper')}
+                        onSlideChange={() => {}}
+                        onSwiper={(swiper) => {}}
                     >
 
                         {reportList.map((val, index) =>
@@ -78,7 +78,7 @@ export default function LatestReports() {
                                             <div className='mb-2 font-bold'>
                                                 {toCapitalCase(val.url)}
                                             </div>
-                                            <div className='pb-4'>
+                                            <div className='pb-4 max-h-[100px]'>
                                                 {val.summary.split('...')[0].split(' ').filter((r, i) => i < 30).join(' ')}...
                                             </div>
                                         </div>
