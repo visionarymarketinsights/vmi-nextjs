@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { apiUrl } from '@/constants';
+import Skeleton from './Skeleton';
 
 async function getRelatedReports(category_url, currentReportId) {
   const res = await fetch(`${apiUrl}/reports/category/${String(category_url)}?page=1&per_page=3`);
