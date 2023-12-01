@@ -10,7 +10,7 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Congruence Market Insights',
   description: 'Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence.'
-  , keywords: ['Global Market Insights', 'US Market Research', 'Congruence Market Reports', 'Market Analysis and Trends', 'Strategic Insights', 'Industry Statistics', 'Market Forecasting', 'Business Strategy Reports', 'Market Size and Share Analysis', 'Competitive Intelligence', 'Industry Trends and Insights', 'Data-driven Market Research', 'Global Business Strategies', 'Sector-specific Research Reports', 'Market Intelligence Solutions']
+  , keywords: 'Global Market Insights, US Market Research, Congruence Market Reports, Market Analysis and Trends, Strategic Insights, Industry Statistics, Market Forecasting, Business Strategy Reports, Market Size and Share Analysis, Competitive Intelligence, Industry Trends and Insights, Data-driven Market Research, Global Business Strategies, Sector-specific Research Reports, Market Intelligence Solutions'
 }
 
 export default function RootLayout({
