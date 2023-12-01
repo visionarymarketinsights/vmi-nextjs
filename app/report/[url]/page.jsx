@@ -13,10 +13,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     return {
         title: toCapitalCase(report.data.url),
         description: report.data.meta_desc,
-        keywords: report.data.meta_keyword.split(','),
-        // openGraph: {
-        //     images: ['/some-specific-page-image.jpg', ...previousImages],
-        // },
+        keywords: [...report.data.meta_keyword.split(',')]
     }
 }
 
