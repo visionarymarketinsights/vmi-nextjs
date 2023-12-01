@@ -6,13 +6,11 @@ import Link from 'next/link';
 import { apiUrl } from '@/constants'
 import axios from 'axios';
 import moment from 'moment';
-// import { notifyError } from '@/app/layout';
+import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
+import CustomToastContainer from '@/utils/CustomToastContainer';
 
-export const metadata = {
-  title: 'Congruence Market Insights',
-  description: 'Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence.'
-, keywords: 'Global Market Insights, US Market Research, Congruence Market Reports, Market Analysis and Trends, Strategic Insights, Industry Statistics, Market Forecasting, Business Strategy Reports, Market Size and Share Analysis, Competitive Intelligence, Industry Trends and Insights, Data-driven Market Research, Global Business Strategies, Sector-specific Research Reports, Market Intelligence Solutions'
-}
+
+
 const SearchList = ({ params }) => {
 
   const { keyword } = params;
@@ -32,13 +30,14 @@ const SearchList = ({ params }) => {
         setReportList(reportList)
       } else {
         setReportList([])
-        // notifyError('No reports for this category')
+        notifyError('No reports for this category')
       }
     })
   }, []);
 
   return (
     <div>
+      <CustomToastContainer/>
       {/* <div className="mb-6 md:text-3xl text-lg h-[200px] md:h-[300px] font-extrabold flex items-center justify-center bg-gradient  text-white">{category.toUpperCase()}</div> */}
       <div className="max-w-6xl px-4 mx-auto sm:px-6">
         <div className="py-2 text-center md:pt-10 md:text-left">

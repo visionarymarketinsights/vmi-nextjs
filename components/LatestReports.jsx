@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
 import axios from 'axios';
 import { apiUrl, toCapitalCase } from '@/constants';
-// import { notifyError } from '@/app/layout';
-
+import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
+import CustomToastContainer from '@/utils/CustomToastContainer';
 export default function LatestReports() {
 
 
@@ -19,13 +19,14 @@ export default function LatestReports() {
                 setReportList(res.data.data)
             } else {
                 setReportList([])
-                // notifyError('No latest reports')
+                notifyError('No latest reports')
             }
         })
     }, []);
 
     return (
         <div className='relative overflow-clip'>
+            <CustomToastContainer/>
             {/* <img loading='lazy' src="/assets/hex.jpg" alt="bgimg" className='absolute top-0 left-0 z-0 object-contain' /> */}
             {/* <div className='absolute top-0 left-0 z-0'>
                 <img loading='lazy' src="/assets/abstract.jpg" alt="bgimg" className='object-contain' />

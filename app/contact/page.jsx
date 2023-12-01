@@ -4,14 +4,12 @@ import axios from 'axios';
 import CreateEmail from '@/utils/CreateEmail';
 import { apiUrl, reCaptchaKey } from '@/constants';
 import { useForm } from 'react-hook-form';
-// import { notifyError, notifySuccess } from '@/app/layout';
+import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
+import CustomToastContainer from '@/utils/CustomToastContainer';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-export const metadata = {
-  title: 'Congruence Market Insights',
-  description: 'Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence.'
-, keywords: 'Global Market Insights, US Market Research, Congruence Market Reports, Market Analysis and Trends, Strategic Insights, Industry Statistics, Market Forecasting, Business Strategy Reports, Market Size and Share Analysis, Competitive Intelligence, Industry Trends and Insights, Data-driven Market Research, Global Business Strategies, Sector-specific Research Reports, Market Intelligence Solutions'
-}
+
+
 export default function Contact() {
 
 
@@ -30,7 +28,7 @@ export default function Contact() {
   function onSubmit(formData) {
     if (captchaChecked) {
       window.grecaptcha.reset();
-
+      
       const url = `${apiUrl}/email`;
       const data = {
         // subject: enquiryType + ' - ' + reportTitle,
@@ -48,18 +46,18 @@ export default function Contact() {
           console.log(response.data);
           setCaptchaChecked(false)
           reset();
-          // notifySuccess("We'll contact you soon!!!");
+          notifySuccess("We'll contact you soon!!!");
         })
         .catch(error => {
           console.error('Error:', error);
-          // notifyError('Email us at congruencemarketresearch@gmail.com');
+          notifyError('Email us at congruencemarketresearch@gmail.com');
         });
     } else {
-      // notifyError('Check the reCaptcha checkbox')
+      notifyError('Check the reCaptcha checkbox')
     }
   }
 
-
+  
   function onChange(value) {
     console.log("Captcha value:", value);
     if (value) {
@@ -75,6 +73,7 @@ export default function Contact() {
   }
   return (
     <div>
+    <CustomToastContainer />
       <section className="relative overflow-hidden">
         <div className="container">
           <div className="flex flex-wrap py-10 mx-4 md:py-20 md:mx-10 lg:justify-between">

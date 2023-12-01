@@ -3,7 +3,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 import { apiUrl, toCapitalCase } from '@/constants';
-// import { notifyError } from '@/app/layout';
+import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
+import CustomToastContainer from '@/utils/CustomToastContainer';
 import moment from 'moment';
 
 export default function LatestPressRelease() {
@@ -17,13 +18,14 @@ export default function LatestPressRelease() {
                 setPressReleaseList(reportList)
             } else {
                 setPressReleaseList([])
-                // notifyError('No latest reports')
+                notifyError('No latest reports')
             }
         })
     }, []);
 
     return (
         <div className="py-12">
+            <CustomToastContainer/>
             <div className="max-w-6xl px-4 mx-auto sm:px-6">
                 <div className="max-w-4xl mx-auto text-center ">
                     <h2 className="mb-6 text-3xl font-extrabold text-slate-600">Latest Press Release</h2>

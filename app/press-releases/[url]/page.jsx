@@ -3,14 +3,12 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { apiUrl, toCapitalCase } from '@/constants'
 import axios from 'axios';
-// import { notifyError, notifySuccess } from '@/app/layout';
+import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
+import CustomToastContainer from '@/utils/CustomToastContainer';
 import moment from 'moment';
 
-export const metadata = {
-  title: 'Congruence Market Insights',
-  description: 'Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence.'
-, keywords: 'Global Market Insights, US Market Research, Congruence Market Reports, Market Analysis and Trends, Strategic Insights, Industry Statistics, Market Forecasting, Business Strategy Reports, Market Size and Share Analysis, Competitive Intelligence, Industry Trends and Insights, Data-driven Market Research, Global Business Strategies, Sector-specific Research Reports, Market Intelligence Solutions'
-}
+
+
 
 export default function PressReleases({ params }) {
 
@@ -53,13 +51,14 @@ export default function PressReleases({ params }) {
                     setPressReleaseList(reportList)
                 } else {
                     setPressReleaseList([])
-                    //   notifyError('No press releases for this category')
+                      notifyError('No press releases for this category')
                 }
             })
         }
     }, [url, page]);
     return (
         <div>
+            <CustomToastContainer />
             <div className="mb-6 md:text-3xl overflow-clip relative text-lg h-[200px] md:h-[300px] font-extrabold flex items-center justify-center bg-gradient text-white">
                 {category.back_cover && <img loading="lazy" className='absolute flex items-center justify-center w-auto h-auto md:object-contain md:w-full' src={'/assets/'+category.back_cover.replace('.jpg','.webp')} alt="" />}
                 {
