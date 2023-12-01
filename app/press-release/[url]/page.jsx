@@ -1,49 +1,35 @@
-'use client'
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { apiUrl, toCapitalCase } from '@/constants';
 import moment from 'moment';
 import Link from 'next/link';
 import PressReleaseRequestSample from '../../../components/PressReleaseRequestSample'
 
-// export async function generateMetadata({ params, searchParams }, parent) {
-//     const url = params.url
-//     const report = await fetch(apiUrl + '/reports/url/' + url).then((res) => res.json())
-
-//     return {
-//         title: toCapitalCase(report.data.url),
-//         description: report.data.meta_desc,
-//         keywords: report.data.meta_keyword.split(','),
-//     }
-// }
-
-
-// async function getReportData(url) {
-//     const res = await fetch(apiUrl + '/reports/url/' + url);
-//     const response = await res.json();
-//     return response.data;
-// }
-
-export default function PressRelease({ params }) {
-    const { url } = params;
-    const [pressRelease, setPressRelease] = useState({});
-    const [report, setReport] = useState({});
-
-    useEffect(() => {
-        axios.get(`${apiUrl}/press_release/url/${url}`)
-            .then((res) => {
-                setPressRelease(res.data.data);
-                getReportByReportId(res.data.data.report_id)
-            })
-    }, [])
-
-
-    const getReportByReportId = (reportId) => {
-        axios.get(`${apiUrl}/reports/${reportId}`).then((res) => {
-            setReport(res.data.data);
-        })
+export async function generateMetadata({ params, searchParams }, parent) {
+    const url = params.url
+    console.log('1' + url);
+    const pr = await fetch(`${apiUrl}/press_release/url/${url}`);
+    const response = await pr.json();
+    // console.log(response.data);
+    return {
+        title: toCapitalCase(response.data.url),
+        description: response.data.meta_desc,
+        keywords: response.data.meta_keyword,
     }
+}
 
+
+async function getPressReleaseData(url) {
+    const pr = await fetch(`${apiUrl}/press_release/url/${url}`);
+    const r1 = await pr.json();
+
+    const rd = await fetch(`${apiUrl}/reports/${r1.data.report_id}`);
+    const r2 = await rd.json();
+    return { pressRelease: r1.data, report: r2.data };
+}
+
+export default async function PressRelease({ params }) {
+    const { url } = params;
+    const { pressRelease, report } = await getPressReleaseData(url);
     return (
         <div>
 
