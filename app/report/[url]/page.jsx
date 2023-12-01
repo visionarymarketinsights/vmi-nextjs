@@ -4,13 +4,29 @@ import Link from 'next/link';
 import RelatedReports from '../../../components/RelatedReports';
 import ReportDetails from '../../../components/ReportDetails';
 import ReportBuyNow from '../../../components/ReportBuyNow';
-import { apiUrl } from '@/constants';
+import { apiUrl, toCapitalCase } from '@/constants';
+
+export async function generateMetadata({ params, searchParams }, parent) {
+    const url = params.url
+    const report = await fetch(apiUrl + '/reports/url/' + url).then((res) => res.json())
+
+    return {
+        title: toCapitalCase(report.data.url),
+        description: report.data.meta_desc,
+        keywords: report.data.meta_keyword.split(','),
+        // openGraph: {
+        //     images: ['/some-specific-page-image.jpg', ...previousImages],
+        // },
+    }
+}
+
 
 async function getReportData(url) {
     const res = await fetch(apiUrl + '/reports/url/' + url);
-    const data = await res.json();
-    return data.data;
+    const response = await res.json();
+    return response.data;
 }
+
 export default async function Report({ params, searchParams }) {
 
     const { url } = params;

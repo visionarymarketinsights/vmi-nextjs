@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import RequestSample from '@/components/RequestSample';
 import axios from 'axios';
 import { apiUrl } from '@/constants';
-import ContentLoading from '@/components/ContentLoading'
+import Skeleton from '@/components/Skeleton'
 import Faq from '@/components/Faq';
 import Methodology from '@/components/Methodology';
 
@@ -102,7 +102,6 @@ export default function ReportBuyNow({ report, url, section }) {
       <div className='px-4'>
         {!section &&
           <div>
-            {!localReport?.description && <ContentLoading />}
             <div className='html-content description-content' dangerouslySetInnerHTML={{ __html: localReport?.description }}></div>
             {localReport?.description && <Faq faqs={JSON.parse(localReport?.faqs)} />}
           </div>

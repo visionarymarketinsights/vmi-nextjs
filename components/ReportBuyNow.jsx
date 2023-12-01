@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
 import RequestSample from '@/components/RequestSample';
 import axios from 'axios';
 import { apiUrl } from '@/constants';
+import Skeleton from './Skeleton';
 
 export default function ReportBuyNow({ report }) {
 
@@ -32,6 +33,9 @@ export default function ReportBuyNow({ report }) {
   return (
 
     <div className='flex flex-col gap-2 p-4 border rounded-md shadow-lg '>
+      {
+        priceList.length == 0 && <Skeleton count={2} />
+      }
       {
         priceList.map((res, i) => {
           return (
