@@ -81,7 +81,7 @@ const Footer = () => {
                 <Link href='/contact'>
                   <div className="mb-2">Contact Us</div>
                 </Link>
-                <Link href='/press-releases/all'>
+                <Link href='/press-releases/all-industries'>
                   <div className="mb-2">Press Release</div>
                 </Link>
               </div>

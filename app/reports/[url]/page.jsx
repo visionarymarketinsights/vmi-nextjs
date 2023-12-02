@@ -3,17 +3,18 @@ import Link from 'next/link';
 import {
   useEffect, useState
 } from 'react';
-import { apiUrl } from '@/constants'
+import { apiUrl, toCapitalCase } from '@/constants'
 import axios from 'axios';
 import moment from 'moment';
 import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
 import CustomToastContainer from '@/utils/CustomToastContainer';
 const AllReport = ({ params }) => {
-
+  const { url } = params;
   const [category, setCategory] = useState({});
   const [categoryList, setCategoryList] = useState([]);
   const [reportList, setReportList] = useState([]);
   const [reportCount, setReportCount] = useState(0);
+  const [totalReportCount, setTotalReportCount] = useState(0);
   const [page, setPage] = useState(1);
 
   const scrollToTop = () => {
@@ -21,26 +22,31 @@ const AllReport = ({ params }) => {
   }
 
   useEffect(() => {
-    // setCategory(categories.find(res => res.url === params.url))
+    // setCategory(categories.find(res => res.url === url))
     axios.get(`${apiUrl}/reports/category/category_count`).then(res => {
       let localRef = 0;
+      let rcount = 0;
       let categoryList = res.data.data.map(res => {
-        localRef += params.url == res.category_url ? 1 : 0;
+        localRef += url == res.category_url ? 1 : 0;
+        rcount += 1;
         return res;
       })
-      setReportCount(localRef)
+      setTotalReportCount(rcount)
+      setReportCount(url == 'all-industries' ? rcount : localRef)
       setCategoryList(categoryList)
     })
 
-    axios.get(`${apiUrl}/category/url/${params.url}`).then(res => {
-      setCategory(res.data.data)
-    })
-  }, [params.url]);
+    if (url != 'all-industries') {
+      axios.get(`${apiUrl}/category/url/${url}`).then(res => {
+        setCategory(res.data.data)
+      })
+    }
+  }, [url]);
 
   useEffect(() => {
-    if (params.url) {
-      // axios.get(`${apiUrl}/reports/category/${categories.find(res => res.url === params.url).name}?page=${page}&per_page=8`).then(res => {
-      axios.get(`${apiUrl}/reports/category/${params.url}?page=${page}&per_page=8`).then(res => {
+    if (url) {
+      // axios.get(`${apiUrl}/reports/category/${categories.find(res => res.url === url).name}?page=${page}&per_page=8`).then(res => {
+      axios.get(`${apiUrl}/reports/category/${url}?page=${page}&per_page=8`).then(res => {
         let reportList = res.data.data;
         if (reportList.length) {
           setReportList(reportList)
@@ -50,7 +56,12 @@ const AllReport = ({ params }) => {
         }
       })
     }
-  }, [params.url, page]);
+  }, [url, page]);
+
+  const setPagination = (val) => {
+    setPage(val);
+    scrollToTop();
+  }
 
   return (
     <div>
@@ -62,6 +73,12 @@ const AllReport = ({ params }) => {
           <div className='z-10 px-4 py-2 bg-slate-800 drop-shadow'>
             {category.name.toUpperCase()}
           </div>
+          ||
+          (
+            <div className='z-10 px-4 py-2 bg-slate-800 drop-shadow'>
+              {url.toUpperCase()}
+            </div>
+          )
         }
       </div>
       <div className="max-w-6xl px-4 mx-auto sm:px-6">
@@ -72,18 +89,58 @@ const AllReport = ({ params }) => {
                 <div className='border rounded-md p-4 sticky top-[20px]'>
                   <div className="mb-2 text-xl font-semibold">Reports by Industry</div>
                   <div className='flex flex-col gap-2'>
+                    <Link href={`/reports/all-industries`} >
+                      <div className={`py-2 text-sm cursor-pointer hover:text-primary  border-b-2 ${url === 'all-industries' && 'text-primary'}`}>All Industries {totalReportCount ? `(${totalReportCount})` : ''}</div>
+                    </Link>
                     {categoryList.map((res, key) => {
                       return (
                         <Link key={key} href={`/reports/${res.category_url}`} onClick={scrollToTop}>
-                          <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === String(params.url) && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name} ({res.count})</div>
+                          <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === String(url) && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name} ({res.count})</div>
                         </Link>
                       )
                     })}
                   </div>
                 </div>
               </div>
-              <div className="mt-12 md:w-3/4 md:ml-8 md:mt-0">
-                <div className="px-4 mb-4 text-xl font-semibold">Research Reports in {category.name}</div>
+              <div className="relative mt-12 md:w-3/4 md:ml-8 md:mt-0">
+                <div className='hidden md:block absolute top-[-60px] right-0 text-right'>
+                  <nav >
+                    <ul className="inline-flex my-4 -space-x-px text-sm cursor-pointer">
+                      <li>
+                        <div onClick={() => (page - 1) > 0 ? setPagination(page - 1) : ''} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 ms-0 border-e-0 rounded-s-lg hover:bg-gray-100 hover:text-gray-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="-rotate-90 icon icon-tabler icon-tabler-chevron-up" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M6 15l6 -6l6 6" />
+                          </svg>
+                        </div>
+                      </li>
+                      {(page - 2) > 0 && <li>
+                        <div onClick={() => setPagination(page - 2)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page - 2}</div>
+                      </li>}
+                      {(page - 1) > 0 && <li>
+                        <div onClick={() => setPagination(page - 1)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page - 1}</div>
+                      </li>}
+                      <li>
+                        <div className={`flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 `}>{page}</div>
+                      </li>
+                      {(page + 1) <= ((reportCount / 8) + 1) && <li>
+                        <div onClick={() => setPagination(page + 1)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page + 1}</div>
+                      </li>}
+                      {(page + 2) <= ((reportCount / 8) + 1) && <li>
+                        <div onClick={() => setPagination(page + 2)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page + 2}</div>
+                      </li>}
+                      <li>
+                        <div onClick={() => (page + 1) <= ((reportCount / 8) + 1) ? setPagination(page + 1) : ''} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="rotate-90 icon icon-tabler icon-tabler-chevron-up" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M6 15l6 -6l6 6" />
+                          </svg>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
                 {reportList.map((res, key) => {
                   return (
                     <Link href={`/report/${res.url}`} key={key}>
@@ -105,25 +162,35 @@ const AllReport = ({ params }) => {
                   <nav >
                     <ul className="inline-flex my-4 -space-x-px text-sm cursor-pointer">
                       <li>
-                        <div onClick={() => (page - 1) > 0 ? setPage(page - 1) : ''} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 ms-0 border-e-0 rounded-s-lg hover:bg-gray-100 hover:text-gray-700">Previous</div>
+                        <div onClick={() => (page - 1) > 0 ? setPagination(page - 1) : ''} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 ms-0 border-e-0 rounded-s-lg hover:bg-gray-100 hover:text-gray-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="-rotate-90 icon icon-tabler icon-tabler-chevron-up" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M6 15l6 -6l6 6" />
+                          </svg>
+                        </div>
                       </li>
                       {(page - 2) > 0 && <li>
-                        <div onClick={() => setPage(page - 2)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page - 2}</div>
+                        <div onClick={() => setPagination(page - 2)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page - 2}</div>
                       </li>}
                       {(page - 1) > 0 && <li>
-                        <div onClick={() => setPage(page - 1)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page - 1}</div>
+                        <div onClick={() => setPagination(page - 1)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page - 1}</div>
                       </li>}
                       <li>
                         <div className={`flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 `}>{page}</div>
                       </li>
-                      {(page + 1) <= Number(reportCount / 8) && <li>
-                        <div onClick={() => setPage(page + 1)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page + 1}</div>
+                      {(page + 1) <= ((reportCount / 8) + 1) && <li>
+                        <div onClick={() => setPagination(page + 1)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page + 1}</div>
                       </li>}
-                      {(page + 2) <= Number(reportCount / 8) && <li>
-                        <div onClick={() => setPage(page + 2)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page + 2}</div>
+                      {(page + 2) <= ((reportCount / 8) + 1) && <li>
+                        <div onClick={() => setPagination(page + 2)} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">{page + 2}</div>
                       </li>}
                       <li>
-                        <div onClick={() => (page + 1) <= Number(reportCount / 8) ? setPage(page + 1) : ''} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">Next</div>
+                        <div onClick={() => (page + 1) <= ((reportCount / 8) + 1) ? setPagination(page + 1) : ''} className="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="rotate-90 icon icon-tabler icon-tabler-chevron-up" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M6 15l6 -6l6 6" />
+                          </svg>
+                        </div>
                       </li>
                     </ul>
                   </nav>
