@@ -1,7 +1,7 @@
 import { apiUrl } from '@/constants'
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
 
-export default async function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const reports = await fetch(apiUrl + '/reports').then((res) => res.json())
   const pressReleases = await fetch(apiUrl + '/press_release').then((res) => res.json())
   let filteredReports:any = []
