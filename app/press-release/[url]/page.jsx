@@ -4,6 +4,8 @@ import moment from 'moment';
 import Link from 'next/link';
 import PressReleaseRequestSample from '../../../components/PressReleaseRequestSample'
 
+export const dynamic = 'force-dynamic'
+
 export async function generateMetadata({ params, searchParams }, parent) {
     const url = params.url
     const pr = await fetch(`${apiUrl}/press_release/meta/${url}`);

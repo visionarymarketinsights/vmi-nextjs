@@ -6,6 +6,8 @@ import ReportDetails from '../../../components/ReportDetails';
 import ReportBuyNow from '../../../components/ReportBuyNow';
 import { apiUrl, toCapitalCase } from '@/constants';
 
+export const dynamic = 'force-dynamic'
+
 export async function generateMetadata({ params, searchParams }, parent) {
     const url = params.url
     const report = await fetch(apiUrl + '/reports/meta/' + url).then((res) => res.json())
@@ -19,7 +21,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
 
 async function getReportData(url) {
-    const res = await fetch(apiUrl + '/reports/url/' + url);
+    const res = await fetch(apiUrl + '/reports/url/' + url,  { next: { cache: 'no-store'} });
     const response = await res.json();
     return response.data;
 }
