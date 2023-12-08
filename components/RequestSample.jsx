@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
-import { apiUrl, reCaptchaKey } from '@/constants';
+import { apiUrl, reCaptchaKey, toCapitalCase } from '@/constants';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
@@ -33,17 +33,16 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
         setCaptchaChecked(false)
     }
     function onSubmit(formData) {
-        formData = { report: reportTitle, ...formData }
+        formData = { report: toCapitalCase(reportTitle), ...formData }
         if (captchaChecked) {
             window.grecaptcha.reset();
 
             const url = `${apiUrl}/email`;
             const data = {
-                subject: enquiryType + ' - ' + reportTitle,
+                subject: enquiryType + ' - ' + toCapitalCase(reportTitle),
                 content: CreateEmail(enquiryType, formData),
                 response_token: captchaToken,
             };
-
             axios.post(url, data, {
                 headers: {
                     'Content-Type': 'application/json',

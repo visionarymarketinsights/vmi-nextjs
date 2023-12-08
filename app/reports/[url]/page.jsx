@@ -24,15 +24,17 @@ const AllReport = ({ params }) => {
   useEffect(() => {
     // setCategory(categories.find(res => res.url === url))
     axios.get(`${apiUrl}/reports/category/category_count`).then(res => {
-      let localRef = 0;
-      let rcount = 0;
-      let categoryList = res.data.data.map(res => {
-        localRef += url == res.category_url ? 1 : 0;
-        rcount += 1;
-        return res;
+      let totalCount = 0;
+      let tempCount = 0;
+      let categoryList = res.data.data.map(r => {
+        if (url == r.category_url) {
+          tempCount = r.count;
+        }
+        totalCount += r.count;
+        return r;
       })
-      setTotalReportCount(rcount)
-      setReportCount(url == 'all-industries' ? rcount : localRef)
+      setReportCount(url === 'all-industries' ? totalCount : tempCount)
+      setTotalReportCount(totalCount)
       setCategoryList(categoryList)
     })
 

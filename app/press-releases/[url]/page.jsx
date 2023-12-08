@@ -37,15 +37,17 @@ export default function PressReleases({ params }) {
     useEffect(() => {
         getCategoryByUrl();
         axios.get(`${apiUrl}/press_release/category/category_count`).then(res => {
-            let rc = 0;
-            let localRef = 0;
+            let tempCount = 0;
+            let totalCount = 0;
             let categoryList = res.data.data.map(res => {
-                localRef += url === res.category_url ? 1 : 0;
-                rc += res.count;
+                if (url === res.category_url) {
+                    tempCount = res.count;
+                }
+                totalCount += res.count;
                 return res;
             })
-            setReportCount(localRef)
-            setTotalReportCount(rc)
+            setReportCount(url=='all-industries' ? totalCount : tempCount)
+            setTotalReportCount(totalCount)
             setCategoryList(categoryList)
         })
     }, [url]);
