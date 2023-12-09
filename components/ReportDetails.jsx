@@ -123,7 +123,7 @@ export default function ReportBuyNow({ report, url, section }) {
         }
         {section === 'Request' &&
           <div>
-            <RequestSample reportTitle={localReport?.url} enquiryType='Request Sample' closeModal={() => { }} />
+            <RequestSample reportTitle={localReport?.title.split('Market')[0] + 'Market'} enquiryType='Request Sample' closeModal={() => { }} />
           </div>
         }
       </div>

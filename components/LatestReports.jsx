@@ -76,7 +76,8 @@ export default function LatestReports() {
                                     <div className="flex flex-col justify-between p-4 text-sm md:text-justify md:w-3/5">
                                         <div>
                                             <div className='mb-2 font-bold'>
-                                                {toCapitalCase(val.url)}
+                                                {/* {toCapitalCase(val.url)} */}
+                                                {val.title?.split('Market')[0]+' Market'}
                                             </div>
                                             <div className='pb-4 max-h-[100px]'>
                                                 {val.summary.split('...')[0].split(' ').filter((r, i) => i < 30).join(' ')}...

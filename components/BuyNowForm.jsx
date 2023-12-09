@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
-import { apiUrl, reCaptchaKey } from '@/constants';
+import { apiUrl, reCaptchaKey,countryList } from '@/constants';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
@@ -47,7 +47,8 @@ export default function BuyNowForm({ reportTitle, license }) {
                 content: CreateEmail('Buy Now', formData),
                 response_token: captchaToken,
             };
-
+            // console.log(data)
+            // return;
             axios.post(url, data, {
                 headers: {
                     'Content-Type': 'application/json',
@@ -82,10 +83,11 @@ export default function BuyNowForm({ reportTitle, license }) {
                         <div>
                             <select {...register('country')} id="country" defaultValue='Select Country' className="bg-gray-50 outline-0 border border-gray-300 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 ">
                                 <option>Select Country</option>
-                                <option value="India">India</option>
-                                <option value="US">US</option>
-                                <option value="UK">UK</option>
-                                <option value="Australia">Australia</option>
+                                {
+                                    countryList.map((r,i)=>{
+                                       return <option key={i} value={r}>{r}</option>
+                                    })
+                                }
                             </select>
                         </div>
                         <div>

@@ -11,10 +11,9 @@ export const dynamic = 'force-dynamic'
 export async function generateMetadata({ params, searchParams }, parent) {
     const url = params.url
     const report = await fetch(apiUrl + '/reports/meta/' + url).then((res) => res.json())
-
     return {
         title: toCapitalCase(report.data.meta_title),
-        description: report.data.meta_desc,
+        description: report.data.summary,
         keywords: [...report.data.meta_keyword.split(',')]
     }
 }

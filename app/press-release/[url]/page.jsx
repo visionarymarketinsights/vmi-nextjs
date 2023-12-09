@@ -12,7 +12,8 @@ export async function generateMetadata({ params, searchParams }, parent) {
     const response = await pr.json();
     return {
         title: toCapitalCase(response.data.meta_title),
-        description: response.data.meta_desc,
+        // description: response.data.meta_desc,
+        description: response.data.summary,
         keywords: response.data.meta_keyword,
     }
 }

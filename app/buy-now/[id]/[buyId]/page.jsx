@@ -47,15 +47,18 @@ export default function BuyNow({ params }) {
                                                     {report.url?.split('-').map(res => res[0].toUpperCase() + res.slice(1)).join(' ')}
                                                 </div>
                                                 <div className='flex justify-center pt-2 text-sm md:justify-normal'>
-                                                    <div className='pr-4 border-r-2 border-slate-300'>
+                                                    <div className={`pr-4 ${report.category && 'border-r-2'} border-slate-300`}>
                                                         <div>Report ID</div>
                                                         {/* <div>CNG{getAbrByCategory(report.category)}{report.id}</div> */}
                                                         <div>CNG{report.category_url}{report.id}</div>
                                                     </div>
-                                                    <div className='pl-4'>
-                                                        <div>Category</div>
-                                                        <div>{report.category}</div>
-                                                    </div>
+                                                    {
+                                                        report.category_name &&
+                                                        <div className='pl-4'>
+                                                            <div>Category</div>
+                                                            <div>{report.category_name}</div>
+                                                        </div>
+                                                    }
                                                 </div>
                                             </div>
                                         </div>
@@ -103,7 +106,7 @@ export default function BuyNow({ params }) {
                         <div className="border rounded-md shadow-md md:w-3/5">
                             <div className='relative p-4'>
                                 <div className='flex flex-col gap-2 '>
-                                    <BuyNowForm license={license} reportTitle={report.url} />
+                                    <BuyNowForm license={license} reportTitle={report.title?.split('Market')[0] + 'Market'} />
                                 </div>
                             </div>
                         </div>
