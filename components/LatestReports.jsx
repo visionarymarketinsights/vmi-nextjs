@@ -38,7 +38,7 @@ export default function LatestReports() {
                         <div className='mb-8 text-3xl font-extrabold text-center'>Latest Reports</div>
                         <motion.div
                             initial={{ opacity: 0, y:'25%' }}
-                            whileInView={{ opacity: 1,  y:0}}
+                            whileInView={{ opacity: 1, y:0}}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
                         >
