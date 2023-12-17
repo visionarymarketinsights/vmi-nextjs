@@ -74,7 +74,7 @@ export default function Search() {
                                 value={keyword}
                                 onKeyDown={handleEnterSearch}
                                 onChange={(e) => setKeyword(e.target.value)}
-                                placeholder="Search something.." />
+                                placeholder="Search reports.." />
                         </div>
                         {/* <button className='px-8 m-1 text-sm font-bold tracking-wide text-white rounded-md bg-primary'>Search</button> */}
                         <button onClick={handleSearch}>
@@ -83,7 +83,7 @@ export default function Search() {
 
                     </div>
                 </div>
-                <div className='flex items-center justify-center gap-2 py-4' >
+                <div className='flex items-center justify-center gap-2 pt-4' >
                     <div className='text-xl text-center'>
                         Browse By Industry
                     </div>
@@ -91,14 +91,21 @@ export default function Search() {
                     </div>
                 </div>
                 <div className='grid items-start justify-center w-full grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14 min-h-20'>
-                    {categories.map((res, index) => (
-                        <Link key={index} href={`/reports/${res.url}`}>
-                            <div className='flex flex-col items-center gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
-                                <img loading="lazy" src={'/assets/' + res.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
-                                <div className="text-center mx-1 text-[8px] md:text-[10px] w-20">{res.name}</div>
-                            </div>
-                        </Link>
-                    ))}
+                    {categories.length == 0 &&
+                        <div className='flex flex-col items-center invisible gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
+                            <img loading="lazy" alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
+                            <div className="text-center mx-1 text-[8px] md:text-[10px] w-20"></div>
+                        </div>
+                    }
+                    {
+                        categories.map((res, index) => (
+                            <Link key={index} href={`/reports/${res.url}`}>
+                                <div className='flex flex-col items-center gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
+                                    <img loading="lazy" src={'/assets/' + res.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
+                                    <div className="text-center mx-1 text-[8px] md:text-[10px] w-20">{res.name}</div>
+                                </div>
+                            </Link>
+                        ))}
                 </div>
             </div>
             <CustomToastContainer />
