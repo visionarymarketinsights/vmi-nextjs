@@ -88,11 +88,23 @@ const Footer = () => {
 
               <div>
                 <div className="mb-4 text-xl font-bold">Connect</div>
-                <div className="mb-2">Facebook</div>
-                <div className="mb-2">Twitter</div>
-                <div className="mb-2">LinkedIn</div>
-                <div className="mb-2">Instagram</div>
-                <div className="mb-2">YouTube</div>
+                <div className="mb-2">
+                  <a href="https://www.facebook.com/profile.php?id=61553676880810" target="_blank">
+                    Facebook
+                  </a>
+                </div>
+                <div className="mb-2">
+                  <a href="https://www.linkedin.com/company/congruence-market-insights/" target="_blank">
+                    LinkedIn
+                  </a>
+                </div>
+                <div className="mb-2">
+                  <a href="https://www.youtube.com/@CongruenceMarketInsights" target="_blank">
+                    YouTube
+                  </a>
+                </div>
+                {/* <div className="mb-2">Instagram</div>
+                <div className="mb-2">YouTube</div> */}
               </div>
             </div>
           </div>

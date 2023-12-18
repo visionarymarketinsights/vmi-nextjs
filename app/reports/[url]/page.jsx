@@ -92,12 +92,14 @@ const AllReport = ({ params }) => {
                   <div className="mb-2 text-xl font-semibold">Reports by Industry</div>
                   <div className='flex flex-col gap-2'>
                     <Link href={`/reports/all-industries`} >
-                      <div className={`py-2 text-sm cursor-pointer hover:text-primary  border-b-2 ${url === 'all-industries' && 'text-primary'}`}>All Industries {totalReportCount ? `(${totalReportCount})` : ''}</div>
+                      {/* <div className={`py-2 text-sm cursor-pointer hover:text-primary  border-b-2 ${url === 'all-industries' && 'text-primary'}`}>All Industries {totalReportCount ? `(${totalReportCount})` : ''}</div> */}
+                      <div className={`py-2 text-sm cursor-pointer hover:text-primary  border-b-2 ${url === 'all-industries' && 'text-primary'}`}>All Industries</div>
                     </Link>
                     {categoryList.map((res, key) => {
                       return (
                         <Link key={key} href={`/reports/${res.category_url}`} onClick={scrollToTop}>
-                          <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === String(url) && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name} ({res.count})</div>
+                          {/* <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === String(url) && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name} ({res.count})</div> */}
+                          <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === String(url) && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div>
                         </Link>
                       )
                     })}
