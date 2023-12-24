@@ -7,6 +7,7 @@ import CustomToastContainer from '@/utils/CustomToastContainer';
 {/* <CustomToastContainer /> */ }
 import { getCategories } from '@/constants';
 import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Search() {
     const router = useRouter()
@@ -90,23 +91,30 @@ export default function Search() {
                     <div className='hidden md:block w-1/2 h-[2px] bg-white'>
                     </div>
                 </div>
-                <div className='grid items-start justify-center w-full grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14 min-h-20'>
-                    {categories.length == 0 &&
-                        <div className='flex flex-col items-center invisible gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
-                            <img loading="lazy" alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
-                            <div className="text-center mx-1 text-[8px] md:text-[10px] w-20"></div>
-                        </div>
-                    }
-                    {
-                        categories.map((res, index) => (
-                            <Link key={index} href={`/reports/${res.url}`}>
-                                <div className='flex flex-col items-center gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
-                                    <img loading="lazy" src={'/assets/' + res.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
-                                    <div className="text-center mx-1 text-[8px] md:text-[10px] w-20">{res.name}</div>
-                                </div>
-                            </Link>
-                        ))}
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: '25%' }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.2 }}
+                    viewport={{ once: true }}
+                >
+                    <div className='grid items-start justify-center w-full grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14 min-h-20'>
+                        {categories.length == 0 &&
+                            <div className='flex flex-col items-center invisible gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
+                                <img loading="lazy" alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
+                                <div className="text-center mx-1 text-[8px] md:text-[10px] w-20"></div>
+                            </div>
+                        }
+                        {
+                            categories.map((res, index) => (
+                                <Link key={index} href={`/reports/${res.url}`}>
+                                    <div className='flex flex-col items-center gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
+                                        <img loading="lazy" src={'/assets/' + res.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
+                                        <div className="text-center mx-1 text-[8px] md:text-[10px] w-20">{res.name}</div>
+                                    </div>
+                                </Link>
+                            ))}
+                    </div>
+                </motion.div>
             </div>
             <CustomToastContainer />
         </div>

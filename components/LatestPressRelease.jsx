@@ -34,7 +34,8 @@ export default function LatestPressRelease() {
                     <motion.div
                         initial={{ opacity: 0, y: '25%' }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}   viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: 0.2 }}
+                        viewport={{ once: true }}
                     >
                         <div className='flex flex-col flex-wrap justify-between md:gap-0 md:flex-row'>
                             {pressReleaseList.map((res, i) => {

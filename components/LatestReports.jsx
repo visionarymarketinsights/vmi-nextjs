@@ -37,9 +37,9 @@ export default function LatestReports() {
                     <div className="z-10 max-w-6xl py-12 mx-auto text-white md:pt-10 sm:px-6">
                         <div className='mb-8 text-3xl font-extrabold text-center'>Latest Reports</div>
                         <motion.div
-                            initial={{ opacity: 0, y:'25%' }}
-                            whileInView={{ opacity: 1, y:0}}
-                            transition={{ duration: 0.5 }}
+                            initial={{ opacity: 0, y: '25%' }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
                         >
                             <div className="flex items-center justify-between mt-6">
