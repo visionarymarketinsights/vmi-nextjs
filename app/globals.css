@@ -217,3 +217,11 @@
   background: #4F46E5;
 }
 /* Button Animation End */
+
+
+img {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}

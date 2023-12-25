@@ -61,27 +61,22 @@ export default function Header() {
                   } `}
               >
                 <div className="block lg:flex">
-                  <div className="relative">
+                  {/* <div className="relative">
                     <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/">Home</Link>
-                  </div>
+                  </div> */}
                   <div className="relative cursor-pointer">
                     <div className='flex items-center gap-2 py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => setCategoryOpen(!isCategoryOpen)}>
                       <div>Category</div>
-                      {isCategoryOpen ?
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                      {
+                        <svg xmlns="http://www.w3.org/2000/svg" className={`icon icon-tabler icon-tabler-chevron-up transition-all duration-200 ${isCategoryOpen?'rotate-0':'rotate-180'}`} width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                           <path d="M6 15l6 -6l6 6" />
-                        </svg>
-                        :
-                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M6 9l6 6l6 -6" />
                         </svg>
                       }
                     </div>
                     {
-                      isCategoryOpen &&
-                      <div id='openedCategoryDropDown' className={`absolute z-20 bg-white py-6 px-10  shadow-2xl rounded-md top-[100%] md:top-[170%] left-[-35%] md:left-[-120%] text-sm w-[300px] md:w-[550px]`}>
+                      
+                      <div id='openedCategoryDropDown' className={`absolute z-20 bg-white py-6 px-10  shadow-2xl rounded-md top-[100%] md:top-[170%] left-[-35%] md:left-[-120%] text-sm w-[300px] md:w-[550px] transition-all duration-200 ${isCategoryOpen? 'opacity-100 pointer-events-auto':'opacity-0 pointer-events-none'}`}>
                         <div className="grid grid-cols-1 gap-x-2 gap-y-0 md:grid-cols-2">
                           {categories.map((res: any, index) => {
                             return (
