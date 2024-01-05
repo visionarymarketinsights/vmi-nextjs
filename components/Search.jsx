@@ -11,8 +11,8 @@ import { motion } from 'framer-motion';
 
 export default function Search() {
     const router = useRouter()
-    const [keyword, setKeyword] = useState('');
     const [categories, setCategories] = useState([]);
+    const [keyword, setKeyword] = useState('');
 
 
     const handleEnterSearch = (e) => {
