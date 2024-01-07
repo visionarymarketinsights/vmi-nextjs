@@ -183,16 +183,16 @@ export default function Header() {
           </div >
         </div >
       </header >
-      <div className={`absolute ${(!reportList.length || pathname == '/' || pathname.includes('/search') || keyword == '') && 'hidden'} flex justify-center w-full  max-h-[75vh] top-20`}>
-        <div className="w-[90%] bg-white rounded-md p-4 overflow-auto shadow-xl cursor-default">
+      <div className={`absolute  ${(!reportList.length || pathname == '/' || pathname.includes('/search') || keyword == '') && 'hidden'} flex justify-center w-full  max-h-[75vh] top-20`}>
+        <div className="w-[90%] border-slate-300 border bg-white rounded-md p-4 overflow-auto shadow-xl cursor-default">
           <div className="mb-2 font-bold">Reports</div>
           <div className="flex flex-col gap-2">
             {
               reportList.map((r, i) => {
                 return (
-                  <Link href={`/report/${r.url}`} key={i} onClick={() => { setReportList([]); setKeyword('') }}>
+                  <Link className="group" href={`/report/${r.url}`} key={i} onClick={() => { setReportList([]); setKeyword('') }}>
                     <div key={1} className="p-2 text-sm border rounded-md border-slate-300 hover:bg-slate-100">
-                      <div className="font-semibold">{r.title.split('').filter((res, i) => i < 160).join('')}...</div>
+                      <div className="font-semibold group-hover:text-primary group-hover:underline">{r.title.split('').filter((res, i) => i < 160).join('')}...</div>
                       <div className="text-slate-600">{r.summary}</div>
                     </div>
                   </Link>
