@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
 import CustomToastContainer from '@/utils/CustomToastContainer';
 import ReCAPTCHA from 'react-google-recaptcha';
+export const dynamic = 'force-dynamic'
 
 
 
