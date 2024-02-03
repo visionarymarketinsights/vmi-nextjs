@@ -1,13 +1,14 @@
 'use client'
 import React from 'react'
-export default function Offering() {
+
+export default function OfferingMain() {
     
     const scrollTo = (id) => {
         document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
 
-    return (
-        <div>
+  return (
+    <div>
             <div className='flex justify-between max-w-screen-xl gap-2 px-4 py-4 mx-auto md:gap-8 lg:py-12 lg:px-6'>
                 <div className='w-1/3 duration-200 cursor-pointer md:hover:scale-95'>
                     <div onClick={() => scrollTo('section-1')} className='overflow-clip relative md:p-8 p-4 text-xs md:text-3xl font-bold  rounded-md flex justify-center md:justify-end items-end text-white h-20 md:h-[360px]'>
@@ -169,6 +170,5 @@ export default function Offering() {
                 </div>
             </section>
         </div>
-
-    )
+  )
 }

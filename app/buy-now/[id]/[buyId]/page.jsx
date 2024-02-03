@@ -5,8 +5,6 @@ import BuyNowForm from '@/components/BuyNowForm'
 import axios from 'axios';
 import BuyNowInfo from '@/components/BuyNowInfo'
 
-
-
 export default function BuyNow({ params }) {
     const [report, setReport] = useState({});
     const [license, setLicense] = useState({});

@@ -6,11 +6,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { GoogleTagManager } from '@next/third-parties/google'
+ 
 
 export const metadata: Metadata = {
-  title: 'Congruence Market Insights',
-  description: 'Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence.'
-  , keywords: 'Global Market Insights, US Market Research, Congruence Market Reports, Market Analysis and Trends, Strategic Insights, Industry Statistics, Market Forecasting, Business Strategy Reports, Market Size and Share Analysis, Competitive Intelligence, Industry Trends and Insights, Data-driven Market Research, Global Business Strategies, Sector-specific Research Reports, Market Intelligence Solutions'
+  title: 'Congruence Market Insights - Market Research & Consulting',
+  description: 'Congruence is your trusted partner in navigating emerging opportunities and challenges through high-quality, tailored market research reports.',
+  keywords: 'Congruence Market Insights, CMI, Market Research, Industry Analysis, Market Analysis, Global Market Trends, Business Intelligence, Custom Market Research, Strategic Insights, Market Dynamics, Emerging Opportunities, Competitive Landscape, Data-driven Decision Making, Market Forecast, Industry Reports, Tailored Research Solutions, Market Intelligence Services'
 }
 
 export default function RootLayout({
@@ -25,6 +27,7 @@ export default function RootLayout({
         {children}
         <Footer></Footer>
       </body>
+      <GoogleTagManager gtmId="GTM-PLCKML74" />
     </html>
   )
 }

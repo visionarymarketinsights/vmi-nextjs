@@ -1,5 +1,12 @@
 import React from 'react'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Who We are - Congruence Market Insights',
+    description: 'At CMI, we\'re more than a market research company. Learn about our mission, values, and commitment to delivering valuable insights.',
+    keywords: 'About Us, Company Overview, Mission Statement, Values, Market Research Firm, Insights Provider, Corporate Culture, Team Profiles, Company History, Vision Statement, Business Philosophy, Our Story, Leadership Team, Company Mission, Values and Vision'
+}
 
 
 export default function About() {
