@@ -1,7 +1,7 @@
 
 import React from 'react'
 import ContactForm from '../../components/ContactForm';
-
+export const revalidate = 3600 //every 1 hr
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -45,7 +45,7 @@ export default function Contact() {
                       <span className='mr-1 font-semibold'>
                         US Sales Office:
                       </span>
-                      4781 Canoga St, Montclair, California 91763, USA
+                      530 Lytton Ave, Palo Alto, California 94301, United States
                     </p>
                     <p className="text-base text-body-color">
                       <span className='mr-1 font-semibold'>
