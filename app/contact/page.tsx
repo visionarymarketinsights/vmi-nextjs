@@ -73,7 +73,7 @@ export default function Contact() {
                       Phone Number
                     </h4>
                     <p className="text-base text-body-color">
-                      (+62)81 414 257 9980
+                      (+1) 650-646-2623
                     </p>
                   </div>
                 </div>
