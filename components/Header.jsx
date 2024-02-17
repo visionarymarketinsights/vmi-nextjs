@@ -166,7 +166,7 @@ export default function Header() {
                   <div className="relative">
                     <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/about">About</Link>
                   </div>
-                  <div className={`relative ${(pathname == '/' || pathname.includes('/search')) && 'hidden'}`}>
+                  <div className={`relative ${(pathname == '/') && 'hidden'}`}>
                     <div className="flex items-center gap-4 lg:ml-12">
                       <button type="button" className="hover:border-gray-7 md:border-gray-6 flex h-5 w-5 items-center justify-start md:h-auto md:w-64 md:flex-none md:rounded-lg md:border md:bg-backgroundSecondary md:py-2 md:pl-4 md:pr-3.5 md:text-sm">
                         <input type="text" value={keyword} onKeyDown={handleEnterSearch} onChange={(e) => setKeyword(e.target.value)} className="w-full pr-4 outline-none" placeholder="Search Market Report" />
@@ -183,7 +183,7 @@ export default function Header() {
           </div >
         </div >
       </header >
-      <div className={`absolute  ${(!reportList.length || pathname == '/' || pathname.includes('/search') || keyword == '') && 'hidden'} flex justify-center w-full  max-h-[75vh] top-20`}>
+      <div className={`absolute  ${(!reportList.length || pathname == '/' || keyword == '') && 'hidden'} flex justify-center w-full  max-h-[75vh] top-20`}>
         <div className="w-[90%] border-slate-300 border bg-white rounded-md p-4 overflow-auto shadow-xl cursor-default">
           <div className="mb-2 font-bold">Reports</div>
           <div className="flex flex-col gap-2">

@@ -46,7 +46,7 @@ const Footer = () => {
     <div>
       <div className="relative text-center text-white bg-slate-800 md:text-left">
         {/* <img loading="lazy" src={"/assets/footer-guy.png"} alt="working-guy" className="absolute hidden md:block bottom-0 right-10 h-[420px] transform -scale-x-100" /> */}
-        <img loading="lazy" src={"/assets/f1.png"} alt="working-guy" className="absolute hidden md:block bottom-12 right-20 h-[360px] transform -scale-x-100" />
+        <img loading="lazy" src={"/assets/f1.png"} alt="working-guy" className="absolute hidden md:block bottom-4 right-20 h-[280px] transform -scale-x-100" />
         {/* <img loading="lazy" src={"/assets/f3.png"} alt="working-guy" className="absolute hidden md:block bottom-10 right-20 h-[360px] transform" /> */}
         <div className="md:flex">
           <div className="md:w-1/2">
@@ -126,12 +126,15 @@ const Footer = () => {
 
               </div>
             </div>
+            <div className="flex justify-end ">
+              <img loading="lazy" src={"/assets/others/footer payment image.png"} alt="secure-payment" className="hidden md:block w-[400px]" />
+            </div>
           </div>
         </div>
         <div className="text-sm border-t cursor-default border-slate-600">
           <div className="px-12 py-8 text-justify md:w-3/5">Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence. Our expert analysts deliver actionable data, empowering businesses to make informed decisions in a dynamic marketplace. Trust us to navigate your path to success.</div>
           <div className="flex flex-col gap-8 px-12 py-8 md:flex-row md:items-end">
-            <div>© 2023 Congruence Market Insights</div>
+            <div>© 2024 Congruence Market Insights</div>
             {detailsList.map((r, i) => {
               return <div className="cursor-pointer" key={i} onClick={() => handleDetailsOpen(r.title)}>{r.title}</div>
             })}

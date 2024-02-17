@@ -29,10 +29,19 @@ export default function ReportBuyNow({ report }) {
   const handleDiscountFormOpen = () => setDiscountFormOpen(true);
   const handleDiscountFormClose = () => setDiscountFormOpen(false);
 
+  const getPriceInNumber = (price) => {
+    return Number(price.split('$')[1].split(',')[0] + price.split('$')[1].split(',')[1]);
+  }
+  const discountedPrice = (price, discountPercent) => {
+    price = getPriceInNumber(price);
+    price = price - (discountPercent * price / 100)
+    return price 
+  }
+
   const [license, setLicense] = useState('Single User License');
   return (
 
-    <div className='flex flex-col gap-2 p-4 border rounded-md shadow-lg '>
+    <div className='flex flex-col gap-4 px-4 py-6 border rounded-md shadow-lg '>
       {
         priceList.length == 0 && <Skeleton count={2} />
       }
@@ -42,7 +51,12 @@ export default function ReportBuyNow({ report }) {
             <div key={i} onClick={() => setLicense(res.license)} className={`flex justify-between cursor-default hover:text-primary ${license == res.license && 'text-primary'} p-1 rounded-sm`}>
               <div className='flex gap-2'>
                 {res.license}</div>
-              <div className='font-bold'>{res.price}</div>
+              <div className='relative font-bold'>
+                {res.price}
+                <div className='absolute text-right text-sm font-normal w-full line-through text-red-500 top-[-16px]'>
+                  {'$'+discountedPrice(res.price, 10)}
+                </div>
+              </div>
             </div>
           )
         })
