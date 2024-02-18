@@ -34,8 +34,8 @@ export default function ReportBuyNow({ report }) {
   }
   const discountedPrice = (price, discountPercent) => {
     price = getPriceInNumber(price);
-    price = price - (discountPercent * price / 100)
-    return price 
+    price = price + (discountPercent * price / 100)
+    return price.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
   }
 
   const [license, setLicense] = useState('Single User License');
@@ -54,7 +54,7 @@ export default function ReportBuyNow({ report }) {
               <div className='relative font-bold'>
                 {res.price}
                 <div className='absolute text-right text-sm font-normal w-full line-through text-red-500 top-[-16px]'>
-                  {'$'+discountedPrice(res.price, 10)}
+                  {'$' + discountedPrice(res.price, 10)}
                 </div>
               </div>
             </div>
