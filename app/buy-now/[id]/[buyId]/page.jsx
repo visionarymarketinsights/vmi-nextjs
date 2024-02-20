@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { apiUrl } from '@/constants';
+import { apiUrl, discountedPrice, getPriceInNumber } from '@/constants';
 import BuyNowForm from '@/components/BuyNowForm'
 import axios from 'axios';
 import BuyNowInfo from '@/components/BuyNowInfo'
@@ -65,21 +65,33 @@ export default function BuyNow({ params }) {
                                             <div className='px-4 py-3 border-b-2'>
                                                 Selected License
                                             </div>
-                                            <div className='flex justify-between px-4 py-3 border-b-2'>
+                                            <div className='flex justify-between px-4 py-4 border-b-2'>
                                                 <div>
                                                     {license.license}
                                                 </div>
-                                                <div className='font-bold'>
-                                                    {license.price}
-                                                </div>
+                                                {
+                                                    license.price &&
+                                                    <div className='font-bold'>
+                                                        {/* {license.price} */}
+                                                        <div className='relative font-bold'>
+                                                            {'$' + discountedPrice(getPriceInNumber(license.price))}
+                                                            <div className='absolute text-right text-sm font-normal w-full line-through text-red-500 top-[-16px]'>
+                                                                {license.price}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
                                             </div>
                                             <div className='flex justify-between px-4 py-3'>
                                                 <div>
                                                     Total <span className='text-xs'>(Inclusive of all taxes)</span>
                                                 </div>
-                                                <div className='font-bold text-primary'>
-                                                    {license.price}
-                                                </div>
+                                                {
+                                                    license.price &&
+                                                    <div className='font-bold text-primary'>
+                                                        {'$' + discountedPrice(getPriceInNumber(license.price))}
+                                                    </div>
+                                                }
                                             </div>
                                         </div>
                                     </div>

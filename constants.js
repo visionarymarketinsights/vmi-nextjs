@@ -126,6 +126,16 @@ export const toCapitalCase = (val) => {
 }
 
 
+export const getPriceInNumber = (price) => {
+    return Number(price.split('$')[1].split(',')[0] + price.split('$')[1].split(',')[1]);
+}
+export const discountedPrice = (price) => {
+    price = price - (20 * price / 100)
+    return price.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
+
+
+
 export const countryList =
     [
         "Afghanistan",
@@ -371,3 +381,5 @@ export const countryList =
         "Zambia",
         "Zimbabwe",
     ]
+
+

@@ -7,7 +7,7 @@ import Modal from '@mui/material/Modal';
 import { useState, useEffect } from 'react';
 import RequestSample from '@/components/RequestSample';
 import axios from 'axios';
-import { apiUrl } from '@/constants';
+import { apiUrl, getPriceInNumber, discountedPrice } from '@/constants';
 import Skeleton from './Skeleton';
 
 export default function ReportBuyNow({ report }) {
@@ -29,14 +29,13 @@ export default function ReportBuyNow({ report }) {
   const handleDiscountFormOpen = () => setDiscountFormOpen(true);
   const handleDiscountFormClose = () => setDiscountFormOpen(false);
 
-  const getPriceInNumber = (price) => {
-    return Number(price.split('$')[1].split(',')[0] + price.split('$')[1].split(',')[1]);
-  }
-  const discountedPrice = (price, discountPercent) => {
-    price = getPriceInNumber(price);
-    price = price + (discountPercent * price / 100)
-    return price.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-  }
+  // const getPriceInNumber = (price) => {
+  //   return Number(price.split('$')[1].split(',')[0] + price.split('$')[1].split(',')[1]);
+  // }
+  // const discountedPrice = (price, discountPercent) => {
+  //   price = price - (discountPercent * price / 100)
+  //   return price.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  // }
 
   const [license, setLicense] = useState('Single User License');
   return (
@@ -52,9 +51,9 @@ export default function ReportBuyNow({ report }) {
               <div className='flex gap-2'>
                 {res.license}</div>
               <div className='relative font-bold'>
-                {res.price}
+                {'$' + discountedPrice(getPriceInNumber(res.price))}
                 <div className='absolute text-right text-sm font-normal w-full line-through text-red-500 top-[-16px]'>
-                  {'$' + discountedPrice(res.price, 10)}
+                  {res.price}
                 </div>
               </div>
             </div>
