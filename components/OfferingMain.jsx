@@ -9,7 +9,7 @@ export default function OfferingMain() {
 
   return (
     <div>
-        <h1 className='fixed invisible pointer-events-none'>Offerings</h1>
+        <h1 className='fixed text-transparent'>Offerings</h1>
             <div className='flex justify-between max-w-screen-xl gap-2 px-4 py-4 mx-auto md:gap-8 lg:py-12 lg:px-6'>
                 <div className='w-1/3 duration-200 cursor-pointer md:hover:scale-95'>
                     <div onClick={() => scrollTo('section-1')} className='overflow-clip relative md:p-8 p-4 text-xs md:text-3xl font-bold  rounded-md flex justify-center md:justify-end items-end text-white h-20 md:h-[360px]'>

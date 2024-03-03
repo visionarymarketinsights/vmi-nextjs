@@ -27,7 +27,7 @@ export default function BuyNow({ params }) {
 
     return (
         <div className="p-4 mx-auto max-w-7xl sm:px-6">
-            <h1 className='fixed invisible pointer-events-none'>Buy Now</h1>
+            <h1 className='fixed text-transparent'>Buy Now</h1>
             <div className="py-2 text-center md:pt-2 md:text-left">
                 <div className="pb-12 mx-auto max-w-8xl md:pb-10">
                     <div className='flex flex-col gap-4 md:flex-row'>

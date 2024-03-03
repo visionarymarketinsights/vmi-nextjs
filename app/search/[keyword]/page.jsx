@@ -37,7 +37,7 @@ const SearchList = ({ params }) => {
   return (
     <div>
       <CustomToastContainer />
-      <h1 className='fixed invisible pointer-events-none'>Search results for "{keyword}"</h1>
+      <h1 className='fixed text-transparent'>Search results for "{keyword}"</h1>
       {/* <div className="mb-6 md:text-3xl text-lg h-[200px] md:h-[300px] font-extrabold flex items-center justify-center bg-gradient  text-white">{category.toUpperCase()}</div> */}
       <div className="max-w-6xl px-4 mx-auto sm:px-6">
         <div className="py-2 text-center md:pt-10 md:text-left">
