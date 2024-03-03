@@ -12,6 +12,7 @@ export default function Home() {
   return (
 
     <section className="relative" >
+      <h1 className='fixed text-transparent'>Congruence Market Insights</h1>
       <Search />
       <Insights />
       <LatestReports />
