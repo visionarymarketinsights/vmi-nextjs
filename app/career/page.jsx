@@ -6,6 +6,7 @@ export default function Careers() {
     return (
 
         <div>
+            <h1 className='fixed invisible pointer-events-none'>Career</h1>
             <div className="max-w-6xl p-4 mx-auto sm:px-6">
                 <div className='py-8 text-center'>
                     <div className='mb-4 text-3xl font-extrabold tracking-tight text-gray-900 '>

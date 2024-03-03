@@ -19,9 +19,9 @@ export default function Contact() {
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <span className="block mb-4 text-base font-semibold text-primary">Contact Us</span>
-                <h2 className="mb-6 text-2xl md:text-[32px] font-bold text-[#652E7E] uppercase text-dark sm:text-[40px] lg:text-[28px] xl:text-[32px]">
+                <h1 className="mb-6 text-2xl md:text-[32px] font-bold text-[#652E7E] uppercase text-dark sm:text-[40px] lg:text-[28px] xl:text-[32px]">
                   Get in Touch with <br /> Congruence Market Insights
-                </h2>
+                </h1>
                 <p className="text-base leading-relaxed mb-9 text-body-color">
                   At Congruence Market Insights, we value your inquiries, feedback, and the opportunity to connect with you. Whether you have questions, require information, or wish to explore potential collaborations, we are here to assist you.
                 </p>

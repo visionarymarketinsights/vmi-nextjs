@@ -17,7 +17,7 @@ export default function About() {
                 <section>
                     <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
                         <div className='md:text-center'>
-                            <h2 className="mb-4 text-3xl font-extrabold tracking-tight  text-[#652E7E] text-gray-900 text-[#652E7E]">About Us</h2>
+                            <h1 className="mb-4 text-3xl font-extrabold tracking-tight  text-[#652E7E] text-gray-900 text-[#652E7E]">About Us</h1>
                             <div className="flex justify-center mb-2 text-xl font-light">
                                 <div className='text-lg text-gray-600 md:p-6'>
                                     Welcome to <span className='font-semibold'>Congruence Market Insights</span>, where knowledge meets innovation and insight transforms industries. We are not just another market research company; we are your strategic partners in decoding the complexities of the market landscape and uncovering hidden opportunities that drive your business forward.

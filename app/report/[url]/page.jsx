@@ -33,6 +33,7 @@ export default async function Report({ params, searchParams }) {
 
     return (
         <div className='px-4 py-2 mx-auto md:py-12 max-w-7xl md:pt-0 sm:px-6'>
+            <h1 className='fixed invisible pointer-events-none'>{report.title}</h1>
             {/* <div className='pt-8 pb-4 '> Congruence / {report.category} / <span className='text-primary'> {report.url}</span></div> */}
             <nav className="flex pt-8 pb-4" aria-label="Breadcrumb">
                 <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">

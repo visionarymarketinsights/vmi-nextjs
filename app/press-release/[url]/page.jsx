@@ -33,7 +33,7 @@ export default async function PressRelease({ params }) {
     const { pressRelease, report } = await getPressReleaseData(url);
     return (
         <div>
-
+            <h1 className='fixed invisible pointer-events-none'>{pressRelease.title}</h1>
             <div className="max-w-6xl px-4 mx-auto sm:px-6">
                 <div className='flex justify-between'>
                     <nav className="flex pt-8 pb-4" aria-label="Breadcrumb">
