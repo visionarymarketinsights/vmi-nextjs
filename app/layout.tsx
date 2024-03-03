@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} dark custom-bg`}>
+        <h1 className='fixed invisible pointer-events-none'>Congruence Market Insights</h1>
         <Header></Header>
         {children}
         <Footer></Footer>
