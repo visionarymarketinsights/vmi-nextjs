@@ -95,7 +95,7 @@ export default function ReportBuyNow({ report, url, section }) {
         <Link href={'/report/' + report?.url + '?section=Table'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Table' ? 'font-bold bg-primary text-white' : ''}`}>Table Of Content</Link>
         <Link href={'/report/' + report?.url + '?section=Highlights'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Highlights' ? 'font-bold bg-primary text-white' : ''}`}>Highlights</Link>
         <Link href={'/report/' + report?.url + '?section=Methodology'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Methodology' ? 'font-bold bg-primary text-white' : ''}`}>Methodology</Link>
-        <Link href={'/report/' + report?.url + '?section=Request'} className={`codepen-button md:w-1/4 w-full md:mb-0 mb-4 text-sm box-border relative z-30 flex justify-center items-center border rounded-sm cursor-pointer ${section === 'Request' ? 'font-bold' : ''}`}>
+        <Link href={'/report/' + report?.url + '?section=Request'} className={`codepen-button md:w-1/4 w-full md:mb-0 mb-4 text-sm box-border relative z-10 flex justify-center items-center border rounded-sm cursor-pointer ${section === 'Request' ? 'font-bold' : ''}`}>
           <span className='py-2 text-center'>Request Sample</span>
         </Link>
       </div>
