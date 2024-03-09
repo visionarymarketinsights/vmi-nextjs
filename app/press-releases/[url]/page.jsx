@@ -6,13 +6,30 @@ import axios from 'axios';
 import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
 import CustomToastContainer from '@/utils/CustomToastContainer';
 import moment from 'moment';
+// import type { Metadata } from 'next';
 
-// import type { Metadata } from 'next'
-// export const metadata= {
-//     title: 'PRS',
-//     description: 'At CMI, we\'re more than a market research company. Learn about our mission, values, and commitment to delivering valuable insights.',
-//     keywords: 'About Us, Company Overview, Mission Statement, Values, Market Research Firm, Insights Provider, Corporate Culture, Team Profiles, Company History, Vision Statement, Business Philosophy, Our Story, Leadership Team, Company Mission, Values and Vision'
+// export async function generateMetadata({ params, searchParams }, parent) {
+//     const url = params.url
+//     return {
+//         title: 'Press Releases - Latest News and Updates | Congruence Market Insights',
+//         description: 'Stay informed with our latest press releases. Explore news and updates across various categories, showcasing our commitment to delivering valuable insights.',
+//         keywords: 'Press Releases, Latest News, Company Updates, Press Release Categories, Corporate Announcements, Market Insights, Industry News, Business Reports, Press Release Archive',
+//         alternates: {
+//             canonical: 'https://www.congruencemarketinsights.com/press-releases/' + url
+//         },
+//     }
 // }
+
+
+// export const metadata: Metadata = {
+//     title: 'Syndicate, Custom and Consulting Report Services from Congruence',
+//     description: 'Unlock strategic advantages with Congruence Market Insights—your partner for syndicate reports, custom research, and consulting services.',
+//     keywords: 'Syndicate Reports, Custom Research, Consulting Services, Market Insights, Strategic Analysis, Tailored Solutions, Business Intelligence, Industry Trends, Data-driven Insights, Competitive Landscape, Emerging Markets, Comprehensive Research, Market Dynamics, Strategic Consulting, Customized Reports',
+//     alternates: {
+//         canonical: 'https://www.congruencemarketinsights.com/offering',
+//     },
+// }
+
 
 export default function PressReleases({ params }) {
 

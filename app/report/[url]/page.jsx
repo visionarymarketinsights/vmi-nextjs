@@ -11,10 +11,14 @@ export const dynamic = 'force-dynamic'
 export async function generateMetadata({ params, searchParams }, parent) {
     const url = params.url
     const report = await fetch(apiUrl + '/reports/meta/' + url).then((res) => res.json())
+    const siteURL = 'https://www.congruencemarketinsights.com';
     return {
         title: toCapitalCase(report.data.meta_title),
         description: report.data.summary,
-        keywords: [...report.data.meta_keyword.split(',')]
+        keywords: [...report.data.meta_keyword.split(',')],
+        alternates: {
+            canonical: `${siteURL}/report/${url}`,
+        },
     }
 }
 
