@@ -45,7 +45,7 @@ export default function Search() {
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-to-bl from-blue-900 to-blue-500 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-0 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-45 text-white`}>
-        <div className={`relative mx-auto py-12 bg-cover overflow-clip bg-bottom flex justify-center items-center bg-gradient text-white`}>
+        <div className={`relative mx-auto py-12 h-[75vh] bg-cover overflow-clip bg-bottom flex justify-center items-center bg-gradient text-white`}>
             <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample.webm"} type="video/mp4" src={"/assets/sample.webm"} />
             </video>
@@ -91,30 +91,21 @@ export default function Search() {
                     <div className='hidden md:block w-1/2 h-[2px] bg-white'>
                     </div>
                 </div>
-                <motion.div
-                    initial={{ opacity: 0, y: '25%' }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.2 }}
-                    viewport={{ once: true }}
-                >
-                    <div className='grid items-start justify-center w-full grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14 min-h-20'>
-                        {categories.length == 0 &&
-                            <div className='flex flex-col items-center invisible gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
-                                <img loading="lazy" alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
-                                <div className="text-center mx-1 text-[8px] md:text-[10px] w-20"></div>
-                            </div>
-                        }
+                <div className='h-20'>
+                    <motion.div initial={{ opacity: 0, y: '25%' }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.2 }} viewport={{ once: true }}>
+                        <div className='grid items-start justify-center w-full grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14'>
                         {
-                            categories.map((res, index) => (
-                                <Link key={index} href={`/reports/${res.url}`}>
-                                    <div className='flex flex-col items-center gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
-                                        <img loading="lazy" src={'/assets/' + res.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
-                                        <div className="text-center mx-1 text-[8px] md:text-[10px] w-20">{res.name}</div>
-                                    </div>
-                                </Link>
-                            ))}
-                    </div>
-                </motion.div>
+                                categories.map((res, index) => (
+                                    <Link key={index} href={`/reports/${res.url}`}>
+                                        <div className='flex flex-col items-center gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
+                                            <img loading="lazy" src={'/assets/' + res.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
+                                            <div className="text-center mx-1 text-[8px] md:text-[10px] w-20">{res.name}</div>
+                                        </div>
+                                    </Link>
+                                ))}
+                        </div>
+                    </motion.div>
+                </div>
             </div>
             <CustomToastContainer />
         </div>

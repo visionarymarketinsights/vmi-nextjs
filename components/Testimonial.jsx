@@ -32,8 +32,8 @@ export default function Testimonial() {
 
                 <div className="mx-4 my-8 md:m-4 md:w-1/3">
                     <motion.div
-                        initial={{ opacity: 0, x: '-100%' }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: '-25%' }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                     >
@@ -51,8 +51,8 @@ export default function Testimonial() {
                 </div>
                 <div className='cursor-pointer md:w-1/2'>
                     <motion.div
-                        initial={{ opacity: 0, x: '100%' }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: '25%' }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                     >
