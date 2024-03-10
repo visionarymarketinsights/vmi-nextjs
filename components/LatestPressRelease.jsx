@@ -25,7 +25,7 @@ export default function LatestPressRelease() {
     }, []);
 
     return (
-        <div className="py-12 h-[600px]">
+        <div className="py-12 md:h-[600px]">
             <CustomToastContainer />
             <div className="max-w-6xl px-4 mx-auto sm:px-6">
                 <div className="mx-auto text-center ">

@@ -26,7 +26,7 @@ export default function LatestReports() {
     }, []);
 
     return (
-        <div className='relative h-[410px] overflow-clip'>
+        <div className='relative md:h-[410px] overflow-clip'>
             <CustomToastContainer />
             <div className='absolute w-full h-full -z-10 bg-gradient'>
                 <img loading='lazy' src="/assets/abstract.jpg" alt="bgimg" className='hidden md:block' />
