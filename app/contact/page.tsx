@@ -7,7 +7,10 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
     title: 'Get in Touch with Congruence Market Insights',
     description: 'Connect with Congruence Market Insights through our Contact page. Reach out for inquiries, collaborations, or tailored market solutions.',
-    keywords: 'Contact Us, Inquiry Form, Collaboration Requests, Market Solutions, Business Consultation, Reach Out, Communication, Inquiry Submission, Assistance, Business Partnership, Contact Information, Inquiry Process, Connect, Customer Support'
+    keywords: 'Contact Us, Inquiry Form, Collaboration Requests, Market Solutions, Business Consultation, Reach Out, Communication, Inquiry Submission, Assistance, Business Partnership, Contact Information, Inquiry Process, Connect, Customer Support',
+    alternates: {
+      canonical: 'https://www.congruencemarketinsights.com/contact',
+  },
 }
 
 export default function Contact() {

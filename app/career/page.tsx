@@ -1,5 +1,14 @@
 import React from 'react'
+import type { Metadata } from 'next'
 
+export const metadata: Metadata = {
+    title: 'Join Our Team - Careers at Congruence Market Insights',
+    description: 'Explore exciting career opportunities at CMI. Learn about our mission, values, and join us in delivering valuable insights to the world.',
+    keywords: 'Careers, Job Opportunities, Join Our Team, Employment, Work with Us, Company Culture, Team Profiles, Career Growth, Job Openings, Recruitment, Hiring, Professional Development, Employee Benefits',
+    alternates: {
+        canonical: 'https://www.congruencemarketinsights.com/career',
+    },
+}
 
 
 export default function Careers() {
