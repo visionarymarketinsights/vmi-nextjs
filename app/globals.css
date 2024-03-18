@@ -244,3 +244,7 @@ img {
   /* background-color: #8070d4; */
   background-color: grey;
 }
+
+img{
+  display: none;
+}
