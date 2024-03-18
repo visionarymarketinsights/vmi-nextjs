@@ -15,7 +15,7 @@ export default function Services() {
 
                         <div className='flex justify-center mb-2 text-sm text-slate-300'>
                             <div className='w-4/5 md:w-full'>
-                                Welcome to Congruence Market Insights, where strategic insights and innovative solutions converge to empower your business. We offer a diverse range of services tailored to meet your unique market research needs. By partnering with us, you unlock a world of opportunities and gain a competitive edge in your industry. Explore our services and discover how we can drive your business forward.
+                                Welcome to Visionary Market Insights, where strategic insights and innovative solutions converge to empower your business. We offer a diverse range of services tailored to meet your unique market research needs. By partnering with us, you unlock a world of opportunities and gain a competitive edge in your industry. Explore our services and discover how we can drive your business forward.
                             </div>
                         </div>
 

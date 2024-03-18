@@ -58,7 +58,7 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    notifyError('Email us at congruencemarketresearch@gmail.com');
+                    notifyError('Email us at visionarymarketinsights@gmail.com');
                 });
         } else {
             notifyError('Check the reCaptcha checkbox')

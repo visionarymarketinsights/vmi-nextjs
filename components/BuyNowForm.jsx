@@ -60,7 +60,7 @@ export default function BuyNowForm({ reportTitle, license }) {
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    notifyError('Email us at congruencemarketresearch@gmail.com');
+                    notifyError('Email us at visionarymarketinsights@gmail.com');
                 });
         } else {
             notifyError('Check the reCaptcha checkbox')

@@ -62,7 +62,6 @@ const Footer = () => {
             <div className="flex flex-col gap-4 p-8 text-sm border-t md:gap-36 md:flex-row md:px-12 md:py-16 border-slate-600">
               {/* <div>
                 <div className="mb-4 text-xl font-bold">Resources</div>
-                <div className="mb-2">Why Congruence?</div>
                 <div className="mb-2">Customer Service</div>
                 <div className="mb-2">Blogs</div>
                 <div className="mb-2">Guides</div>
@@ -94,12 +93,12 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="mb-2">
-                  <a href="https://www.linkedin.com/company/congruence-market-insights/" target="_blank">
+                  <a href="https://www.linkedin.com/company/visionarymarketinsights/" target="_blank">
                     LinkedIn
                   </a>
                 </div>
                 <div className="mb-2">
-                  <a href="https://www.youtube.com/@CongruenceMarketInsights" target="_blank">
+                  <a href="https://www.youtube.com/@visionarymarketinsights" target="_blank">
                     YouTube
                   </a>
                 </div>
@@ -132,9 +131,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-sm border-t cursor-default border-slate-600">
-          <div className="px-12 py-8 text-justify md:w-3/5">Congruence Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence. Our expert analysts deliver actionable data, empowering businesses to make informed decisions in a dynamic marketplace. Trust us to navigate your path to success.</div>
+          <div className="px-12 py-8 text-justify md:w-3/5">Visionary Market Insights is a leading market research company dedicated to providing unparalleled insights and strategic intelligence. Our expert analysts deliver actionable data, empowering businesses to make informed decisions in a dynamic marketplace. Trust us to navigate your path to success.</div>
           <div className="flex flex-col gap-8 px-12 py-8 md:flex-row md:items-end">
-            <div>© 2024 Congruence Market Insights</div>
+            <div>© 2024 Visionary Market Insights</div>
             {detailsList.map((r, i) => {
               return <div className="cursor-pointer" key={i} onClick={() => handleDetailsOpen(r.title)}>{r.title}</div>
             })}

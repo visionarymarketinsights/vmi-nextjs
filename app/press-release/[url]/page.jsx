@@ -10,7 +10,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     const url = params.url
     const pr = await fetch(`${apiUrl}/press_release/meta/${url}`);
     const response = await pr.json();
-    const siteURL = 'https://www.congruencemarketinsights.com';
+    const siteURL = 'https://www.visionarymarketinsights.com';
     return {
         title: toCapitalCase(response.data.meta_title),
         // description: response.data.meta_desc,
