@@ -5,7 +5,7 @@ export default function AboutHome() {
   return (
     <div className='relative py-12 text-white overflow-clip'>
       <div className='absolute bottom-0 w-full h-full -z-10 bg-gradient'>
-        <img loading='lazy' src={'/assets/abstract.jpg'} alt="bgimg" className='hidden md:block' />
+        {/* <img loading='lazy' src={'/assets/abstract.jpg'} alt="bgimg" className='hidden md:block' /> */}
       </div>
       <div className='max-w-6xl mx-auto sm:px-6'>
         <div className="mb-10 text-3xl font-extrabold text-center ">About Us</div>

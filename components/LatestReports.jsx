@@ -26,10 +26,10 @@ export default function LatestReports() {
     }, []);
 
     return (
-        <div className='relative md:h-[410px] overflow-clip'>
+        <div className='relative md:h-[360px] overflow-clip'>
             <CustomToastContainer />
             <div className='absolute w-full h-full -z-10 bg-gradient'>
-                <img loading='lazy' src="/assets/abstract.jpg" alt="bgimg" className='hidden md:block' />
+                {/* <img loading='lazy' src="/assets/abstract.jpg" alt="bgimg" className='hidden md:block' /> */}
             </div>
             <div className="z-10 max-w-6xl py-12 mx-auto text-white md:pt-10 sm:px-6">
                 <div className='mb-8 text-3xl font-extrabold text-center'>Latest Reports</div>
@@ -67,11 +67,11 @@ export default function LatestReports() {
 
                             {reportList.map((val, index) =>
                                 <SwiperSlide key={index}>
-                                    <div className="mx-2 border rounded-md md:h-60 md:flex overflow-clip">
-                                        <div className="flex items-center justify-center bg-white md:w-2/5 h-[200px] overflow-clip md:h-auto md:p-0 text-slate-400">
+                                    <div className="mx-2 border rounded-md md:flex overflow-clip">
+                                        {/* <div className="flex items-center justify-center bg-white md:w-2/5 h-[200px] overflow-clip md:h-auto md:p-0 text-slate-400">
                                             <img loading="lazy" className='object-contain' src={val.cover_img} alt="" />
-                                        </div>
-                                        <div className="flex flex-col justify-between p-4 text-sm md:text-justify md:w-3/5">
+                                        </div> */}
+                                        <div className="flex flex-col justify-between p-4 text-sm md:text-justify">
                                             <div>
                                                 <div className='mb-2 font-bold'>
                                                     {/* {toCapitalCase(val.url)} */}

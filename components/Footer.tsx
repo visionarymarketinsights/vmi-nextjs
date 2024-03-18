@@ -51,9 +51,10 @@ const Footer = () => {
         <div className="md:flex">
           <div className="md:w-1/2">
             <div className="flex flex-col items-center gap-4 p-8 md:items-start md:px-12 md:py-16 md:flex-row border-slate-700">
-              <div className="flex font-bold md:w-1/2">
+              <div className="flex items-center justify-center font-bold md:w-1/2">
                 <Link href='/'>
-                  <img loading="lazy" src={'/assets/cmilightlogo.png'} alt="logo" className="flex justify-center "></img>
+                  {/* <img loading="lazy" src={'/assets/cmilightlogo.png'} alt="logo" className="flex justify-center "></img> */}
+                  <div className="text-6xl">VMI</div>
                 </Link>
               </div>
               {/* <div className="w-3/5 text-sm md:text-justify">Harvesting market intelligence to sow success, cultivating strategies for growth in dynamic landscapes. Your compass in the evolving business terrain.</div> */}

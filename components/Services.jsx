@@ -6,7 +6,6 @@ export default function Services() {
         <div className='relative text-white overflow-clip'>
 
             <div className='absolute flex items-center justify-between w-full h-full -z-10 bg-gradient'>
-                <img loading='lazy' src="/assets/abstract.jpg" alt="bgimg" className='hidden md:block' />
             </div>
             <div className="px-4 mx-auto max-w-7xl sm:px-6">
                 <div className="pt-12 md:py-12 md:pt-10">

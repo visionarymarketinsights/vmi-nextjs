@@ -46,9 +46,9 @@ export default function Search() {
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-0 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-45 text-white`}>
         <div className={`relative mx-auto py-12 md:h-[75vh] bg-cover overflow-clip bg-bottom flex justify-center items-center bg-gradient text-white`}>
-            <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
+            {/* <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample.webm"} type="video/mp4" src={"/assets/sample.webm"} />
-            </video>
+            </video> */}
             <video className='absolute top-0 z-10 block w-full brightness-[0.4] md:hidden' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample_vertical.webm"} type="video/mp4" src={"/assets/sample_vertical.webm"} />
             </video>
