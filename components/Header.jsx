@@ -100,8 +100,8 @@ export default function Header() {
           <div className="px-4">
             <div className="w-full m-4 text-2xl md:m-0">
               <Link href='/'>
-                {/* <img loading="lazy" src={'/assets/cmidarklogo.png'} alt="logo" className="flex justify-center w-44"></img> */}
-                <div>VMI</div>
+                <img loading="lazy" src={'/assets/vmilogo.png'} alt="logo" className="flex justify-center w-44"></img>
+                {/* <div>VMI</div> */}
               </Link>
             </div>
           </div>

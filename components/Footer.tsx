@@ -51,14 +51,14 @@ const Footer = () => {
         <div className="md:flex">
           <div className="md:w-1/2">
             <div className="flex flex-col items-center gap-4 p-8 md:items-start md:px-12 md:py-16 md:flex-row border-slate-700">
-              <div className="flex items-center justify-center font-bold md:w-1/2">
+              <div className="flex items-center justify-center p-2 font-bold bg-white rounded-md md:w-1/2">
                 <Link href='/'>
-                  {/* <img loading="lazy" src={'/assets/cmilightlogo.png'} alt="logo" className="flex justify-center "></img> */}
-                  <div className="text-6xl">VMI</div>
+                  <img loading="lazy" src={'/assets/vmilogo.png'} alt="logo" className="flex justify-center "></img>
+                  {/* <div className="text-6xl">VMI</div> */}
                 </Link>
               </div>
               {/* <div className="w-3/5 text-sm md:text-justify">Harvesting market intelligence to sow success, cultivating strategies for growth in dynamic landscapes. Your compass in the evolving business terrain.</div> */}
-              <div className="text-2xl leading-relaxed md:w-1/2 ">Navigating Trends, Illuminating Insights</div>
+              <div className="pt-4 pl-4 text-2xl leading-relaxed md:w-1/2 ">Navigating Trends, Illuminating Insights</div>
             </div>
             <div className="flex flex-col gap-4 p-8 text-sm border-t md:gap-36 md:flex-row md:px-12 md:py-16 border-slate-600">
               {/* <div>
@@ -89,7 +89,7 @@ const Footer = () => {
               <div>
                 <div className="mb-4 text-xl font-bold">Connect</div>
                 <div className="mb-2">
-                  <a href="https://www.facebook.com/profile.php?id=61553676880810" target="_blank">
+                  <a href="https://www.facebook.com/" target="_blank">
                     Facebook
                   </a>
                 </div>

@@ -40,7 +40,7 @@ export default function LatestPressRelease() {
                         <div className='flex flex-col flex-wrap justify-between md:gap-0 md:flex-row'>
                             {pressReleaseList.map((res, i) => {
                                 return (
-                                    <div key={i} className="p-4 md:w-1/2">
+                                    <div key={i} className="p-2 md:w-1/2">
                                         {/* <motion.div initial={{ scale: 0.8 }} whileInView={{ scale: 1 }} transition={{ delay: 0.2 }}> */}
                                         <div className="text-left border rounded-md md:flex ">
                                             <div className="relative flex flex-col p-4 text-sm">

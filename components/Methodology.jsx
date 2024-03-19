@@ -24,9 +24,9 @@ export default class Methodology extends Component {
                     At the core of our methodology is primary research, ensuring the credibility and accuracy of our findings. This process involves engaging with key industry participants (KIPs) through in-depth interviews with market leaders, managers, executives, distributors, retailers, and consumers, as well as subject matter experts.
                 </div>
 
-                <div className='flex items-center justify-center'>
+                {/* <div className='flex items-center justify-center'>
                     <img loading='lazy' src="/assets/others/methodology_image.webp" alt="methodology-img" className='w-3/4 py-4' />
-                </div>
+                </div> */}
                 <div className='mb-2'>
                     <div className='font-bold'>
                         In-house Validation
