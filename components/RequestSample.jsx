@@ -99,13 +99,18 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
                         <div className="sm:col-span-2">
                             <textarea {...register('message')} id="message" defaultValue={""} rows={8} className="block p-2.5 w-full text-sm bg-gray-50 rounded-lg outline-0 border border-gray-300 focus:ring-primary-500 focus:border-primary-500 " placeholder="Kindly specify your research needs." />
                         </div>
-                        <div className="flex items-center sm:col-span-2">
+                        <div className="flex sm:col-span-2">
                             <ReCAPTCHA
                                 sitekey={reCaptchaKey}
                                 onChange={onChange}
                                 onErrored={onErrored}
                                 onExpired={onExpired}
                             />
+                            <div className='pl-4 '>
+                                This website is secure and your personal details are safe.
+                                We're committed to keeping your personal details safe and secure.
+                                We do not share your information with anyone.
+                            </div>
                         </div>
                     </div>
                     <div className='flex justify-center'>

@@ -152,14 +152,19 @@
 
 @media screen and (max-width:1300px) {
   .html-content p img {
-      margin: 24px 0;
+    margin: 24px 0 24px 100px;
   }
-
+  
   .html-content td {
-      min-width: 50%;
+    min-width: 50%;
   }
 }
 
+@media screen and (max-width:900px) {
+  .html-content p img {
+    margin: 24px 0;
+  }
+}
 
 
 /* Button Animation Start */
