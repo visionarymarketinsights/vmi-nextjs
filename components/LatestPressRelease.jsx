@@ -47,7 +47,7 @@ export default function LatestPressRelease() {
                                                 <div className='text-xs font-semibold text-right'>
                                                     {moment(res.created_date).format('Do MMM YYYY')}
                                                 </div>
-                                                <div className='py-2 font-semibold'>
+                                                <div className='py-2 text-lg font-semibold'>
                                                     {toCapitalCase(res.url)}
                                                 </div>
                                                 <div className='h-12 mb-8 text-xs md:text-justify'>

@@ -7,13 +7,14 @@ import LatestReports from '@/components/LatestReports'
 import Insights from '@/components/Insights'
 import LatestPressRelease from '@/components/LatestPressRelease'
 import Services from '@/components/Services'
+import CategoryMain from '@/components/CategoryMain'
 
 export default function Home() {
   return (
 
     <section className="relative" >
       <h1 className='fixed text-transparent'>Visionary Market Insights</h1>
-      <Search />
+      <CategoryMain />
       <Insights />
       <LatestReports />
       < LatestPressRelease />
