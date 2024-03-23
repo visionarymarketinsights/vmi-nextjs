@@ -106,7 +106,7 @@ const Footer = () => {
       </div>
       <div className="px-12 py-4 text-white bg-[#4E5763] flex justify-between">
         <div>
-          Copyright © Transparency Market Research, Inc. All Rights reserved
+          Copyright © Visionary Market Insights, Inc. All Rights reserved
         </div>
         <img src="https://www.transparencymarketresearch.com/assets/images/paypalLogo.svg" className="h-6" alt="" />
       </div>
