@@ -26,13 +26,13 @@ export default function LatestReports() {
     }, []);
 
     return (
-        <div className='relative md:h-[360px] overflow-clip'>
+        <div className='relative md:h-[360px] overflow-clip bg-gradient'>
             <CustomToastContainer />
-            <div className='absolute w-full h-full -z-10 bg-gradient'>
+            <div className='absolute w-full h-full -z-10 '>
                 {/* <img loading='lazy' src="/assets/abstract.jpg" alt="bgimg" className='hidden md:block' /> */}
             </div>
-            <div className="z-10 max-w-6xl py-12 mx-auto text-white md:pt-10 sm:px-6">
-                <div className='mb-8 text-3xl font-extrabold text-center'>Latest Reports</div>
+            <div className="z-10 max-w-6xl py-12 mx-auto md:pt-10 sm:px-6">
+                <div className='mb-8 text-3xl font-extrabold text-center text-slate-600'>Trending Reports</div>
                 <motion.div initial={{ opacity: 0, y: '25%' }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
                     <div className="flex items-center justify-between mt-6">
                         <div className="p" onClick={() => { my_swiper.slidePrev() }}>
@@ -83,7 +83,7 @@ export default function LatestReports() {
                                             </div>
                                             <div className='flex justify-center mt-8 md:mt-0 md:justify-end'>
                                                 <Link href={`/report/${val.url}`}>
-                                                    <button type="button" className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white transition-all bg-indigo-500 border border-transparent rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+                                                    <button type="button" className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white transition-all bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
                                                         Read Me
                                                     </button>
                                                 </Link>

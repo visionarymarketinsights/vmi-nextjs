@@ -16,13 +16,13 @@ export default function Home() {
     <section className="relative" >
       <h1 className='fixed text-transparent'>Visionary Market Insights</h1>
       <Banner />
-      <CategoryMain />
       <Insights />
       <LatestReports />
-      < LatestPressRelease />
+      <CategoryMain />
       <Services />
-      <Testimonial />
+      <LatestPressRelease />
       <AboutHome />
+      <Testimonial />
       <Clients />
     </section >
   )

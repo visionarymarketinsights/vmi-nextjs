@@ -77,7 +77,7 @@ export default async function Report({ params, searchParams }) {
                     <div className='items-center justify-between md:flex'>
                         <div className="w-full">
                             {/* <div className='p-4 text-white bg-[#2C3E50]'> */}
-                            <div className='p-4 font-semibold text-black bg-tertiary'>
+                            <div className='p-4 font-semibold text-black bg-slate-200'>
                                 {
                                     report.title &&
                                     <div>

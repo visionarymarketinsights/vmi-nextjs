@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 export default function AboutHome() {
   return (
-    <div className='relative py-12 text-white overflow-clip'>
+    <div className='relative py-12 overflow-clip'>
       <div className='absolute bottom-0 w-full h-full -z-10 bg-gradient'>
         {/* <img loading='lazy' src={'/assets/abstract.jpg'} alt="bgimg" className='hidden md:block' /> */}
       </div>

@@ -91,13 +91,11 @@ export default function ReportBuyNow({ report, url, section }) {
   return (
     <div>
       <div className={`${section !== 'Request' && 'md:sticky top-0'} p-4 relative justify-between gap-2 bg-white md:flex`}>
-        <Link href={'/report/' + report?.url} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${!section ? 'font-bold bg-primary text-white' : ''}`}>Description</Link>
-        <Link href={'/report/' + report?.url + '?section=Table'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Table' ? 'font-bold bg-primary text-white' : ''}`}>Table Of Content</Link>
-        <Link href={'/report/' + report?.url + '?section=Highlights'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Highlights' ? 'font-bold bg-primary text-white' : ''}`}>Highlights</Link>
-        <Link href={'/report/' + report?.url + '?section=Methodology'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Methodology' ? 'font-bold bg-primary text-white' : ''}`}>Methodology</Link>
-        <Link href={'/report/' + report?.url + '?section=Request'} className={`codepen-button md:w-1/4 w-full md:mb-0 mb-4 text-sm box-border relative z-10 flex justify-center items-center border rounded-sm cursor-pointer ${section === 'Request' ? 'font-bold' : ''}`}>
-          <span className='py-2 text-center'>Request Sample</span>
-        </Link>
+        <Link href={'/report/' + report?.url} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${!section ? 'font-bold bg-orange-500 text-white' : ''}`}>Description</Link>
+        <Link href={'/report/' + report?.url + '?section=Table'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Table' ? 'font-bold bg-orange-500 text-white' : ''}`}>Table Of Content</Link>
+        <Link href={'/report/' + report?.url + '?section=Highlights'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Highlights' ? 'font-bold bg-orange-500 text-white' : ''}`}>Highlights</Link>
+        <Link href={'/report/' + report?.url + '?section=Methodology'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Methodology' ? 'font-bold bg-orange-500 text-white' : ''}`}>Methodology</Link>
+        <Link href={'/report/' + report?.url + '?section=Request'} className={`md:w-1/4 py-3 md:mb-0 mb-4 duration-200 text-sm flex justify-center items-center border rounded-sm cursor-pointer  ${section === 'Request' ? 'font-bold bg-orange-500 text-white' : ''}`}>  Request Sample</Link>
       </div>
       <div className='px-4'>
         {!section &&

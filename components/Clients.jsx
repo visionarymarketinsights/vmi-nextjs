@@ -16,7 +16,7 @@ export default function Clients() {
   ];
 
   return (
-    <div className="py-12 mx-auto md:py-10">
+    <div className="py-12 mx-auto md:py-10 bg-gradient">
       <div className="">
         {/* Section header */}
         <div className="max-w-3xl pb-12 mx-8 text-center md:mx-auto md:pb-4">
@@ -25,7 +25,7 @@ export default function Clients() {
           <p className="text-gray-600 md:text-xl" data-aos="zoom-y-out">Trusted by industry leaders, our insights drive success, empowering businesses to thrive in dynamic market landscapes with precision.</p>
         </div>
         {/* <div className="select-none mt-6 mb-3 relative m-auto w-50vw overflow-hidden bg-white before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] after:content-['']"> */}
-        <div className="select-none mt-6 mb-3 relative m-auto w-50vw overflow-hidden bg-white before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px]  before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100  after:content-['']">
+        <div className="select-none mt-6 mb-3 relative m-auto w-50vw overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px]  before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100  after:content-['']">
           <div className="animate-infinite-slider flex w-[calc(500px*10)]">
             {LOGOS.map((logo, index) => (
               <div

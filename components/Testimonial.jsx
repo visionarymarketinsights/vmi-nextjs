@@ -39,7 +39,7 @@ export default function Testimonial() {
                     >
 
                         {testimonials.map((testimonial, index) =>
-                            <div key={index} onClick={() => { changeSlider(index) }} className={`flex items-center gap-4 mb-4 duration-500 border border-b-4 rounded-md shadow-sm hover:shadow-xl cursor-pointer ${testimonial.selected && 'border-b-primary'}`}>
+                            <div key={index} onClick={() => { changeSlider(index) }} className={`flex items-center gap-4 mb-4 duration-500 border border-b-4 rounded-md shadow-sm hover:shadow-xl cursor-pointer ${testimonial.selected && 'border-b-orange-500'}`}>
                                 {/* <div className="rounded-full h-14 w-14 bg-slate-300"></div> */}
                                 <div className='mx-4 my-2'>
                                     <div>{testimonial.company}</div>

@@ -63,14 +63,14 @@ export default function ReportBuyNow({ report }) {
       <div className='flex flex-col gap-2 mt-2'>
         {/* <button className='w-full py-2 font-semibold text-white bg-blue-500 rounded-md text-md'>Buy Now</button>
 <button className='w-full py-2 font-semibold text-white bg-blue-500 rounded-md text-md'>Inquiry Before Buying</button> */}
-        <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`} className="inline-flex items-center justify-center font-semibold codepen-button">
-          <span className='flex items-center justify-center py-2 text-center'>
+        <button type="button" className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+          <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`}>
             Buy Now
-          </span>
-        </Link>
-        <button type="button" onClick={handleDiscountFormOpen} className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all bg-indigo-500 border border-transparent rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
-          Request Discount
+          </Link>
         </button>
+        {/* <button type="button" onClick={handleDiscountFormOpen} className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+          Request Discount
+        </button> */}
       </div>
       <Modal
         open={discountFormOpen}

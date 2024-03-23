@@ -25,11 +25,11 @@ export default function LatestPressRelease() {
     }, []);
 
     return (
-        <div className="py-12 md:h-[600px]">
+        <div className="py-12 md:h-[600px] ">
             <CustomToastContainer />
             <div className="max-w-6xl px-4 mx-auto sm:px-6">
                 <div className="mx-auto text-center ">
-                    <h2 className="mb-6 text-3xl font-extrabold text-slate-600">Latest Press Release</h2>
+                    <h2 className="mb-6 text-3xl font-extrabold text-slate-600">Trending Press Release</h2>
 
                     <motion.div
                         initial={{ opacity: 0, y: '25%' }}
@@ -42,7 +42,7 @@ export default function LatestPressRelease() {
                                 return (
                                     <div key={i} className="p-2 md:w-1/2">
                                         {/* <motion.div initial={{ scale: 0.8 }} whileInView={{ scale: 1 }} transition={{ delay: 0.2 }}> */}
-                                        <div className="text-left border rounded-md md:flex ">
+                                        <div className="text-left bg-white border rounded-md md:flex ">
                                             <div className="relative flex flex-col p-4 text-sm">
                                                 <div className='text-xs font-semibold text-right'>
                                                     {moment(res.created_date).format('Do MMM YYYY')}
@@ -55,7 +55,7 @@ export default function LatestPressRelease() {
                                                 </div>
                                                 <div className='absolute bottom-[-10px] right-[35%] md:right-[20px] flex justify-center md:justify-end'>
                                                     <Link href={`/press-release/${res.url}`}>
-                                                        <button type="button" className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white transition-all bg-indigo-500 border border-transparent rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+                                                        <button type="button" className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white transition-all bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
                                                             Read Me
                                                         </button>
                                                     </Link>
