@@ -15,7 +15,8 @@ export default function Home() {
 
     <section className="relative" >
       <h1 className='fixed text-transparent'>Visionary Market Insights</h1>
-      <Banner />
+      <Search />
+      {/* <Banner /> */}
       <Insights />
       <TrendingReports />
       <CategoryMain />

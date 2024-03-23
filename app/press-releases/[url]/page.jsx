@@ -93,7 +93,7 @@ export default function PressReleases({ params }) {
         <div>
             <CustomToastContainer />
             <h1 className='fixed text-transparent'>{category.name && category.name.toUpperCase()}</h1>
-            <div className="mb-6 md:text-3xl overflow-clip relative text-lg h-[200px] md:h-[300px] font-extrabold flex items-center justify-center bg-gradient text-white">
+            <div className="mb-6 md:text-3xl overflow-clip relative text-lg h-[200px] md:h-[150px] font-extrabold flex items-center justify-center bg-gradient text-white">
                 {category.back_cover && <img loading="lazy" className='absolute flex items-center justify-center w-auto h-auto md:object-contain md:w-full' src={'/assets/' + category.back_cover.replace('.jpg', '.webp')} alt="" />}
                 {url === 'all-industries' && <img loading="lazy" className='absolute flex items-center justify-center w-auto h-auto md:object-contain md:w-full' src={'/assets/category_covers/all.webp'} alt="" />}
                 {

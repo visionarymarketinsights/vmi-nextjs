@@ -29,7 +29,7 @@ export default function AboutHome() {
 
             </div>
             <div className="p-10 pb-0 md:p-0 md:w-1/2">
-              <img loading="lazy" className='object-cover w-full rounded-lg h-72 brightness-110' src={'/assets/blurry/about_img.webp'} alt="about-img" srcSet="" />
+              <img loading="lazy" className='object-cover object-top w-full rounded-lg h-72 brightness-110' src={'/assets/others/vmiabout.jpg'} alt="about-img" srcSet="" />
             </div>
           </div>
         </motion.div>
