@@ -3,9 +3,9 @@ import Search from '@/components/Search'
 import Testimonial from '@/components/Testimonial'
 import Clients from '@/components/Clients'
 import AboutHome from '@/components/AboutHome'
-import LatestReports from '@/components/LatestReports'
+import TrendingReports from '@/components/TrendingReports'
 import Insights from '@/components/Insights'
-import LatestPressRelease from '@/components/LatestPressRelease'
+import TrendingPressRelease from '@/components/TrendingPressRelease'
 import Services from '@/components/Services'
 import CategoryMain from '@/components/CategoryMain'
 import Banner from '@/components/Banner'
@@ -17,10 +17,10 @@ export default function Home() {
       <h1 className='fixed text-transparent'>Visionary Market Insights</h1>
       <Banner />
       <Insights />
-      <LatestReports />
+      <TrendingReports />
       <CategoryMain />
       <Services />
-      <LatestPressRelease />
+      <TrendingPressRelease />
       <AboutHome />
       <Testimonial />
       <Clients />

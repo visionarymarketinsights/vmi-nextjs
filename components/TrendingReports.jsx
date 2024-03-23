@@ -8,12 +8,12 @@ import CustomToastContainer from '@/utils/CustomToastContainer';
 import moment from 'moment';
 import { motion } from "framer-motion"
 
-export default function LatestPressRelease() {
+export default function TrendingReports() {
 
     const [pressReleaseList, setPressReleaseList] = useState([]);
 
     useEffect(() => {
-        axios.get(`${apiUrl}/press_release/latest?page=1&per_page=6`).then(res => {
+        axios.get(`${apiUrl}/reports/latest?page=1&per_page=6`).then(res => {
             let reportList = res.data.data;
             if (reportList.length) {
                 setPressReleaseList(reportList)
@@ -25,11 +25,11 @@ export default function LatestPressRelease() {
     }, []);
 
     return (
-        <div className="py-12 md:h-[600px] ">
+        <div className="py-12 md:h-[740px] bg-gradient">
             <CustomToastContainer />
             <div className="max-w-6xl px-4 mx-auto sm:px-6">
                 <div className="mx-auto text-center ">
-                    <h2 className="mb-6 text-3xl font-extrabold text-slate-600">Trending Press Release</h2>
+                    <h2 className="mb-6 text-3xl font-extrabold text-slate-600">Trending Reports</h2>
 
                     <motion.div
                         initial={{ opacity: 0, y: '25%' }}
