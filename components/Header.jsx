@@ -129,6 +129,10 @@ export default function Header() {
                   {/* <div className="relative">
                     <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/">Home</Link>
                   </div> */}
+                  
+                  <div className="relative">
+                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' href="/">Home</Link>
+                  </div>
                   <div className="relative cursor-pointer">
                     <div className='flex items-center gap-2 py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => setCategoryOpen(!isCategoryOpen)}>
                       <div>Category</div>
