@@ -90,7 +90,7 @@ export default function BuyNow({ params }) {
                                                 </div>
                                                 {
                                                     license.price &&
-                                                    <div className='font-bold text-primary'>
+                                                    <div className='font-bold text-cyan-800'>
                                                         {'$' + discountedPrice(getPriceInNumber(license.price))}
                                                     </div>
                                                 }

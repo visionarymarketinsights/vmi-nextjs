@@ -120,14 +120,14 @@ export default function PressReleases({ params }) {
                                     <div className="mb-2 text-xl font-semibold">By Industry</div>
                                     <div className='flex flex-col gap-2'>
                                         <Link href={`/press-releases/all-industries`} >
-                                            {/* <div className={`py-2 text-sm cursor-pointer hover:text-primary ${url === 'all-industries' && 'text-primary'} border-b-2`}>All Industries {totalReportCount ? `(${totalReportCount})` : ''}</div> */}
-                                            <div className={`py-2 text-sm cursor-pointer hover:text-primary ${url === 'all-industries' && 'text-primary'} border-b-2`}>All Industries</div>
+                                            {/* <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${url === 'all-industries' && 'text-cyan-800'} border-b-2`}>All Industries {totalReportCount ? `(${totalReportCount})` : ''}</div> */}
+                                            <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${url === 'all-industries' && 'text-cyan-800'} border-b-2`}>All Industries</div>
                                         </Link>
                                         {categoryList.map((res, key) => {
                                             return (
                                                 <Link key={key} href={`/press-releases/${res.category_url}`} onClick={scrollToTop}>
-                                                    {/* <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === url && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name} ({res.count})</div> */}
-                                                    <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === url && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div>
+                                                    {/* <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res.category_url === url && 'text-cyan-800'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name} ({res.count})</div> */}
+                                                    <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res.category_url === url && 'text-cyan-800'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div>
                                                 </Link>
                                             )
                                         })}
@@ -184,8 +184,8 @@ export default function PressReleases({ params }) {
                                                     {moment(res.created_date).format('Do MMM YYYY')}
                                                 </div>
                                                 <div className='flex flex-col gap-2 p-4 mb-6 border-2 rounded-md cursor-pointer group-hover:bg-slate-50'>
-                                                    {/* <div className="font-semibold group-hover:text-primary group-hover:underline">{res.title.split(' ').filter((r, i) => i < 20).join(' ')}...</div> */}
-                                                    <div className="font-semibold group-hover:text-primary group-hover:underline">{toCapitalCase(res.url)}</div>
+                                                    {/* <div className="font-semibold group-hover:text-cyan-800 group-hover:underline">{res.title.split(' ').filter((r, i) => i < 20).join(' ')}...</div> */}
+                                                    <div className="font-semibold group-hover:text-cyan-800 group-hover:underline">{toCapitalCase(res.url)}</div>
                                                     <div className="text-xs">{res.summary}...</div>
                                                 </div>
                                             </div>

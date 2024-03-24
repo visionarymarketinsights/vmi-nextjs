@@ -47,8 +47,9 @@ export default function ReportBuyNow({ report }) {
       {
         priceList.map((res, i) => {
           return (
-            <div key={i} onClick={() => setLicense(res.license)} className={`flex justify-between cursor-default hover:text-primary ${license == res.license && 'text-primary'} p-1 rounded-sm`}>
+            <div key={i} onClick={() => setLicense(res.license)} className={`flex justify-between cursor-default hover:text-cyan-800 ${license == res.license && 'text-cyan-800'} p-1 rounded-sm`}>
               <div className='flex gap-2'>
+                <input type="radio" checked={license == res.license} name="price-radio" id="" />
                 {res.license}</div>
               <div className='relative font-bold'>
                 {'$' + discountedPrice(getPriceInNumber(res.price))}
@@ -63,12 +64,22 @@ export default function ReportBuyNow({ report }) {
       <div className='flex flex-col gap-2 mt-2'>
         {/* <button className='w-full py-2 font-semibold text-white bg-blue-500 rounded-md text-md'>Buy Now</button>
 <button className='w-full py-2 font-semibold text-white bg-blue-500 rounded-md text-md'>Inquiry Before Buying</button> */}
-        <button type="button" className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+        <button type="button" className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
           <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`}>
             Buy Now
           </Link>
         </button>
-        {/* <button type="button" onClick={handleDiscountFormOpen} className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+        <button type="button" className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+          <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`}>
+            Enquire Now
+          </Link>
+        </button>
+        <button type="button" className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+          <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`}>
+            Ask For Discount
+          </Link>
+        </button>
+        {/* <button type="button" onClick={handleDiscountFormOpen} className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
           Request Discount
         </button> */}
       </div>

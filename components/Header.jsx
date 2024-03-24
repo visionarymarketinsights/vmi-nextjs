@@ -197,7 +197,7 @@ export default function Header() {
                 return (
                   <Link className="group" href={`/report/${r.url}`} key={i} onClick={() => { setReportList([]); setKeyword('') }}>
                     <div key={1} className="p-2 text-sm border rounded-md border-slate-300 hover:bg-slate-100">
-                      <div className="font-semibold group-hover:text-primary group-hover:underline">{r.title.split('').filter((res, i) => i < 160).join('')}...</div>
+                      <div className="font-semibold group-hover:text-cyan-800 group-hover:underline">{r.title.split('').filter((res, i) => i < 160).join('')}...</div>
                       <div className="text-slate-600">{r.summary}</div>
                     </div>
                   </Link>

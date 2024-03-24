@@ -50,7 +50,7 @@ const SearchList = ({ params }) => {
                     <Link href={`/report/${res.url}`} key={key}>
                       <div className='group' >
                         <div className={`flex flex-col gap-2 p-4 ${key !== reportList.length - 1 && 'border-b-2'} cursor-pointer group-hover:bg-slate-50`}>
-                          <div className="font-semibold group-hover:text-primary group-hover:underline">{res.title.split('').filter((res, i) => i < 160).join('')}... </div>
+                          <div className="font-semibold group-hover:text-cyan-800 group-hover:underline">{res.title.split('').filter((res, i) => i < 160).join('')}... </div>
                           <div className="">{res.summary}</div>
                           <div className='flex gap-4 text-sm'>
                             <div className='pr-4 border-r-2 border-gray'>{moment(res.created_date).format('MMMM YYYY')}</div>

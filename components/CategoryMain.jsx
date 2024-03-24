@@ -19,7 +19,7 @@ export default function CategoryMain() {
               categoryList.map((r, i) => {
                 return (
                   i < 7 &&
-                  <div className={`relative flex w-4/5 gap-2 p-3 font-semibold text-center text-black duration-150 border rounded-sm cursor-pointer hover:shadow-lg hover:bg-white hover:text-orange-500 hover:border-orange-500 ${ (i==2 ?'bg-white text-orange-500 border-orange-500 shadow-lg':'bg-gradient')}`}>
+                  <div className={`relative flex w-4/5 gap-2 p-3 font-semibold text-center text-black duration-150 border rounded-sm cursor-pointer hover:shadow-lg hover:bg-white hover:text-cyan-800 hover:border-cyan-800 ${ (i==2 ?'bg-white text-cyan-800 border-cyan-800 shadow-lg':'bg-gradient')}`}>
                     <div className='p-1 rounded-md bg-slate-500'>
                       <img loading="lazy" src={'/assets/' + r.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
                     </div>
@@ -33,27 +33,27 @@ export default function CategoryMain() {
           <div className="text-black border rounded-sm shadow-lg bg-gradient md:p-0 md:w-2/3">
             <div className="pt-4 text-lg text-xl font-semibold text-center">- Automation -</div>
             <div className='grid grid-cols-2 gap-1 p-4 md:gap-2'>
-              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-orange-500 border-slate-200'>
+              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-cyan-800 border-slate-200'>
                 <div className="font-semibold">Automotive Coil Spring Market</div>
                 <div className="text-sm">Surge in demand for improved suspension systems in vehicles and rise</div>
               </div>
-              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-orange-500 border-slate-200'>
+              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-cyan-800 border-slate-200'>
                 <div className="font-semibold">Automotive Coil Spring Market</div>
                 <div className="text-sm">Surge in demand for improved suspension systems in vehicles and rise</div>
               </div>
-              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-orange-500 border-slate-200'>
+              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-cyan-800 border-slate-200'>
                 <div className="font-semibold">Automotive Coil Spring Market</div>
                 <div className="text-sm">Surge in demand for improved suspension systems in vehicles and rise</div>
               </div>
-              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-orange-500 border-slate-200'>
+              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-cyan-800 border-slate-200'>
                 <div className="font-semibold">Automotive Coil Spring Market</div>
                 <div className="text-sm">Surge in demand for improved suspension systems in vehicles and rise</div>
               </div>
-              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-orange-500 border-slate-200'>
+              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-cyan-800 border-slate-200'>
                 <div className="font-semibold">Automotive Coil Spring Market</div>
                 <div className="text-sm">Surge in demand for improved suspension systems in vehicles and rise</div>
               </div>
-              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-orange-500 border-slate-200'>
+              <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-cyan-800 border-slate-200'>
                 <div className="font-semibold">Automotive Coil Spring Market</div>
                 <div className="text-sm">Surge in demand for improved suspension systems in vehicles and rise</div>
               </div>
@@ -62,7 +62,7 @@ export default function CategoryMain() {
               {/* <div className='p-3 m-4 font-semibold duration-150 rounded-md cursor-pointer md:w-1/2 hover:150-blue-600 bg-gradient'>
                 Browse All Automation Reports
               </div> */}
-              <button type="button" className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white transition-all bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+              <button type="button" className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
                 Browse All Automation Reports
               </button>
             </div>

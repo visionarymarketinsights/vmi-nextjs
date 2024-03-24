@@ -78,7 +78,7 @@ export default function Search() {
                                 placeholder="Search reports.." />
                         </div>
                         {/* <button className='px-8 m-1 text-sm font-bold tracking-wide text-white rounded-md bg-primary'>Search</button> */}
-                        <button onClick={handleSearch} type="submit" className="inline-flex items-center justify-center gap-2 px-6 py-2 m-1 font-semibold text-white transition-all bg-orange-500 border border-transparent rounded-md hover:bg-orange-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2"
+                        <button onClick={handleSearch} type="submit" className="inline-flex items-center justify-center gap-2 px-6 py-2 m-1 font-semibold text-white transition-all bg-cyan-800 border border-transparent rounded-md hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
 

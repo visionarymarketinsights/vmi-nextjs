@@ -28,7 +28,7 @@ export default async function RelatedReports({ category_url, currentReportId }) 
               // <Link key={i} href={`/report/${r.url}`} onClick={() => window.location.reload()}>
               <Link key={i} href={`/report/${r.url}`}>
                 <div className='flex flex-col px-4 py-2 border-t-2 cursor-pointer group hover:bg-slate-100'>
-                  <div className="font-bold group-hover:text-primary">{r.url?.split('-').map(res => res[0].toUpperCase() + res.slice(1)).join(' ')}</div>
+                  <div className="font-bold group-hover:text-cyan-800">{r.url?.split('-').map(res => res[0].toUpperCase() + res.slice(1)).join(' ')}</div>
                   <div className="text-sm">{r.summary.split(' ').filter((s, j) => j < 15).join(' ')}...</div>
                 </div>
               </Link>
@@ -39,7 +39,7 @@ export default async function RelatedReports({ category_url, currentReportId }) 
           relatedReportList.length === 0
           &&
           <div className='flex flex-col px-2 pt-4 border-t-2 cursor-pointer group hover:bg-slate-100'>
-            <div className="font-bold group-hover:text-primary">
+            <div className="font-bold group-hover:text-cyan-800">
               <Skeleton count={2} />
             </div>
           </div>

@@ -78,7 +78,7 @@ export default function Contact() {
           <div className="flex flex-wrap py-10 mx-4 md:py-20 md:mx-10 lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] lg:mb-0">
-                <span className="block mb-4 text-base font-semibold text-primary">Contact Us</span>
+                <span className="block mb-4 text-base font-semibold text-cyan-800">Contact Us</span>
                 <h2 className="mb-6 text-2xl md:text-[32px] font-bold text-[#652E7E] uppercase text-dark sm:text-[40px] lg:text-[28px] xl:text-[32px]">
                   Get in Touch with <br /> Visionary Market Insights
                 </h2>
@@ -86,7 +86,7 @@ export default function Contact() {
                   At Visionary Market Insights, we value your inquiries, feedback, and the opportunity to connect with you. Whether you have questions, require information, or wish to explore potential collaborations, we are here to assist you.
                 </p>
                 <div className="mb-8 flex w-full max-w-[500px]">
-                  <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                  <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-cyan-800 sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width={24}
                       height={24}
@@ -116,7 +116,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="mb-8 flex w-full max-w-[370px]">
-                  <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                  <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-cyan-800 sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width={24}
                       height={26}
@@ -139,7 +139,7 @@ export default function Contact() {
                 </div>
                 <a href="mailto:sales@visionarymarketinsights.com">
                   <div className="mb-8 flex w-full max-w-[500px]">
-                    <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                    <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-cyan-800 sm:h-[70px] sm:max-w-[70px]">
                       <svg
                         width={28}
                         height={19}

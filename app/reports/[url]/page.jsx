@@ -94,14 +94,14 @@ const AllReport = ({ params }) => {
                   <div className="mb-2 text-xl font-semibold">Reports by Industry</div>
                   <div className='flex flex-col gap-2'>
                     <Link href={`/reports/all-industries`} >
-                      {/* <div className={`py-2 text-sm cursor-pointer hover:text-primary  border-b-2 ${url === 'all-industries' && 'text-primary'}`}>All Industries {totalReportCount ? `(${totalReportCount})` : ''}</div> */}
-                      <div className={`py-2 text-sm cursor-pointer hover:text-primary  border-b-2 ${url === 'all-industries' && 'text-primary'}`}>All Industries</div>
+                      {/* <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800  border-b-2 ${url === 'all-industries' && 'text-cyan-800'}`}>All Industries {totalReportCount ? `(${totalReportCount})` : ''}</div> */}
+                      <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800  border-b-2 ${url === 'all-industries' && 'text-cyan-800'}`}>All Industries</div>
                     </Link>
                     {categoryList.map((res, key) => {
                       return (
                         <Link key={key} href={`/reports/${res.category_url}`} onClick={scrollToTop}>
-                          {/* <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === String(url) && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name} ({res.count})</div> */}
-                          <div className={`py-2 text-sm cursor-pointer hover:text-primary ${res.category_url === String(url) && 'text-primary'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div>
+                          {/* <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res.category_url === String(url) && 'text-cyan-800'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name} ({res.count})</div> */}
+                          <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res.category_url === String(url) && 'text-cyan-800'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div>
                         </Link>
                       )
                     })}
@@ -152,7 +152,7 @@ const AllReport = ({ params }) => {
                     <Link href={`/report/${res.url}`} key={key}>
                       <div className='group' >
                         <div className='flex flex-col gap-2 p-4 border-b-2 cursor-pointer group-hover:bg-slate-50'>
-                          <div className="font-semibold group-hover:text-primary group-hover:underline">{res.title.split('').filter((res, i) => i < 160).join('')}... </div>
+                          <div className="font-semibold group-hover:text-cyan-800 group-hover:underline">{res.title.split('').filter((res, i) => i < 160).join('')}... </div>
                           <div className="">{res.summary}...</div>
                           <div className='flex gap-4 text-sm'>
                             <div className='pr-4 border-r-2 border-gray'>{moment(res.created_date).format('MMMM YYYY')}</div>
