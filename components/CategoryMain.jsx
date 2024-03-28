@@ -19,7 +19,7 @@ export default function CategoryMain() {
               categoryList.map((r, i) => {
                 return (
                   i < 7 &&
-                  <div className={`relative flex w-4/5 gap-2 p-3 font-semibold text-center text-black duration-150 border rounded-sm cursor-pointer hover:shadow-lg hover:bg-white hover:text-cyan-800 hover:border-cyan-800 ${ (i==2 ?'bg-white text-cyan-800 border-cyan-800 shadow-lg':'bg-gradient')}`}>
+                  <div className={`relative flex items-center w-4/5 gap-2 p-3 font-semibold text-center text-sm text-black duration-150 border rounded-sm cursor-pointer hover:shadow-lg hover:bg-white hover:text-cyan-800 hover:border-cyan-800 ${ (i==2 ?'bg-white text-cyan-800 border-cyan-800 shadow-lg':'bg-gradient')}`}>
                     <div className='p-1 rounded-md bg-slate-500'>
                       <img loading="lazy" src={'/assets/' + r.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
                     </div>

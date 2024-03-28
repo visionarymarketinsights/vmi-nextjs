@@ -10,7 +10,7 @@ export default function OfferingMain() {
   return (
     <div>
         <h1 className='fixed text-transparent'>Offerings</h1>
-            <div className='flex justify-between max-w-screen-xl gap-2 px-4 py-4 mx-auto md:gap-8 lg:py-12 lg:px-6'>
+            {/* <div className='flex justify-between max-w-screen-xl gap-2 px-4 py-4 mx-auto md:gap-8 lg:py-12 lg:px-6'>
                 <div className='w-1/3 duration-200 cursor-pointer md:hover:scale-95'>
                     <div onClick={() => scrollTo('section-1')} className='overflow-clip relative md:p-8 p-4 text-xs md:text-3xl font-bold  rounded-md flex justify-center md:justify-end items-end text-white h-20 md:h-[360px]'>
                         <img loading="lazy" className='absolute top-0 right-0 object-cover h-full w-100 -z-10 ' src="/assets/blurry/syndicate1.webp" alt="" />
@@ -29,8 +29,8 @@ export default function OfferingMain() {
                         <span className='z-10'>Consulting</span>
                     </div>
                 </div>
-            </div>
-            <section id='section-1' className="bg-gray-50 -800">
+            </div> */}
+            <section id='section-1' className="bg-gray-50">
                 <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
                     <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                         <div className="text-gray-500 sm:text-lg -400">
@@ -79,7 +79,7 @@ export default function OfferingMain() {
                     </div>
                 </div>
             </section>
-            <section id='section-2' className="bg-gray-50 -800">
+            <section id='section-2' className="bg-gray-50">
                 <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
 
                     <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
@@ -121,7 +121,7 @@ export default function OfferingMain() {
                     </div>
                 </div>
             </section>
-            <section id='section-3' className="bg-gray-50 -800">
+            <section id='section-3' className="bg-gray-50">
                 <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
                     <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                         <div className="text-gray-500 sm:text-lg -400">
