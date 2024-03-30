@@ -22,7 +22,7 @@ export default function Contact() {
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <span className="block mb-4 text-base font-semibold text-cyan-800">Contact Us</span>
-                <h1 className="mb-6 text-2xl md:text-[32px] font-bold text-[#652E7E] uppercase text-dark sm:text-[40px] lg:text-[28px] xl:text-[32px]">
+                <h1 className="mb-6 text-2xl md:text-[32px] font-bold text-cyan-800 uppercase text-dark sm:text-[40px] lg:text-[28px] xl:text-[32px]">
                   Get in Touch with <br /> Visionary Market Insights
                 </h1>
                 <p className="text-base leading-relaxed mb-9 text-body-color">
@@ -40,7 +40,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <h4 className="text-[#652E7E] mb-1 text-xl font-bold text-dark">
+                    <h4 className="mb-1 text-xl font-bold text-cyan-800 text-dark">
                       Our Location
                     </h4>
 
@@ -72,7 +72,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <h4 className="text-[#652E7E] mb-1 text-xl font-bold text-dark">
+                    <h4 className="mb-1 text-xl font-bold text-cyan-800 text-dark">
                       Phone Number
                     </h4>
                     <p className="text-base text-body-color">
@@ -93,7 +93,7 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div className="w-full">
-                      <h4 className="text-[#652E7E] mb-1 text-xl font-bold text-dark">
+                      <h4 className="mb-1 text-xl font-bold text-cyan-800 text-dark">
                         Email Address
                       </h4>
                       <p className="text-sm text-blue-500 underline text-body-color md:text-base ">

@@ -71,7 +71,8 @@ const AllReport = ({ params }) => {
     <div>
       <CustomToastContainer />
       <h1 className='fixed text-transparent'>{category.name && category.name.toUpperCase()}</h1>
-      <div className='text-white bg-[#006388]'>
+      <div className='text-white bg-[#006388] relative'>
+      <img loading="lazy" className='absolute top-0 object-cover w-full h-full' src={'/assets/vmi/head-banner.jpg'} alt="bg-banner-img" srcSet="" />
         <div className="relative flex items-center max-w-6xl px-4 py-6 mx-auto mb-6 text-lg font-semibold sm:px-6 md:text-2xl overflow-clip">
           <div className='flex items-center gap-2'>
           {category.icon && <img loading="lazy" src={'/assets/' + category.icon} alt='category-icon' className="flex justify-center w-6 h-6 duration-100 "></img>}

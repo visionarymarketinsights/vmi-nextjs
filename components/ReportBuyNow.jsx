@@ -40,16 +40,18 @@ export default function ReportBuyNow({ report }) {
   const [license, setLicense] = useState('Single User License');
   return (
 
-    <div className='flex flex-col gap-4 px-4 py-6 border rounded-md shadow-lg '>
+    <div className='flex flex-col gap-2 px-4 py-6 border rounded-md shadow-lg '>
+      <div className='text-slate-500'>Choose License Type</div>
+      <img loading="lazy" className='w-full h-full pb-2 brightness-110' src={'/assets/vmi/payment-modes.jpg'} alt="bg-banner-img" srcSet="" />
       {
         priceList.length == 0 && <Skeleton count={2} />
       }
       {
         priceList.map((res, i) => {
           return (
-            <div key={i} onClick={() => setLicense(res.license)} className={`flex justify-between cursor-default hover:scale-[120%] duration-200 bg-white hover:text-cyan-800 ${license == res.license && 'text-cyan-800'}  rounded-sm`}>
+            <div key={i} onClick={() => setLicense(res.license)} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == res.license && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
               <div className='flex gap-2 text-sm'>
-                <input type="radio" checked={license == res.license} name="price-radio" id="" />
+                <input type="checkbox" checked={license == res.license} name="price-radio" id="" />
                 {res.license}</div>
               <div className='relative font-bold'>
                 {'$' + discountedPrice(getPriceInNumber(res.price))}

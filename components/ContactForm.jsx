@@ -76,7 +76,7 @@ export default function ContactForm() {
                         placeholder='Your Name'
                         name='name'
                         {...register('name')}
-                        className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+                        className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-cyan-800 focus-visible:shadow-none"
                     />
                 </div>
             </div>
@@ -87,7 +87,7 @@ export default function ContactForm() {
                         placeholder='Your Email'
                         name='email'
                         {...register('email')}
-                        className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+                        className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-cyan-800 focus-visible:shadow-none"
                     />
                 </div>
             </div>
@@ -98,7 +98,7 @@ export default function ContactForm() {
                         placeholder='Your Phone'
                         name='phone'
                         {...register('phone')}
-                        className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+                        className="border-[f0f0f0] w-full rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-cyan-800 focus-visible:shadow-none"
                     />
                 </div>
             </div>
@@ -110,7 +110,7 @@ export default function ContactForm() {
                         defaultValue=""
                         rows='6'
                         {...register('details')}
-                        className="border-[f0f0f0] w-full resize-none rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none"
+                        className="border-[f0f0f0] w-full resize-none rounded border py-3 px-[14px] text-base text-body-color outline-none focus:border-cyan-800 focus-visible:shadow-none"
                     />
                 </div>
             </div>
@@ -128,7 +128,7 @@ export default function ContactForm() {
             <div>
                 <button
                     type="submit"
-                    className="w-full p-3 bg-[#3056D3] text-white transition border rounded border-primary bg-primary hover:bg-opacity-90"
+                    className="w-full p-3 text-white transition border rounded bg-cyan-800 hover:bg-opacity-90"
                 >
                     Send Message
                 </button>
