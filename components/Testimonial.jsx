@@ -26,7 +26,8 @@ export default function Testimonial() {
 
     return (
         <div className='py-12 mx-auto max-w-7xl md:pt-10 sm:px-6'>
-            <div className='mb-4 text-3xl font-extrabold text-center text-slate-600'>Testimonials</div>
+            {/* <div className='mb-4 text-3xl font-extrabold text-center text-cyan-950'>Testimonials</div> */}
+            <h2 className="mb-6 text-3xl font-extrabold text-center text-cyan-950 custom-underline">Testimonials</h2>
             <div className="items-center justify-center md:flex">
 
 

@@ -45,20 +45,21 @@ export default function Search() {
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-to-bl from-blue-900 to-blue-500 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-0 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-45 text-white`}>
-        <div className={`relative mx-auto py-12 md:h-[75vh] bg-cover overflow-clip bg-bottom flex justify-center items-center text-white bg-slate-600`}>
+        <div className={`relative mx-auto py-12  bg-cover overflow-clip bg-bottom flex justify-center items-center `}>
             {/* <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample.webm"} type="video/mp4" src={"/assets/sample.webm"} />
             </video> */}
-            <video className='absolute top-0 z-10 block w-full brightness-[0.4] md:hidden' autoPlay muted loop id="myVideo">
+            <img loading="lazy" className='absolute bottom-0 z-10 w-full' src={'/assets/vmi/bg5.jpg'} alt="bg-banner-img" srcSet="" />
+            {/* <video className='absolute top-0 z-10 block w-full brightness-[0.4] md:hidden' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample_vertical.webm"} type="video/mp4" src={"/assets/sample_vertical.webm"} />
-            </video>
+            </video> */}
 
             <div className='z-10 flex flex-col gap-8 px-4 text-center md:px-16 md:gap-8'>
                 <div className="text-3xl font-semibold md:text-4xl" >
-                Analyzing and Anticipating Global Market
+                    We Analyze and Anticipate the Global Market 
                 </div>
                 <div className='flex justify-center'>
-                    <div className="text-sm text-center md:w-5/6 md:text-lg" >Empower your business with data-driven strategies. Discover trends, analyze markets, and seize opportunities for sustainable success. Explore limitless possibilities today!</div>
+                    <div className="text-sm text-center md:w-5/6 md:text-lg" >Our Market Research and Business Consulting Solutions helps clients to build a rational strategy that can create inclusive and sustainable growth and considers impact through five dimensions: Financial & Operational, Customer, Capability, Employee, and Environmental & Social.</div>
                 </div>
                 <div className='flex items-center justify-center'>
                     <div className='flex items-center justify-between overflow-hidden bg-white rounded-lg focus-within:shadow-lg'>
@@ -78,7 +79,7 @@ export default function Search() {
                                 placeholder="Search reports.." />
                         </div>
                         {/* <button className='px-8 m-1 text-sm font-bold tracking-wide text-white rounded-md bg-primary'>Search</button> */}
-                        <button onClick={handleSearch} type="submit" className="inline-flex items-center justify-center gap-2 px-6 py-2 m-1 font-semibold text-white transition-all bg-cyan-800 border border-transparent rounded-md hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2"
+                        <button onClick={handleSearch} type="submit" className="inline-flex items-center justify-center gap-2 px-6 py-2 m-1 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
 
@@ -97,11 +98,11 @@ export default function Search() {
                 </div>
                 <div className='h-20'>
                     <motion.div initial={{ opacity: 0, y: '25%' }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.2 }} viewport={{ once: true }}>
-                        <div className='grid items-start justify-center w-full grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14'>
+                        <div className='grid items-start justify-center w-full grid-cols-3 gap-4 text-white sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14'>
                             {
                                 categories.map((res, index) => (
                                     <Link key={index} href={`/reports/${res.url}`}>
-                                        <div className='flex flex-col items-center gap-1 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
+                                        <div className='flex flex-col items-center gap-1 p-2 mb-2 duration-200 hover:scale-125 hover:font-semibold'>
                                             <img loading="lazy" src={'/assets/' + res.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
                                             <div className="text-center mx-1 text-[8px] md:text-[10px] w-20">{res.name}</div>
                                         </div>

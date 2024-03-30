@@ -25,18 +25,18 @@ export default function TrendingReports() {
     }, []);
 
     return (
-        <div className="py-12 md:h-[740px] bg-gradient">
+        <div className="relative flex items-center justify-center py-12 mx-auto bg-bottom bg-cover overflow-clip ">
+            <img loading="lazy" className='absolute top-0 object-cover w-full h-full' src={'/assets/vmi/bg2.jpg'} alt="bg-banner-img" srcSet="" />
             <CustomToastContainer />
             <div className="max-w-6xl px-4 mx-auto sm:px-6">
                 <div className="mx-auto text-center ">
-                    <h2 className="mb-6 text-3xl font-extrabold text-slate-600">Trending Reports</h2>
-
                     <motion.div
                         initial={{ opacity: 0, y: '25%' }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.3, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
+                    <h2 className="mb-6 text-3xl font-bold text-cyan-950 custom-underline">Trending Reports</h2>
                         <div className='flex flex-col flex-wrap justify-between md:gap-0 md:flex-row'>
                             {pressReleaseList.map((res, i) => {
                                 return (
@@ -47,7 +47,7 @@ export default function TrendingReports() {
                                                 <div className='text-xs font-semibold text-right'>
                                                     {moment(res.created_date).format('Do MMM YYYY')}
                                                 </div>
-                                                <div className='py-2 text-lg font-semibold'>
+                                                <div className='py-2 text-lg font-semibold text-cyan-800'>
                                                     {toCapitalCase(res.url)}
                                                 </div>
                                                 <div className='h-12 mb-8 text-xs md:text-justify'>
@@ -55,7 +55,7 @@ export default function TrendingReports() {
                                                 </div>
                                                 <div className='absolute bottom-[-10px] right-[35%] md:right-[20px] flex justify-center md:justify-end'>
                                                     <Link href={`/report/${res.url}`}>
-                                                        <button type="button" className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white transition-all bg-cyan-800 border border-transparent rounded-md hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
+                                                        <button type="button" className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2">
                                                             Read Me
                                                         </button>
                                                     </Link>

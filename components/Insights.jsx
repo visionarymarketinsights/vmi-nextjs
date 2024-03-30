@@ -4,10 +4,10 @@ import CountUpUtil from '../utils/CountUpUtil';
 
 export default function Insights() {
     const [reportsPublished, setReportsPublished] = useState(1000);
-    const [clientsServed, setClientsServed] = useState(250);
+    const [clientsServed, setClientsServed] = useState(500);
     const [consultingProjectsPerMonth, setConsultingProjectsPerMonth] = useState(50);
-    const [repeatCustomers, setRepeatCustomers] = useState(35);
-    const [analystHoursPerReport, setAnalystHoursPerReport] = useState(200);
+    const [repeatCustomers, setRepeatCustomers] = useState(60);
+    const [analystHoursPerReport, setAnalystHoursPerReport] = useState(100);
 
 
     const elementRef = useRef(null);
@@ -38,8 +38,8 @@ export default function Insights() {
     return (
         <div className="max-w-6xl px-4 py-8 mx-auto md:pt-10 sm:px-6" ref={elementRef}>
             <div className="max-w-4xl mx-auto text-center md:pb-10">
-                <h2 className="mb-6 text-3xl font-extrabold text-slate-600">Insights</h2>
-                <h2 className="text-xl font-semibold mb-14">Numbers tell the story; our data fuels your business growth.</h2>
+                <h2 className="mb-6 text-3xl font-bold text-cyan-950  custom-underline">We are Guide On How to Build a Data-Driven Organization</h2>
+                <h2 className="text-xl font-semibold mb-14">Some Facts about Visionary Market Insights.</h2>
                 <div className='flex flex-col justify-between gap-10 md:gap-4 md:flex-row'>
                     <div className='flex flex-col gap-1 md:w-1/5'>
                         <div className='text-5xl font-bold'>
@@ -69,7 +69,7 @@ export default function Insights() {
                         <div className='text-5xl font-bold'>
                             <CountUpUtil startValue={analystHoursPerReport / 1.1} endValue={analystHoursPerReport} />
                             <span className='text-4xl text-blue-500'>+</span></div>
-                        <div className='text-sm font-semibold'>Analyst Hours <br /> per Report</div>
+                        <div className='text-sm font-semibold'>Analysts</div>
                     </div>
                 </div>
             </div>

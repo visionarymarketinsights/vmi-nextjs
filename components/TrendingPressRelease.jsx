@@ -29,7 +29,8 @@ export default function TrendingPressRelease() {
         <div className='relative md:h-[410px] overflow-clip'>
             <CustomToastContainer />
             <div className="z-10 py-12 mx-auto max-w-[1600px] md:pt-10 sm:px-6">
-                <div className='mb-8 text-3xl font-extrabold text-center'>Trending Press Releases</div>
+                {/* <div className='mb-8 text-3xl font-extrabold text-center'>Trending Press Releases</div> */}
+                <h2 className="mb-6 text-3xl font-extrabold text-center text-cyan-950  custom-underline">Trending Press Releases</h2>
                 <motion.div initial={{ opacity: 0, y: '25%' }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
                     <div className="flex items-center justify-between mt-6">
                         <div className="p" onClick={() => { my_swiper.slidePrev() }}>

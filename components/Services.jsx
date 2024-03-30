@@ -7,16 +7,11 @@ export default function Services() {
 
             <div className='absolute flex items-center justify-between w-full h-full -z-10 bg-gradient'>
             </div>
+            <img loading="lazy" className='absolute top-0 object-cover w-full h-full' src={'/assets/vmi/bg2.jpg'} alt="bg-banner-img" srcSet="" />
             <div className="px-4 mx-auto max-w-7xl sm:px-6">
                 <div className="pt-12 md:py-12 md:pt-10">
                     <div className="pb-12 mx-auto text-center md:pb-0">
-                        <h2 className="mb-6 text-3xl font-extrabold text-slate-500">Discover Our Services</h2>
-
-                        <div className='flex justify-center mb-2 text-sm '>
-                            <div className='w-4/5 md:w-full'>
-                                Welcome to Visionary Market Insights, where strategic insights and innovative solutions converge to empower your business. We offer a diverse range of services tailored to meet your unique market research needs. By partnering with us, you unlock a world of opportunities and gain a competitive edge in your industry. Explore our services and discover how we can drive your business forward.
-                            </div>
-                        </div>
+                        {/* <h2 className="mb-6 text-3xl font-extrabold text-slate-500">Discover Our Services</h2> */}
 
                         <motion.div
                             initial={{ opacity: 0, y: '25%' }}
@@ -24,6 +19,12 @@ export default function Services() {
                             transition={{ duration: 0.5 }} viewport={{ once: true }}
                         >
 
+                        <h2 className="mb-6 text-3xl font-extrabold text-center text-cyan-950 custom-underline">Discover Our Services</h2>
+                        <div className='flex justify-center mb-8 text-sm '>
+                            <div className='w-4/5 md:w-full'>
+                                Welcome to Visionary Market Insights, where strategic insights and innovative solutions converge to empower your business. We offer a diverse range of services tailored to meet your unique market research needs. By partnering with us, you unlock a world of opportunities and gain a competitive edge in your industry. Explore our services and discover how we can drive your business forward.
+                            </div>
+                        </div>
                             <div className='flex flex-col flex-wrap md:gap-0 md:flex-row'>
                                 <div className="p-2 md:w-1/3">
                                     <div className="w-full p-2 text-left bg-white border rounded-md md:flex">

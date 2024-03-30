@@ -10,7 +10,7 @@ export default function CategoryMain() {
         {/* <img loading='lazy' src={'/assets/abstract.jpg'} alt="bgimg" className='hidden md:block' /> */}
       </div>
       <div className='max-w-6xl mx-auto sm:px-6'>
-        <div className="mb-4 text-3xl font-extrabold text-center underline text-slate-600">Explore Your Industry</div>
+        <div className="mb-4 text-3xl font-extrabold text-center text-cyan-950  custom-underline">Explore Your Industry</div>
         <div className="mb-10 text-xl font-semibold text-center ">Integrate Curated Intelligence in Business Matrix with Our Trending Market Reports</div>
         <div className="text-center md:text-left md:flex">
 

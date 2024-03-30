@@ -8,6 +8,8 @@ import axios from 'axios';
 import moment from 'moment';
 import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
 import CustomToastContainer from '@/utils/CustomToastContainer';
+
+import { getCategories } from '@/constants';
 const AllReport = ({ params }) => {
   const { url } = params;
   const [category, setCategory] = useState({});
@@ -16,6 +18,7 @@ const AllReport = ({ params }) => {
   const [reportCount, setReportCount] = useState(0);
   const [totalReportCount, setTotalReportCount] = useState(0);
   const [page, setPage] = useState(1);
+  
 
   const scrollToTop = () => {
     window.scroll(0, 0)
@@ -64,26 +67,30 @@ const AllReport = ({ params }) => {
     setPage(val);
     scrollToTop();
   }
-
   return (
     <div>
       <CustomToastContainer />
       <h1 className='fixed text-transparent'>{category.name && category.name.toUpperCase()}</h1>
-      <div className="mb-6 md:text-3xl overflow-clip relative text-lg h-[200px] md:h-[150px] font-extrabold flex items-center justify-center bg-gradient text-white">
-        {category.back_cover && <img loading="lazy" className='absolute flex items-center justify-center w-auto h-auto md:object-contain md:w-full' src={'/assets/' + category.back_cover.replace('.jpg', '.webp')} alt="" />}
-        {url === 'all-industries' && <img loading="lazy" className='absolute flex items-center justify-center w-auto h-auto md:object-contain md:w-full' src={'/assets/category_covers/all.webp'} alt="" />}
-        {
-          category.name &&
-          <div className='z-10 px-4 py-2 bg-slate-800 drop-shadow'>
-            {category.name.toUpperCase()}
-          </div>
-          ||
-          (
-            <div className='z-10 px-4 py-2 bg-slate-800 drop-shadow'>
-              {url.toUpperCase()}
+      <div className='text-white bg-[#006388]'>
+        <div className="relative flex items-center max-w-6xl px-4 py-6 mx-auto mb-6 text-lg font-semibold sm:px-6 md:text-2xl overflow-clip">
+          <div className='flex items-center gap-2'>
+          {category.icon && <img loading="lazy" src={'/assets/' + category.icon} alt='category-icon' className="flex justify-center w-6 h-6 duration-100 "></img>}
+            <div>
+              {
+                category.name &&
+                <div className='z-10 px-4 drop-shadow'>
+                  {category.name.toUpperCase()}
+                </div>
+                ||
+                (
+                  <div className='z-10 px-4 drop-shadow'>
+                    {url.toUpperCase()}
+                  </div>
+                )
+              }
             </div>
-          )
-        }
+          </div>
+        </div>
       </div>
       <div className="max-w-6xl px-4 mx-auto sm:px-6">
         <div className="py-2 text-center md:pt-10 md:text-left">
