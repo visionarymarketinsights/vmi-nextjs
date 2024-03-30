@@ -47,7 +47,7 @@ export default function ReportBuyNow({ report }) {
       {
         priceList.map((res, i) => {
           return (
-            <div key={i} onClick={() => setLicense(res.license)} className={`flex justify-between cursor-default hover:text-cyan-800 ${license == res.license && 'text-cyan-800'}  rounded-sm`}>
+            <div key={i} onClick={() => setLicense(res.license)} className={`flex justify-between cursor-default hover:scale-[120%] duration-200 bg-white hover:text-cyan-800 ${license == res.license && 'text-cyan-800'}  rounded-sm`}>
               <div className='flex gap-2 text-sm'>
                 <input type="radio" checked={license == res.license} name="price-radio" id="" />
                 {res.license}</div>

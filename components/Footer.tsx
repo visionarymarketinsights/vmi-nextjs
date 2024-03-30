@@ -75,12 +75,8 @@ const Footer = () => {
         </div>
         <div className="flex justify-between px-4 pt-12 grow">
           <div className="md:w-1/3">
-            <div>
-              U.S Sales Office
-            </div>
-            <div className="text-sm">
-              State Tower, 90 State Street, Suite 700,
-              <br /> Albany NY - 12207, United States
+            <div className="flex justify-center w-4/5 p-4 bg-white rounded-md">
+              <img src={'/assets/vmilogo.png'}  className="h-16 rounded-md" alt="vmilogo" />
             </div>
           </div>
           <div className="md:w-1/3">

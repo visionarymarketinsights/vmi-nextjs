@@ -20,7 +20,7 @@ export default function Clients() {
       <img loading="lazy" className='absolute top-0 object-cover w-full h-full -z-10' src={'/assets/vmi/bg3.jpg'} alt="bg-banner-img" srcSet="" />
       <div className="">
         {/* Section header */}
-        <div className="max-w-3xl pb-12 mx-8 text-center md:mx-auto md:pb-4">
+        <div className="max-w-6xl pb-12 mx-8 text-center md:mx-auto md:pb-4">
           <h2 className="mb-8 text-3xl font-bold text-cyan-950 custom-underline">Our Clients</h2>
           <h2 className="mb-4 h2">Trusted by over 500 companies all over the world</h2>
           <p className="text-gray-600 md:text-xl" data-aos="zoom-y-out">Trusted by industry leaders, our insights drive success, empowering businesses to thrive in dynamic market landscapes with precision.</p>

@@ -54,7 +54,7 @@ export default function Search() {
                 <source data-src={"/assets/sample_vertical.webm"} type="video/mp4" src={"/assets/sample_vertical.webm"} />
             </video> */}
 
-            <div className='z-10 flex flex-col gap-8 px-4 text-center md:px-16 md:gap-8'>
+            <div className='z-10 flex flex-col gap-8 px-4 text-center text-cyan-950 md:px-16 md:gap-8'>
                 <div className="text-3xl font-semibold md:text-4xl" >
                     We Analyze and Anticipate the Global Market 
                 </div>
@@ -90,7 +90,7 @@ export default function Search() {
                     </div>
                 </div>
                 <div className='flex items-center justify-center gap-2 pt-4' >
-                    <div className='text-xl text-center'>
+                    <div className='text-xl text-center text-white'>
                         Browse By Industry
                     </div>
                     <div className='hidden md:block w-1/2 h-[2px] bg-white'>

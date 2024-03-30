@@ -30,7 +30,7 @@ export default function TrendingPressRelease() {
             <CustomToastContainer />
             <div className="z-10 py-12 mx-auto max-w-[1600px] md:pt-10 sm:px-6">
                 {/* <div className='mb-8 text-3xl font-extrabold text-center'>Trending Press Releases</div> */}
-                <h2 className="mb-6 text-3xl font-extrabold text-center text-cyan-950  custom-underline">Trending Press Releases</h2>
+                <h2 className="mb-6 text-3xl font-extrabold text-center text-cyan-950 custom-underline">Trending Press Releases</h2>
                 <motion.div initial={{ opacity: 0, y: '25%' }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }}>
                     <div className="flex items-center justify-between mt-6">
                         <div className="p" onClick={() => { my_swiper.slidePrev() }}>
@@ -66,7 +66,8 @@ export default function TrendingPressRelease() {
                             {reportList.map((val, index) =>
                                 <SwiperSlide key={index}>
                                     <div className="mx-2 border rounded-md md:h-44 md:flex overflow-clip">
-                                        <div className="flex flex-col justify-between p-4 text-sm md:text-justify">
+                                        <img loading="lazy" className='object-cover object-top h-full' src={'/assets/vmi/pr1.png'} alt="about-img" srcSet="" />
+                                        <div className="flex flex-col justify-between p-4 text-xs md:text-justify">
                                             <div>
                                                 <div className='mb-2 font-bold'>
                                                     {/* {toCapitalCase(val.url)} */}

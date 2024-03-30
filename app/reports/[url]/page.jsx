@@ -157,8 +157,8 @@ const AllReport = ({ params }) => {
                 {reportList.map((res, key) => {
                   return (
                     <Link href={`/report/${res.url}`} key={key}>
-                      <div className='group' >
-                        <div className='flex flex-col gap-2 p-4 border-b-2 cursor-pointer group-hover:bg-slate-50'>
+                      <div className='mb-2 group' >
+                        <div className='flex flex-col gap-2 p-4 border cursor-pointer group-hover:bg-slate-50'>
                           <div className="font-semibold group-hover:text-cyan-800 group-hover:underline">{res.title.split('').filter((res, i) => i < 160).join('')}... </div>
                           <div className="">{res.summary}...</div>
                           <div className='flex gap-4 text-sm'>
