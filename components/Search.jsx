@@ -49,7 +49,7 @@ export default function Search() {
             {/* <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample.webm"} type="video/mp4" src={"/assets/sample.webm"} />
             </video> */}
-            <img loading="lazy" className='absolute bottom-0 z-10 w-full' src={'/assets/vmi/bg5.jpg'} alt="bg-banner-img" srcSet="" />
+            <img loading="lazy" className='absolute bottom-0 z-10 w-full brightness-110' src={'/assets/vmi/bg5.jpg'} alt="bg-banner-img" srcSet="" />
             {/* <video className='absolute top-0 z-10 block w-full brightness-[0.4] md:hidden' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample_vertical.webm"} type="video/mp4" src={"/assets/sample_vertical.webm"} />
             </video> */}

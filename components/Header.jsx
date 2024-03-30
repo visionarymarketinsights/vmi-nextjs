@@ -130,12 +130,9 @@ export default function Header() {
                     <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/">Home</Link>
                   </div> */}
                   
-                  <div className="relative">
-                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' href="/">Home</Link>
-                  </div>
                   <div className="relative cursor-pointer">
                     <div className='flex items-center gap-2 py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => setCategoryOpen(!isCategoryOpen)}>
-                      <div>Category</div>
+                      <div>Industry Verticals</div>
                       {
                         <svg xmlns="http://www.w3.org/2000/svg" className={`icon icon-tabler icon-tabler-chevron-up transition-all duration-200 ${isCategoryOpen ? 'rotate-0' : 'rotate-180'}`} width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
                           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -160,7 +157,7 @@ export default function Header() {
                     }
                   </div >
                   <div className="relative">
-                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/press-releases/all-industries">Press Release</Link>
+                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/press-releases/all-industries">News Room</Link>
                   </div>
                   <div className="relative">
                     <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/services">Services</Link>
@@ -198,7 +195,7 @@ export default function Header() {
                   <Link className="group" href={`/report/${r.url}`} key={i} onClick={() => { setReportList([]); setKeyword('') }}>
                     <div key={1} className="p-2 text-sm border rounded-md border-slate-300 hover:bg-slate-100">
                       <div className="font-semibold group-hover:text-cyan-800 group-hover:underline">{r.title.split('').filter((res, i) => i < 160).join('')}...</div>
-                      <div className="text-cyan-950  custom-underline">{r.summary}</div>
+                      <div className="text-cyan-950 custom-underline">{r.summary}</div>
                     </div>
                   </Link>
                 )

@@ -227,7 +227,7 @@ span img {
   margin:auto;
   margin-top: 15px;
   border-radius: 4px;
-  background: linear-gradient(to left, #ff851b 0%, #ff851b 27%, transparent 25%, transparent 35%, #0091ce 35%, #0091ce 100%);
+  background: linear-gradient(to left, #41D2FC 0%, #41D2FC 27%, transparent 25%, transparent 35%, #0091ce 35%, #0091ce 100%);
 }
 
 .custom-underline-about:after{
@@ -238,5 +238,5 @@ span img {
   justify-content: center;
   margin-top: 15px;
   border-radius: 4px;
-  background: linear-gradient(to left, #ff851b 0%, #ff851b 27%, transparent 25%, transparent 35%, #0091ce 35%, #0091ce 100%);
+  background: linear-gradient(to left, #41D2FC 0%, #41D2FC 27%, transparent 25%, transparent 35%, #0091ce 35%, #0091ce 100%);
 }

@@ -110,7 +110,6 @@ export default function PressReleases({ params }) {
                         <div className='md:flex'>
                             <div className=" md:w-[28%]">
                                 <div className='border rounded-md p-4 sticky top-[20px]'>
-                                    <div className="mb-2 text-xl font-semibold">By Types</div>
                                     <div className='flex flex-col gap-2'>
                                         {/* <Link href={`/press-releases/all-industries`} >
                                             <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${url === 'all-industries' && 'text-cyan-800'} border-b-2`}>All Industries</div>
@@ -176,7 +175,7 @@ export default function PressReleases({ params }) {
 
                                         <Link key={key} href={`/press-release/${res.url}`} onClick={scrollToTop}>
                                             <div className='relative group' key={key} >
-                                                <div className='absolute top-[-10px] right-[20px] py-1 px-4 text-xs bg-primary text-white rounded-sm'>
+                                                <div className='absolute top-[-10px] right-[20px] py-1 px-4 text-xs bg-cyan-800 text-white rounded-sm'>
                                                     {moment(res.created_date).format('Do MMM YYYY')}
                                                 </div>
                                                 <div className='flex flex-col gap-2 p-4 mb-6 border-2 rounded-md cursor-pointer group-hover:bg-slate-50'>

@@ -13,7 +13,7 @@ export default function PressReleaseRequestSample({ reportTitle, pressReleaseTit
 
     return (
         <>
-            <button onClick={handleFormOpen} className="gap-4 font-semibold text-white transition-all codepen-button w-44 ">
+            <button onClick={handleFormOpen} className="gap-4 font-semibold bg-[#9A1750] text-white transition-all codepen-button w-44 ">
                 <span className='flex items-center justify-center py-2'>
                     Request Sample
                 </span>

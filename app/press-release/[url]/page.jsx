@@ -78,7 +78,7 @@ export default async function PressRelease({ params }) {
                         <div className='md:flex'>
                             <div className="w-full">
                                 <div className='relative border rounded-lg shadow-lg'>
-                                    <div className='absolute top-[-10px] right-[20px] text-xs md:text-sm lg:text-md py-1 px-4 bg-primary text-white rounded-sm'>
+                                    <div className='absolute top-[-10px] right-[20px] text-xs md:text-sm lg:text-md py-1 px-4 bg-[#006388] text-white rounded-sm'>
                                         {moment(pressRelease.created_date).format('Do MMM YYYY')}
                                     </div>
 

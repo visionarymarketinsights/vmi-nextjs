@@ -18,13 +18,13 @@ export default function Home() {
       <Search />
       {/* <Banner /> */}
       <Insights />
-      <TrendingReports />
       <CategoryMain />
+      <TrendingReports />
       <Services />
       <TrendingPressRelease />
       <AboutHome />
-      <Testimonial />
       <Clients />
+      <Testimonial />
     </section >
   )
 }

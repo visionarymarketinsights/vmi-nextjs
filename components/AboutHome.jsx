@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 export default function AboutHome() {
   return (
     <div className='relative py-12 overflow-clip'>
-      <img loading="lazy" className='absolute top-0 object-cover w-full h-full' src={'/assets/vmi/bg2.jpg'} alt="bg-banner-img" srcSet="" />
+      <img loading="lazy" className='absolute top-0 object-cover w-full h-full brightness-110' src={'/assets/vmi/bg2.jpg'} alt="bg-banner-img" srcSet="" />
             
       <div className='absolute bottom-0 w-full h-full -z-10 bg-gradient'>
         {/* <img loading='lazy' src={'/assets/abstract.jpg'} alt="bgimg" className='hidden md:block' /> */}
       </div>
-      <div className='mx-auto max-w-7xl sm:px-6'>
+      <div className='mx-auto max-w-8xl sm:px-6'>
         {/* <div className="mb-10 text-3xl font-extrabold text-center ">About Us</div> */}
         <motion.div
           initial={{ opacity: 0, y: '25%' }}
@@ -33,8 +33,9 @@ export default function AboutHome() {
 
               {/* <div className="text-3xl font-extrabold text-slate-500">About Us</div> */}
               <h2 className="text-3xl font-bold text-cyan-950 custom-underline-about">About Us</h2>
-              <div className="text-2xl italic md:w-3/4">We deliver the most advanced strategies for your business</div>
-              <div className="text-lg md:w-4/5">With our insightful and precise consulting services, you can keep a close eye on the market's shifting trends. CMI has a solution for every business issue you face.</div>
+              {/* <div className="text-2xl italic md:w-3/4">We deliver the most advanced strategies for your business</div> */}
+              <div className="text-md ">Visionary Market Dynamics is a leading global market research company dedicated to providing in-depth research insights and strategic solutions to businesses across the globe. </div>
+              <div className="text-md ">We help companies across 150+ countries in 6 continents, we work alongside our clients as one team with a shared ambition and vision to analyze and anticipate markets, outperform the competition, and redefine industries. We complement our tailored, integrated expertise with a holistic approach to identify growth opportunities in hundreds of sectors using a powerful understanding of how value chains operate on a global level.</div>
               <div className='flex justify-between gap-4 mt-4'>
                 <div className='flex w-full gap-8 px-4 py-4 rounded-md bg-slate-200'>
                   <div className='flex items-center w-2/5'>
@@ -49,8 +50,8 @@ export default function AboutHome() {
                     </div>
                   </div>
                 </div>
-                <div className='w-full px-4 py-4 rounded-md bg-slate-200'>
-                  With our comprehensive coverage, decision-makers can confidently decipher the future of the world's largest industries.
+                <div className='w-full px-4 py-4 text-sm rounded-md bg-slate-200'>
+                Through our client work and targeted consolidated impact of USD 100 Bn, we’re catering in depth market research and business consulting solutions for various industry verticals to maximize their revenues.
                 </div>
               </div>
             </div>
