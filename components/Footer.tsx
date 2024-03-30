@@ -95,7 +95,7 @@ const Footer = () => {
             <div className="text-sm">
 
               +1-518-618-1030,  866-552-3453 (US-Canada Toll Free)
-              <br /> sales@transparencymarketresearch.com
+              <br /> sales@visionarymarketinsights.com
             </div>
           </div>
         </div>

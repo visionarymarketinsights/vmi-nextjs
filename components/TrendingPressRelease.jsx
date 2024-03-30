@@ -26,7 +26,7 @@ export default function TrendingPressRelease() {
     }, []);
 
     return (
-        <div className='relative md:h-[410px] overflow-clip'>
+        <div className='relative overflow-clip'>
             <CustomToastContainer />
             <div className="z-10 py-12 mx-auto max-w-[1600px] md:pt-10 sm:px-6">
                 {/* <div className='mb-8 text-3xl font-extrabold text-center'>Trending Press Releases</div> */}

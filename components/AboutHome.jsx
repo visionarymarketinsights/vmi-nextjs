@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 export default function AboutHome() {
   return (
     <div className='relative py-12 overflow-clip'>
-      <img loading="lazy" className='absolute top-0 object-cover w-full h-full brightness-110' src={'/assets/vmi/bg2.jpg'} alt="bg-banner-img" srcSet="" />
+      <img loading="lazy" className='absolute top-0 object-cover w-full h-full brightness-110' src={'/assets/vmi/bgn2.jpg'} alt="bg-banner-img" srcSet="" />
             
       <div className='absolute bottom-0 w-full h-full -z-10 bg-gradient'>
         {/* <img loading='lazy' src={'/assets/abstract.jpg'} alt="bgimg" className='hidden md:block' /> */}
@@ -32,10 +32,10 @@ export default function AboutHome() {
               {/* <img loading="lazy" className='object-cover object-top w-full rounded-lg h-72 brightness-110' src={'/assets/others/vmiabout.jpg'} alt="about-img" srcSet="" /> */}
 
               {/* <div className="text-3xl font-extrabold text-slate-500">About Us</div> */}
-              <h2 className="text-3xl font-bold text-cyan-950 custom-underline-about">About Us</h2>
+              <h2 className="text-3xl font-bold text-white custom-underline-about">About Us</h2>
               {/* <div className="text-2xl italic md:w-3/4">We deliver the most advanced strategies for your business</div> */}
-              <div className="text-md ">Visionary Market Dynamics is a leading global market research company dedicated to providing in-depth research insights and strategic solutions to businesses across the globe. </div>
-              <div className="text-md ">We help companies across 150+ countries in 6 continents, we work alongside our clients as one team with a shared ambition and vision to analyze and anticipate markets, outperform the competition, and redefine industries. We complement our tailored, integrated expertise with a holistic approach to identify growth opportunities in hundreds of sectors using a powerful understanding of how value chains operate on a global level.</div>
+              <div className="text-white text-md">Visionary Market Dynamics is a leading global market research company dedicated to providing in-depth research insights and strategic solutions to businesses across the globe. </div>
+              <div className="text-white text-md">We help companies across 150+ countries in 6 continents, we work alongside our clients as one team with a shared ambition and vision to analyze and anticipate markets, outperform the competition, and redefine industries. We complement our tailored, integrated expertise with a holistic approach to identify growth opportunities in hundreds of sectors using a powerful understanding of how value chains operate on a global level.</div>
               <div className='flex justify-between gap-4 mt-4'>
                 <div className='flex w-full gap-8 px-4 py-4 rounded-md bg-slate-200'>
                   <div className='flex items-center w-2/5'>

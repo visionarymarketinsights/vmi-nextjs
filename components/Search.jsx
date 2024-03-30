@@ -49,12 +49,12 @@ export default function Search() {
             {/* <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample.webm"} type="video/mp4" src={"/assets/sample.webm"} />
             </video> */}
-            <img loading="lazy" className='absolute bottom-0 z-10 w-full brightness-110' src={'/assets/vmi/bg5.jpg'} alt="bg-banner-img" srcSet="" />
+            <img loading="lazy" className='absolute bottom-0 z-10 w-full brightness-95' src={'/assets/vmi/bgn1.jpg'} alt="bg-banner-img" srcSet="" />
             {/* <video className='absolute top-0 z-10 block w-full brightness-[0.4] md:hidden' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample_vertical.webm"} type="video/mp4" src={"/assets/sample_vertical.webm"} />
             </video> */}
 
-            <div className='z-10 flex flex-col gap-8 px-4 text-center text-cyan-950 md:px-16 md:gap-8'>
+            <div className='z-10 flex flex-col gap-8 px-4 text-center text-white md:px-16 md:gap-8'>
                 <div className="text-3xl font-semibold md:text-4xl" >
                     We Analyze and Anticipate the Global Market 
                 </div>

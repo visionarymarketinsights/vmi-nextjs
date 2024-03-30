@@ -16,8 +16,8 @@ export default function Clients() {
   ];
 
   return (
-    <div className="relative py-12 mx-auto md:py-10">
-      <img loading="lazy" className='absolute top-0 object-cover w-full h-full -z-10' src={'/assets/vmi/bg1.jpg'} alt="bg-banner-img" srcSet="" />
+    <div className="relative py-12 mx-auto md:py-8">
+      {/* <img loading="lazy" className='absolute top-0 object-cover w-full h-full -z-10' src={'/assets/vmi/bg1.jpg'} alt="bg-banner-img" srcSet="" /> */}
       <div className="">
         {/* Section header */}
         <div className="max-w-6xl pb-12 mx-8 text-center md:mx-auto md:pb-4">
