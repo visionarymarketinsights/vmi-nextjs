@@ -43,7 +43,7 @@ export default function TrendingReports() {
                                     <div key={i} className="p-2 md:w-1/2">
                                         {/* <motion.div initial={{ scale: 0.8 }} whileInView={{ scale: 1 }} transition={{ delay: 0.2 }}> */}
                                         <div className="text-left bg-white border rounded-md md:flex ">
-                                            <div className="relative flex flex-col p-4 text-sm">
+                                            <div className="relative flex flex-col w-full p-4 text-sm">
                                                 <div className='text-xs font-semibold text-right'>
                                                     {moment(res.created_date).format('Do MMM YYYY')}
                                                 </div>

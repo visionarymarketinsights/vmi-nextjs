@@ -126,12 +126,12 @@ export default function Header() {
                   } `}
               >
                 <div className="block lg:flex">
-                  {/* <div className="relative">
-                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/">Home</Link>
-                  </div> */}
+                  <div className="relative">
+                    <Link className='flex py-2 text-sm font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/">Home</Link>
+                  </div>
                   
                   <div className="relative cursor-pointer"  onClick={() => setCategoryOpen(!isCategoryOpen)}>
-                    <div className='flex items-center gap-2 py-2 text-base font-medium lg:ml-12 lg:inline-flex'>
+                    <div className='flex items-center gap-2 py-2 text-sm font-medium lg:ml-12 lg:inline-flex'>
                       <div>Industry Verticals</div>
                       {
                         <svg xmlns="http://www.w3.org/2000/svg" className={`icon icon-tabler icon-tabler-chevron-up transition-all duration-200 ${isCategoryOpen ? 'rotate-0' : 'rotate-180'}`} width="20" height="20" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000000" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -157,16 +157,16 @@ export default function Header() {
                     }
                   </div >
                   <div className="relative">
-                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/press-releases/all-industries">News Room</Link>
+                    <Link className='flex py-2 text-sm font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/press-releases/all-industries">News Room</Link>
                   </div>
                   <div className="relative">
-                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/services">Services</Link>
+                    <Link className='flex py-2 text-sm font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/services">Services</Link>
                   </div>
                   < div className="relative" >
-                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/contact">Contact</Link>
+                    <Link className='flex py-2 text-sm font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/contact">Contact</Link>
                   </ div>
                   <div className="relative">
-                    <Link className='flex py-2 text-base font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/about">About</Link>
+                    <Link className='flex py-2 text-sm font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/about">About</Link>
                   </div>
                   <div className={`relative ${(pathname == '/') && 'hidden'}`}>
                     <div className="flex items-center gap-4 lg:ml-12">

@@ -29,7 +29,11 @@ export default function About() {
                         <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                             <div className="text-gray-600">
                                 <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-right  text-[#652E7E] text-gray-900 md:text-left">Who We Are</h2>
-                                <div className="mb-2 text-lg font-light text-right md:text-left">At Visionary Market Insights, we are a team of passionate researchers, analysts, and strategists who are dedicated to providing unparalleled market intelligence. With a blend of experience and expertise, we delve deep into market trends, consumer behavior, and industry dynamics to deliver insights that matter. Our commitment goes beyond numbers; we aim to empower businesses with actionable insights that lead to informed decision-making.</div>
+                                <div className="mb-2 text-sm font-light text-right md:text-left">
+                                    Visionary Market Dynamics is India based leading global market research and business consulting company provides data driven market research insights and consulting solutions to businesses across the globe. We are headquartered in India, having offices in U.S. & Canada. We have channel partners in Japan, United Kingdom.
+                                    We provide syndicated market research reports, customized market research reports, market intelligence, and consulting services to renowned institutions, fortune 500 companies, startups and governments to understand macro and micro level global business scenario. 
+                                    Our Client base includes companies from across 100+ Industry Verticals over 150+ countries. Our Syndicated and Custom Market Research reports help clients make informed business decisions to solve industry defining challenges such as strategy, marketing, financial, organization, operations, information, digital transformation, merger & acquisition, sustainability and corporate finances across all industries and geographies. 
+                                </div>
                             </div>
                             <img loading="lazy" className="hidden object-cover w-full h-64 mb-4 rounded-lg lg:mb-0 lg:flex" src={'/assets/blurry/about1.webp'} alt="about1" />
                         </div>
@@ -41,20 +45,20 @@ export default function About() {
                                         <div className='px-8 py-8 text-lg text-center md:w-1/3'>
                                             <div className='flex justify-center h-12 mb-4'><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21 21H3.8a.8.8 0 0 1-.8-.8V3" stroke="#0E1035" stroke-width="1.5" stroke-miterlimit="10" strokeLinecap="round"></path><path d="M5.47 13.47a.75.75 0 1 0 1.06 1.06l-1.06-1.06ZM10 10l.53-.53a.75.75 0 0 0-1.06 0L10 10Zm4 4-.53.53a.75.75 0 0 0 1.06 0L14 14Zm7.53-6.47a.75.75 0 0 0-1.06-1.06l1.06 1.06Zm-15 7 4-4-1.06-1.06-4 4 1.06 1.06Zm2.94-4 4 4 1.06-1.06-4-4-1.06 1.06Zm5.06 4 7-7-1.06-1.06-7 7 1.06 1.06Z" fill="#0E1035"></path></g></svg>
                                             </div>
-                                            <div className='mb-2 font-semibold'>Comprehensive Insights</div>
+                                            <div className='mb-2 font-semibold'>An Insurgent Mind-Set</div>
                                             <div className='text-sm '>
 
-                                                Our research goes beyond the surface, providing in-depth analyses that uncover hidden trends and market drivers, enabling you to stay ahead of the curve.
+                                            We work with ambitious clients who want to define the future, not hide from it. Together, we define a bold ambition and achieve extraordinary results that redefine industries. Our Analyst and Consultants are intellectually quick and deep. We are emerging market research and consulting firm run on a culture of shared values where we are able to see both the forest and the trees and move between the two seamlessly. Our market research and consulting services are designed by using robust methodology and superior processes with the right tools, fresh techniques and perspectives that allow clients to understand & solve their problems.
                                             </div>
                                         </div>
                                         <div className='px-8 py-8 text-lg text-center md:w-1/3'>
                                             <div className='flex justify-center h-12 mb-4'><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#0E1035"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path d="M22 12C22 13.3132 21.7413 14.6136 21.2388 15.8268C20.7362 17.0401 19.9997 18.1425 19.0711 19.0711C18.1425 19.9997 17.0401 20.7362 15.8268 21.2388C14.6136 21.7413 13.3132 22 12 22C10.6868 22 9.38642 21.7413 8.17317 21.2388C6.95991 20.7362 5.85752 19.9997 4.92893 19.0711C4.00035 18.1425 3.26375 17.0401 2.7612 15.8268C2.25866 14.6136 2 13.3132 2 12C2 10.6868 2.25866 9.38642 2.76121 8.17316C3.26375 6.95991 4.00035 5.85752 4.92893 4.92893C5.85752 4.00035 6.95991 3.26375 8.17317 2.7612C9.38642 2.25866 10.6868 2 12 2C13.3132 2 14.6136 2.25866 15.8268 2.76121C17.0401 3.26375 18.1425 4.00035 19.0711 4.92893C19.9997 5.85752 20.7362 6.95991 21.2388 8.17317C21.7413 9.38642 22 10.6868 22 12L22 12Z" stroke="#1C274C" strokeWidth="1.5" /> <path d="M16 12C16 13.3132 15.8965 14.6136 15.6955 15.8268C15.4945 17.0401 15.1999 18.1425 14.8284 19.0711C14.457 19.9997 14.016 20.7362 13.5307 21.2388C13.0454 21.7413 12.5253 22 12 22C11.4747 22 10.9546 21.7413 10.4693 21.2388C9.98396 20.7362 9.54301 19.9997 9.17157 19.0711C8.80014 18.1425 8.5055 17.0401 8.30448 15.8268C8.10346 14.6136 8 13.3132 8 12C8 10.6868 8.10346 9.38642 8.30448 8.17316C8.5055 6.95991 8.80014 5.85752 9.17157 4.92893C9.54301 4.00035 9.98396 3.26375 10.4693 2.7612C10.9546 2.25866 11.4747 2 12 2C12.5253 2 13.0454 2.25866 13.5307 2.76121C14.016 3.26375 14.457 4.00035 14.8284 4.92893C15.1999 5.85752 15.4945 6.95991 15.6955 8.17317C15.8965 9.38642 16 10.6868 16 12L16 12Z" stroke="#1C274C" strokeWidth="1.5" /> <path d="M2 12H22" stroke="#1C274C" strokeWidth="1.5" strokeLinecap="round" /> </g></svg>
 
                                             </div>
-                                            <div className='mb-2 font-semibold'>Global Perspective</div>
+                                            <div className='mb-2 font-semibold'>Client Centric Approach </div>
                                             <div className='text-sm '>
 
-                                                In today's interconnected world, we offer a global viewpoint with a keen understanding of local markets. Our insights are enriched by a deep appreciation for cultural nuances and regional influences.
+                                            We are proactive with our clients. We call you and send you timely updates on significant issues. You can count on our professionals to take the initiative and follow through. We deliver integrated solutions, complementing our capabilities with a curated ecosystem of the world’s leading innovators to achieve better, faster, more enduring results for clients. Working harder to provide outstanding service is our hallmark. We give each client the time, attention and service they expect and deserve.
                                             </div>
                                         </div>
                                         <div className='px-8 py-8 text-lg text-center md:w-1/3'>
@@ -64,10 +68,10 @@ export default function About() {
 
 
                                             </div>
-                                            <div className='mb-2 font-semibold'>Innovation at its Core</div>
+                                            <div className='mb-2 font-semibold'>Experience and Expertise</div>
                                             <div className='text-sm '>
 
-                                                We embrace innovation in both our methodologies and thinking. By staying at the forefront of technological advancements, we deliver insights that are not only accurate but also forward-looking.
+                                            Our consultants are senior level with many years of experience in their specific specialty. We know what we’re doing. We are able to hit the ground running; to identify opportunities quickly and to respond appropriately. We bring a fresh perspective, mutual trust and infectious energy to every client relationship. Our talented and diverse group of colleagues and helping our clients create meaningful and lasting change.
                                             </div>
                                         </div>
                                         <div className='px-8 py-8 text-lg text-center md:w-1/3'>
@@ -75,10 +79,10 @@ export default function About() {
 
 
                                             </div>
-                                            <div className='mb-2 font-semibold'>Client-Centric Approach</div>
+                                            <div className='mb-2 font-semibold'>Global Perspective</div>
                                             <div className='text-sm '>
 
-                                                Your success is our priority. We foster strong client relationships built on trust, transparency, and collaboration. We listen to your challenges and work closely with you to develop tailored solutions that address your specific needs.
+                                            Our Business Model is heavily focused on building partnerships with regional and international organisations. Our Market Research reports provides global insights and assist companies of all sizes in succeeding in a dynamic environment by identifying new ventures and strengthening old thought. We embrace a global perspective in our research insights to navigate cultural nuances, leverage digital advancements, and connect with global audiences.
                                             </div>
                                         </div>
                                         <div className='px-8 py-8 text-lg text-center md:w-1/3'>
@@ -86,10 +90,10 @@ export default function About() {
                                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path d="M9 13L11 15L15 11M12.0627 6.06274L11.9373 5.93726C11.5914 5.59135 11.4184 5.4184 11.2166 5.29472C11.0376 5.18506 10.8425 5.10425 10.6385 5.05526C10.4083 5 10.1637 5 9.67452 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V10.2C21 9.0799 21 8.51984 20.782 8.09202C20.5903 7.71569 20.2843 7.40973 19.908 7.21799C19.4802 7 18.9201 7 17.8 7H14.3255C13.8363 7 13.5917 7 13.3615 6.94474C13.1575 6.89575 12.9624 6.81494 12.7834 6.70528C12.5816 6.5816 12.4086 6.40865 12.0627 6.06274Z" stroke="#0E1035" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /> </g></svg>
 
                                             </div>
-                                            <div className='mb-2 font-semibold'>Integrity and Ethics</div>
+                                            <div className='mb-2 font-semibold'>Results, not Reports</div>
                                             <div className='text-sm '>
 
-                                                We uphold the highest standards of integrity and ethics in our work. Our clients rely on us for unbiased, reliable, and credible insights that they can trust when making critical business decisions.
+                                            We started our company on the principle that clients should get results not just reports. We break the rules by developing customized strategies that help clients beat their competition. We combine bold thinking with a practical approach that focuses on getting the job done, turning decisions into action and delivering results.
                                             </div>
                                         </div>
                                     </div>
@@ -100,15 +104,14 @@ export default function About() {
                             <img loading="lazy" className="items-center justify-center hidden object-cover w-full h-64 mb-4 rounded-lg lg:mb-0 lg:flex" src={'/assets/blurry/about2.webp'} alt="about2" />
                             <div className="text-gray-600">
                                 <h2 className="mb-4 text-3xl font-extrabold tracking-tight  text-[#652E7E] text-gray-900 ">Our Approach</h2>
-                                <div className="mb-2 text-lg font-light ">We pride ourselves on our innovative approach to market research. We integrate advanced technologies into our analysis, ensuring that our approach not only captures data but also delves into the core of consumer preferences and industry trends. Our customized solutions are tailored to meet the unique needs of each client, offering a comprehensive understanding of their specific market drivers, trends, challenges and opportunities.</div>
+                                <div className="mb-2 text-lg font-light ">Our approach helps clients overcome the odds by predicting, measuring and managing the risk associated with change from day one. The results: a proven method to structure, orchestrate and enable the changes necessary to achieve a competitive advantage.  We help our clients to achieve sustainable, organic growth by providing data driven and actionable insights. Our approach tests every element of client’s experience, delivering optimal interactions at every touchpoint.</div>
                             </div>
                         </div>
                         <div className='text-right md:text-center'>
-                            <h2 className="mb-4 text-3xl font-extrabold tracking-tight  text-[#652E7E] text-gray-900">Our Promise</h2>
+                            <h2 className="mb-4 text-3xl font-extrabold tracking-tight  text-[#652E7E] text-gray-900">Our Mission</h2>
                             <div className="flex justify-center mb-2 text-lg font-light">
                                 <div className='text-gray-600 md:p-6'>
-                                    When you partner with Visionary Market Insights, you embark on a journey of discovery and growth. We are dedicated to providing you with insights that inspire confidence and drive meaningful outcomes. Our commitment to excellence, coupled with our passion for unraveling market intricacies, ensures that you receive not just data, but actionable intelligence that propels your business toward success.
-                                    Thank you for considering Visionary Market Insights as your trusted research partner. Together, let’s explore the endless possibilities and chart a course for your business’s prosperous future.
+                                When you partner with Visionary Market Insights, you embark on a journey of discovery and growth. We have a passion for results aligned with our client’s success, and a commitment to the highest level of professionalism and ethical standards in everything we do. Our mission is to help our clients create such high levels of value that together we set new standards of excellence in our respective industries.
                                 </div>
                             </div>
                         </div>

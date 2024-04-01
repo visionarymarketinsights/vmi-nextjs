@@ -5,71 +5,15 @@ export default class Privacy extends Component {
         return (
 
             <div>
-                <div className='mb-2'>
-                    At Visionary Market Insights, we highly value your privacy and are committed to ensuring the confidentiality of the information you provide to us. This privacy policy outlines our practices regarding the collection and use of personal information. By accessing our website at www.visionarymarketinsights.com, you agree to the terms described in this Privacy Policy.
+
+                <div className='mb-4'>
+                    Company respects your privacy and allow you to control the treatment of your personal information. Company’s privacy policy is expressly incorporated into this Agreement by this reference. When you are required to open an account to use or access the Site or Service, you must complete the registration process by providing the complete and accurate information requested on the registration form. You will also be asked to provide a user name and password. You are entirely responsible for maintaining the confidentiality of your password.
                 </div>
 
-                <div className='mb-2'>
-                    <div className='font-bold'>
-                        1. Information Collection:
-                    </div>
-                    We collect personal information voluntarily provided by you on our website. This includes data obtained during activities such as sample report requests, market data requests, newsletter subscriptions, and responses to surveys. The information collected may include your name, company name, title/designation, mailing address, phone number, email address, and payment details for invoice purposes.
+                <div className='mb-4'>
+                    You may not use the account, username, or password of someone else at any time. You agree to notify Company immediately on any unauthorized use of your account, user name, or password. Company shall not be liable for any loss that you incur as a result of someone else using your password, either with or without your knowledge. You may be held liable for any losses incurred by Company, its affiliates, officers, directors, employees, consultants, agents, and representatives due to someone else’s use of your account or password.
                 </div>
 
-
-                <div className='mb-2'>
-                    <div className='font-bold'>
-                        2. Lawful and Fair Means:
-                    </div>
-                    We ensure that all personal information is collected lawfully and by fair means. Passwords and user details are securely stored and encrypted to protect your privacy.
-                </div>
-
-
-                <div className='mb-2'>
-                    <div className='font-bold'>
-                        3. Use of Personal Information:
-                    </div>
-                    We use your personal information for various purposes, including providing requested services, sending sample reports, responding to queries, obtaining feedback on market research reports, updating you on industry information, conducting research activities, and administering our website. Additionally, we may use your information to personalize your website experience, send invoices, and collect payments.
-                </div>
-
-
-                <div className='mb-2'>
-                    <div className='font-bold'>
-                        4. Opt-Out Policy:
-                    </div>
-                    If you choose to opt-out, your information will be retained in our "unsubscribe" database to prevent future communication, including emails regarding industry news, new studies, research activities, surveys, and discount offers.
-                </div>
-
-
-                <div className='mb-2'>
-                    <div className='font-bold'>
-                        5. Non-Disclosure to Third Parties:
-                    </div>
-                    We do not share, sell, or rent your personal information to third parties. Your information is disclosed only as necessary to provide our services or as required by law, legal proceedings, or to establish, exercise, or defend legal rights.
-                </div>
-
-
-                <div className='mb-2'>
-                    <div className='font-bold'>
-                        6. Security Measures:
-                    </div>
-                    Visionary Market Insights employs security measures to prevent the loss, misuse, and alteration of information obtained from you. While we implement security protocols, we cannot guarantee prevention of loss, misuse, or alteration. Your data is stored on secure servers.
-                </div>
-
-
-                <div className='mb-2'>
-                    <div className='font-bold'>
-                        7. Third-Party Websites:
-                    </div>
-                    Our website may contain links to other websites. We are not responsible for the privacy practices or content of these external sites. It is your responsibility to review and agree with the privacy policies of such websites.
-                </div>
-
-
-                <div className='mb-2'>
-
-                    By using our website, you acknowledge and agree to the terms outlined in this Privacy Policy. For any questions or concerns regarding your privacy, please contact us at contact@visionarymarketinsights.com. This policy is subject to change, and any modifications will be effective immediately upon posting on our website.
-
-                </div>
             </div>
         )
     }

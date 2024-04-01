@@ -20,7 +20,7 @@ export default function Services() {
                         >
 
                             <h2 className="mb-6 text-3xl font-extrabold text-center text-white custom-underline">Discover Our Services</h2>
-                            <div className='flex justify-center mb-8 text-sm text-white'>
+                            <div className='flex justify-center mb-8 text-xs text-white'>
                                 <div className='w-4/5 md:w-full'>
                                     Welcome to Visionary Market Insights, where strategic insights and innovative solutions converge to empower your business. We offer a diverse range of services tailored to meet your unique market research needs. By partnering with us, you unlock a world of opportunities and gain a competitive edge in your industry. Explore our services and discover how we can drive your business forward.
                                 </div>
@@ -40,12 +40,12 @@ export default function Services() {
                                             </svg>
 
                                         </div>
-                                        <div className="relative flex flex-col justify-between flex-grow h-40 gap-1 p-4 text-center md:w-3/5 md:text-left">
+                                        <div className="relative flex flex-col flex-grow gap-1 p-4 text-center min-h-[260px] md:w-3/5 md:text-left">
                                             <div className='font-semibold '>
-                                                Business Intelligence
+                                                Market Intelligence
                                             </div>
-                                            <div className='mb-2 text-sm text-black md:text-justify '>
-                                                Discover our comprehensive collection of thoroughly investigated market analyses, encompassing diverse industries, offering deep insights to facilitate informed decision-making.
+                                            <div className='mb-2 text-xs text-black md:text-justify '>
+                                            Market Intelligence are crucial in turning companies into modern, data-driven organizations, empowering their daily reporting, operations, and insights sharing. We offer our expertise and Market Intelligence services to assess the business environment with respect to external and internal factors and enable strategic decision-making. Our, Market Intelligence solutions provide actionable insights into various business-critical factors and custom research for informed decision-making.
                                             </div>
                                         </div>
                                     </div>
@@ -56,12 +56,12 @@ export default function Services() {
                                             <svg viewBox="0 0 24 24" width={30} height={30} fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <g id="style=linear"> <g id="setting"> <path id="vector" d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#000000" strokeWidth="1.5" strokeMiterlimit={10} strokeLinecap="round" strokeLinejoin="round" /> <path id="vector_2" d="M2 12.88V11.12C2 10.08 2.85 9.22 3.9 9.22C5.71 9.22 6.45 7.94 5.54 6.37C5.02 5.47 5.33 4.3 6.24 3.78L7.97 2.79C8.76 2.32 9.78 2.6 10.25 3.39L10.36 3.58C11.26 5.15 12.74 5.15 13.65 3.58L13.76 3.39C14.23 2.6 15.25 2.32 16.04 2.79L17.77 3.78C18.68 4.3 18.99 5.47 18.47 6.37C17.56 7.94 18.3 9.22 20.11 9.22C21.15 9.22 22.01 10.07 22.01 11.12V12.88C22.01 13.92 21.16 14.78 20.11 14.78C18.3 14.78 17.56 16.06 18.47 17.63C18.99 18.54 18.68 19.7 17.77 20.22L16.04 21.21C15.25 21.68 14.23 21.4 13.76 20.61L13.65 20.42C12.75 18.85 11.27 18.85 10.36 20.42L10.25 20.61C9.78 21.4 8.76 21.68 7.97 21.21L6.24 20.22C5.33 19.7 5.02 18.53 5.54 17.63C6.45 16.06 5.71 14.78 3.9 14.78C2.85 14.78 2 13.92 2 12.88Z" stroke="#000000" strokeWidth="1.5" strokeMiterlimit={10} strokeLinecap="round" strokeLinejoin="round" /> </g> </g> </g></svg>
 
                                         </div>
-                                        <div className="relative flex flex-col justify-between flex-grow h-40 gap-1 p-4 text-center md:w-3/5 md:text-left">
+                                        <div className="relative flex flex-col flex-grow gap-1 p-4 text-center min-h-[260px] md:w-3/5 md:text-left">
                                             <div className='font-semibold '>
                                                 Competitive Benchmarking
                                             </div>
-                                            <div className='mb-2 text-sm text-black md:text-justify '>
-                                                Our personalized research services focus on your unique needs, exploring specialized markets, consumer trends, and industry dynamics for tailored insights.
+                                            <div className='mb-2 text-xs text-black md:text-justify '>
+                                            Through our Competitive Benchmarking Dashboards, we insights and techniques we evaluate company's performance by comparing its performance and productivity metrics with those of its competitors. We prepare our competitive benchmarking dashboards on various parameters such as Product/Services Benchmarking, Strategy Benchmarking, Financial Benchmarking, Process Benchmarking, Customer Benchmarking, Operational Benchmarking, Marketing Benchmarking, Pricing Benchmarking, Production Capacity Benchmarking, etc.
                                             </div>
                                         </div>
                                     </div>
@@ -73,12 +73,12 @@ export default function Services() {
 
 
                                         </div>
-                                        <div className="relative flex flex-col justify-between flex-grow h-40 gap-1 p-4 text-center md:w-3/5 md:text-left">
+                                        <div className="relative flex flex-col flex-grow gap-1 p-4 text-center min-h-[260px] md:w-3/5 md:text-left">
                                             <div className='font-semibold '>
                                                 Consulting Services
                                             </div>
-                                            <div className='mb-2 text-sm text-black md:text-justify '>
-                                                Remain at the forefront with our industry trend reports for an in-depth grasp of market shifts, tech advancements, and consumer preferences.
+                                            <div className='mb-2 text-xs text-black md:text-justify '>
+                                            We consult companies in building and developing unique financial, supply chain, operations and customer management capabilities. These are critical areas to gain competitive advantage in the market.  Visionary Market Insights is emerging as one of the fastest growing management consulting companies in India, VMI has pioneered the implementation of various consulting solutions in various sectors such as Chemical & Materials, Healthcare, Pharmaceuticals, Consumer Goods, ICT, Automotive, Consumer Goods & Retail, Textiles & Garments, Equipment Manufacturing, Engineering & Construction and Life Sciences. 
                                             </div>
                                         </div>
                                     </div>
@@ -90,12 +90,12 @@ export default function Services() {
 
 
                                         </div>
-                                        <div className="relative flex flex-col justify-between flex-grow h-40 gap-1 p-4 text-center md:w-3/5 md:text-left">
+                                        <div className="relative flex flex-col flex-grow gap-1 p-4 text-center min-h-[260px] md:w-3/5 md:text-left">
                                             <div className='font-semibold '>
                                                 Market Research Reports
                                             </div>
-                                            <div className='mb-2 text-sm text-black md:text-justify '>
-                                                Confidently maneuver competition using our competitive intelligence. Assess key players, strategies, and products to understand strengths and weaknesses, gaining an edge.
+                                            <div className='mb-2 text-xs text-black md:text-justify '>
+                                            Visionary Market Insights provides data driven and insights full market research reports, publishing over 1000+ reports each year, covering 100+ industries, on a global, regional and country level. We track and analyze various industries to identify key markets trends & emerging market opportunities, understand competitive landscape, estimate and forecast market sizes. 
                                             </div>
                                         </div>
                                     </div>
@@ -107,12 +107,12 @@ export default function Services() {
 
 
                                         </div>
-                                        <div className="relative flex flex-col justify-between flex-grow h-40 gap-1 p-4 text-center md:w-3/5 md:text-left">
+                                        <div className="relative flex flex-col flex-grow gap-1 p-4 text-center min-h-[260px] md:w-3/5 md:text-left">
                                             <div className='font-semibold '>
                                                 Syndicated Research
                                             </div>
-                                            <div className='mb-2 text-sm text-black md:text-justify '>
-                                                Grasp your audience deeply. Our consumer insights use advanced methods to unravel behavior, preferences, and purchasing, refining strategies for engagement.
+                                            <div className='mb-2 text-xs text-black md:text-justify '>
+                                            Keeping pace with the business environment, we publish syndicated market research studies. Every year we do publish 1000+ syndicated market research studies.  We employ best-practice models and research methodologies as well as comprehensive market analysis to ensure each syndicated report provides accurate market segmentation and insights. We provide unique and detailed surveys and reports through meticulous examination and careful evaluation of the market trends, statistics, and various micro as well as macroeconomic factors. 
                                             </div>
                                         </div>
                                     </div>
@@ -124,19 +124,19 @@ export default function Services() {
 
 
                                         </div>
-                                        <div className="relative flex flex-col justify-between flex-grow h-40 gap-1 p-4 text-center md:w-3/5 md:text-left">
+                                        <div className="relative flex flex-col flex-grow gap-1 p-4 text-center min-h-[260px] md:w-3/5 md:text-left">
                                             <div className='font-semibold '>
-                                                Customer Surveys
+                                                Custom Research
                                             </div>
-                                            <div className='mb-2 text-sm text-black md:text-justify '>
-                                                Gain tailored expert guidance aligned with your goals. Our strategic consulting delivers actionable advice and implementation strategies for market expansion and innovation.
+                                            <div className='mb-2 text-xs text-black md:text-justify '>
+                                            Visionary Market Insights provide the tailored market research insights as per our client requirements. Complex research problems that cannot be solved with syndicated research can be solved with custom research. We work with our clients to build custom market research solutions such as qualitative analysis, quantitative analysis, market size analysis and forecast, competitive landscape and value chain analysis.
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className='flex items-center justify-center mt-4 text-center'>
-                                <button type="button" className="inline-flex items-center justify-center gap-2 px-12 py-4 text-sm font-semibold transition-all bg-white border border-transparent rounded-md text-cyan-800 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:ring-offset-2">
+                                <button type="button" className="inline-flex items-center justify-center gap-2 px-12 py-4 text-xs font-semibold transition-all bg-white border border-transparent rounded-md text-cyan-800 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:ring-offset-2">
                                     Browse All Services
                                 </button>
                             </div>
