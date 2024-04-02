@@ -23,10 +23,10 @@ export default function Contact() {
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <span className="block mb-4 text-base font-semibold text-cyan-800">Contact Us</span>
                 <h1 className="mb-6 text-2xl md:text-[32px] font-bold text-cyan-800 uppercase text-dark sm:text-[40px] lg:text-[28px] xl:text-[32px]">
-                  Get in Touch with <br /> Visionary Market Insights
+                  GET IN TOUCH WITH <br /> VISIONARY MARKET INSIGHTS
                 </h1>
                 <p className="text-base leading-relaxed mb-9 text-body-color">
-                  At Visionary Market Insights, we value your inquiries, feedback, and the opportunity to connect with you. Whether you have questions, require information, or wish to explore potential collaborations, we are here to assist you.
+                At Visionary Market Insights, we believe in open communication. We value your inquiries, feedback, and the opportunity to connect with you. If you have questions, require information, or wish to explore potential collaborations, we are here to assist you.
                 </p>
                 <div className="mb-8 flex w-full max-w-[500px]">
                   <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-cyan-800 sm:h-[70px] sm:max-w-[70px]">

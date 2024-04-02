@@ -12,18 +12,18 @@ import Skeleton from './Skeleton';
 
 export default function ReportBuyNow({ report }) {
 
-  const [priceList, setPriceList] = useState([]);
+  // const [priceList, setPriceList] = useState([]);
 
 
-  const getPriceList = () => {
-    axios.get(`${apiUrl}/price/`).then(res => {
-      setPriceList(res.data.data.reverse())
-    })
-  };
+  // const getPriceList = () => {
+  //   axios.get(`${apiUrl}/price/`).then(res => {
+  //     setPriceList(res.data.data.reverse())
+  //   })
+  // };
 
-  useEffect(() => {
-    getPriceList();
-  }, [])
+  // useEffect(() => {
+  //   getPriceList();
+  // }, [])
 
   const [discountFormOpen, setDiscountFormOpen] = useState(false);
   const handleDiscountFormOpen = () => setDiscountFormOpen(true);
@@ -43,38 +43,50 @@ export default function ReportBuyNow({ report }) {
     <div className='flex flex-col gap-2 px-4 py-6 border rounded-md shadow-lg '>
       <div className='text-slate-500'>Choose License Type</div>
       <img loading="lazy" className='w-full h-full pb-2 brightness-110' src={'/assets/vmi/payment-modes.jpg'} alt="bg-banner-img" srcSet="" />
-      {
-        priceList.length == 0 && <Skeleton count={2} />
-      }
-      {
-        priceList.map((res, i) => {
-          return (
-            <div key={i} onClick={() => setLicense(res.license)} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == res.license && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
-              <div className='flex gap-2 text-sm'>
-                <input type="checkbox" checked={license == res.license} name="price-radio" id="" />
-                {res.license}</div>
-              <div className='relative font-bold'>
-                {'$' + discountedPrice(getPriceInNumber(res.price))}
-                {/* <div className='absolute text-right text-sm font-normal w-full line-through text-red-500 top-[-16px]'>
-                  {res.price}
-                </div> */}
-              </div>
-            </div>
-          )
-        })
-      }
+      <div onClick={() => setLicense('Single User License')} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == 'Single User License' && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
+        <div className='flex gap-2 text-sm'>
+          <input type="checkbox" checked={license == 'Single User License'} name="price-radio" id="" />
+          Single User License</div>
+        <div className='relative font-bold'>
+          {report.single_user_price?'$' + report.single_user_price:'$0'}
+        </div>
+      </div>
+      <div onClick={() => setLicense('Multi User License')} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == 'Multi User License' && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
+        <div className='flex gap-2 text-sm'>
+          <input type="checkbox" checked={license == 'Multi User License'} name="price-radio" id="" />
+          Multi User License</div>
+        <div className='relative font-bold'>
+          {report.single_user_price?'$' + report.single_user_price:'$0'}
+        </div>
+      </div>
+      <div onClick={() => setLicense('Corporate License')} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == 'Corporate License' && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
+        <div className='flex gap-2 text-sm'>
+          <input type="checkbox" checked={license == 'Corporate License'} name="price-radio" id="" />
+          Corporate License</div>
+        <div className='relative font-bold'>
+          {report.single_user_price?'$' + report.single_user_price:'$0'}
+        </div>
+      </div>
+      <div onClick={() => setLicense('Excel Spreadsheet License')} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == 'Excel Spreadsheet License' && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
+        <div className='flex gap-2 text-sm'>
+          <input type="checkbox" checked={license == 'Excel Spreadsheet License'} name="price-radio" id="" />
+          Excel Spreadsheet License</div>
+        <div className='relative font-bold'>
+          {report.single_user_price?'$' + report.single_user_price:'$0'}
+        </div>
+      </div>
       <div className='flex flex-col gap-2 mt-2'>
         {/* <button className='w-full py-2 font-semibold text-white bg-blue-500 rounded-md text-md'>Buy Now</button>
 <button className='w-full py-2 font-semibold text-white bg-blue-500 rounded-md text-md'>Inquiry Before Buying</button> */}
         <button type="button" className="inline-flex items-center justify-center px-8 py-1 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-offset-2">
-          <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`}>
+          {/* <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`}> */}
             Buy Now
-          </Link>
+          {/* </Link> */}
         </button>
         <button type="button" className="inline-flex items-center justify-center px-8 py-1 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-offset-2">
-          <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`}>
+          {/* <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`}> */}
             Enquire Now
-          </Link>
+          {/* </Link> */}
         </button>
         {/* <button type="button" className="inline-flex items-center justify-center px-8 py-2 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-offset-2">
           <Link href={`/buy-now/${report?.id}/${priceList.find(res => res.license === license)?.id}`}>
