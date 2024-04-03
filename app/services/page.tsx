@@ -1,5 +1,5 @@
 import React from 'react'
-import OfferingMain from '../../components/OfferingMain'
+import ServicesPage from '../../components/ServicesPage'
 
 import type { Metadata } from 'next'
 
@@ -15,6 +15,6 @@ export const metadata: Metadata = {
 export default function Offering() {
 
     return (
-        <OfferingMain />
+        <ServicesPage />
     )
 }

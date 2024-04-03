@@ -19,10 +19,10 @@ const Footer = () => {
       id: 1,
       title: 'How To Order'
     },
-    {
-      id: 2,
-      title: 'Privacy'
-    },
+    // {
+    //   id: 2,
+    //   title: 'Privacy'
+    // },
     {
       id: 3,
       title: 'Terms and Conditions'
@@ -34,6 +34,10 @@ const Footer = () => {
     {
       id: 5,
       title: 'Disclaimer'
+    },
+    {
+      id: 5,
+      title: 'Career'
     },
   ]
 
@@ -65,11 +69,14 @@ const Footer = () => {
               <button className="hover:underline" onClick={() => handleDetailsOpen('How To Order')} >
                 How To Order
               </button>
-              <button className="hover:underline" onClick={() => handleDetailsOpen('Privacy')}>
+              {/* <button className="hover:underline" onClick={() => handleDetailsOpen('Privacy')}>
                 Privacy Policy
-              </button>
+              </button> */}
               <button className="hover:underline" onClick={() => handleDetailsOpen('Disclaimer')}>
                 Disclaimer
+              </button>
+              <button className="hover:underline" onClick={() => handleDetailsOpen('Career')}>
+                Career
               </button>
             </div>
           </div>
@@ -128,7 +135,8 @@ const Footer = () => {
               </div>
               <div className='h-[82vh] overflow-auto text-sm md:text-md'>
                 {details.title === 'How To Order' && <HowToOrder />}
-                {details.title === 'Privacy' && <Privacy />}
+                {/* {details.title === 'Privacy' && <Privacy />} */}
+                {details.title === 'Career' && <Terms />}
                 {details.title === 'Terms and Conditions' && <Terms />}
                 {details.title === 'CustomerFAQ' && <CustomerFAQ />}
                 {details.title === 'Disclaimer' && <Disclaimer />}

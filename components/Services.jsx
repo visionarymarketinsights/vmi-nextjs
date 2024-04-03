@@ -20,11 +20,11 @@ export default function Services() {
                         >
 
                             <h2 className="mb-6 text-3xl font-extrabold text-center text-white custom-underline">Discover Our Services</h2>
-                            <div className='flex justify-center mb-8 text-xs text-white'>
+                            {/* <div className='flex justify-center mb-8 text-xs text-white'>
                                 <div className='w-4/5 md:w-full'>
                                     Welcome to Visionary Market Insights, where strategic insights and innovative solutions converge to empower your business. We offer a diverse range of services tailored to meet your unique market research needs. By partnering with us, you unlock a world of opportunities and gain a competitive edge in your industry. Explore our services and discover how we can drive your business forward.
                                 </div>
-                            </div>
+                            </div> */}
                             <div className='flex flex-col flex-wrap md:gap-0 md:flex-row'>
                                 <div className="p-2 md:w-1/3">
                                     <div className="w-full p-2 text-left bg-white border rounded-md text-cyan-800 md:flex">

@@ -48,7 +48,7 @@ export default function ReportBuyNow({ report }) {
           <input type="checkbox" checked={license == 'Single User License'} name="price-radio" id="" />
           Single User License</div>
         <div className='relative font-bold'>
-          {report.single_user_price?'$' + report.single_user_price:'$0'}
+          {report.single_user_price?'$' + report.single_user_price:'$3700'}
         </div>
       </div>
       <div onClick={() => setLicense('Multi User License')} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == 'Multi User License' && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
@@ -56,7 +56,7 @@ export default function ReportBuyNow({ report }) {
           <input type="checkbox" checked={license == 'Multi User License'} name="price-radio" id="" />
           Multi User License</div>
         <div className='relative font-bold'>
-          {report.single_user_price?'$' + report.single_user_price:'$0'}
+          {report.multi_user_price?'$' + report.multi_user_price:'$5700'}
         </div>
       </div>
       <div onClick={() => setLicense('Corporate License')} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == 'Corporate License' && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
@@ -64,7 +64,7 @@ export default function ReportBuyNow({ report }) {
           <input type="checkbox" checked={license == 'Corporate License'} name="price-radio" id="" />
           Corporate License</div>
         <div className='relative font-bold'>
-          {report.single_user_price?'$' + report.single_user_price:'$0'}
+          {report.corporate_price?'$' + report.corporate_price:'$7700'}
         </div>
       </div>
       <div onClick={() => setLicense('Excel Spreadsheet License')} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == 'Excel Spreadsheet License' && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
@@ -72,7 +72,7 @@ export default function ReportBuyNow({ report }) {
           <input type="checkbox" checked={license == 'Excel Spreadsheet License'} name="price-radio" id="" />
           Excel Spreadsheet License</div>
         <div className='relative font-bold'>
-          {report.single_user_price?'$' + report.single_user_price:'$0'}
+          {report.excel_spreadsheet_price?'$' + report.excel_spreadsheet_price:'$1800'}
         </div>
       </div>
       <div className='flex flex-col gap-2 mt-2'>
