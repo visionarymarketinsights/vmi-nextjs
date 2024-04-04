@@ -75,9 +75,9 @@ const Footer = () => {
               <button className="hover:underline" onClick={() => handleDetailsOpen('Disclaimer')}>
                 Disclaimer
               </button>
-              <button className="hover:underline" onClick={() => handleDetailsOpen('Career')}>
+              <Link href='/career' className="hover:underline">
                 Career
-              </button>
+              </Link>
             </div>
           </div>
           <div className="text-center md:w-1/5">

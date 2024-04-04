@@ -1,15 +1,6 @@
 'use client'
-
-import React from 'react'
-import Link from 'next/link'
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
-import { useState, useEffect } from 'react';
-import RequestSample from '@/components/RequestSample';
-import axios from 'axios';
-import { apiUrl, getPriceInNumber, discountedPrice } from '@/constants';
-import Skeleton from './Skeleton';
-
+import React from 'react';
+import moment from 'moment';
 export default function ReportInfoBlock({ report }) {
   return (
 
@@ -19,28 +10,28 @@ export default function ReportInfoBlock({ report }) {
       </div>
       <div className='flex flex-col justify-between'>
         <div className='font-semibold'>
-          Published On:
+          Rep ID:
         </div>
         <div className='text-sm'>
-          Mar, 2024
+          VMI{report.category_abr}{report.id}
         </div>
         <div className='font-semibold'>
           Published On:
         </div>
         <div className='text-sm'>
-          Mar, 2024
+          {moment(report.created_date).format('MMMM YYYY')}
         </div>
         <div className='font-semibold'>
-          Published On:
+          Pages:
         </div>
         <div className='text-sm'>
-          Mar, 2024
+          {report.pages}
         </div>
         <div className='font-semibold'>
-          Published On:
+          Format:
         </div>
         <div className='text-sm'>
-          Mar, 2024
+          PPT, Excel, PDF
         </div>
       </div>
     </div>

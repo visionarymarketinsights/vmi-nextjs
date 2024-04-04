@@ -86,7 +86,7 @@ export default function ServicesPage() {
                 <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
 
                     <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/others/custom2.webp'} alt="feature image 2" />
+                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/vmi/services/Competitive Benchmarking.jpg'} alt="feature image 2" />
                         <div className="text-gray-500 sm:text-lg -400">
                             <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 ">Competitive Benchmarking</h2>
                             <p className="mb-2 text-sm font-light">Making Rational and Data-driven business decisions requires monitoring company performance periodically. Competitive benchmarking is a technique that companies use to compare their internal performance metrics against data from other companies. Companies have to continuously improvise their strategies in order to stay competitive. Through our Competitive Benchmarking Dashboards, we insights and techniques we evaluate company's performance by comparing its performance and productivity metrics with those of its competitors. We prepare our competitive benchmarking dashboards on various parameters such as Product/Services Benchmarking, Strategy Benchmarking, Financial Benchmarking, Process Benchmarking, Customer Benchmarking, Operational Benchmarking, Marketing Benchmarking, Pricing Benchmarking, Production Capacity Benchmarking, etc.</p>
@@ -109,7 +109,7 @@ export default function ServicesPage() {
                 <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
 
                     <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/others/custom2.webp'} alt="feature image 2" />
+                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/vmi/services/market reserach.jpg'} alt="feature image 2" />
                         <div className="text-gray-500 sm:text-lg -400">
                             <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 ">Market Research Reports</h2>
                             <p className="mb-2 text-sm font-light">Visionary Market Insights provides data driven and insights full market research reports, publishing over 1000+ reports each year, covering 100+ industries, on a global, regional and country level. We track and analyze various industries to identify key markets trends & emerging market opportunities, understand competitive landscape, estimate and forecast market sizes. </p>
@@ -124,7 +124,7 @@ export default function ServicesPage() {
                             <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 ">Syndicated Research</h2>
                             <p className="mb-2 text-sm font-light">Keeping pace with the business environment, we publish syndicated market research studies. Every year we do publish 1000+ syndicated market research studies.  We employ best-practice models and research methodologies as well as comprehensive market analysis to ensure each syndicated report provides accurate market segmentation and insights.We provide unique and detailed surveys and reports through meticulous examination and careful evaluation of the market trends, statistics, and various micro as well as macroeconomic factors</p>
                         </div>
-                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/others/consulting2.webp'} alt="dashboard feature image" />
+                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/vmi/services/Syndicated Research.jpg'} alt="dashboard feature image" />
                     </div>
                 </div>
             </section>
@@ -147,7 +147,7 @@ export default function ServicesPage() {
                             <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 ">Customer Surveys</h2>
                             <p className="mb-2 text-sm font-light">Customer Surveys provide you instant results, unlimited feedback, and allow for customer incentives in exchange for completing surveys. These surveys are cost-effective and user friendly. Surveys can be conducted via mobile or computer, with QR codes or kiosk links.Visionary Market Insights assists B2B and B2C organizations across the country with customer survey services. Our Market Research Team has hands on expertise in designing, fielding, and analysing results to deliver best-practice metrics like Net Promoter Score, Customer Effort Score, customer loyalty, and other key performance indicators</p>
                         </div>
-                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/others/consulting2.webp'} alt="dashboard feature image" />
+                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/vmi/services/Customer Surveys.jpg'} alt="dashboard feature image" />
                     </div>
                 </div>
             </section>
@@ -201,7 +201,7 @@ export default function ServicesPage() {
                 <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
 
                     <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/others/custom2.webp'} alt="feature image 2" />
+                        <img loading="lazy" className="hidden w-full mb-4 rounded-lg shadow-md lg:mb-0 lg:flex" src={'/assets/vmi/services/Market Monitoring.jpg'} alt="feature image 2" />
                         <div className="text-gray-500 sm:text-lg -400">
                             <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 ">Market Monitoring </h2>
                             <p className="mb-2 text-sm font-light">Companies must continually track and monitor market dynamics to develop and maintain efficient organizational structures, comprehensive business strategies, and unparalleled performance. We empower our clients with comprehensive insights on changes within the market and industries to enable well-informed decision-making. Our Market Monitoring solutions provides up-to-date, reliable, verified information on market situations. Through these solutions we help companies in assessing, analyzing and anticipating the market and develop strategies to identify profitable opportunities, and capitalize on factors propelling growth. </p>

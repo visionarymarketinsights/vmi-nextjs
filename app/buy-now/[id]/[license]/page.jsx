@@ -1,27 +1,38 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { apiUrl, discountedPrice, getPriceInNumber } from '@/constants';
+import { apiUrl, discountedPrice, getPriceInNumber, toCapitalCase } from '@/constants';
 import BuyNowForm from '@/components/BuyNowForm'
 import axios from 'axios';
 import BuyNowInfo from '@/components/BuyNowInfo'
 
 export default function BuyNow({ params }) {
     const [report, setReport] = useState({});
-    const [license, setLicense] = useState({});
+    const [license, setLicense] = useState('');
 
     useEffect(() => {
-        const { id, buyId } = { params };
-        axios.get(`${apiUrl}/reports/${params['id']}`).then(res => {
+        console.log(params?.id)
+        setLicense(params?.license)
+        axios.get(`${apiUrl}/reports/${params?.id}`).then(res => {
+            res.data.data.price = getPriceByLicense(params?.license, res.data.data); 
             setReport(res.data.data);
-            getPriceList(params['buyId']);
         })
     }, [])
 
-
-    const getPriceList = (id) => {
-        axios.get(`${apiUrl}/price/`).then(res => {
-            setLicense(res.data.data.find(res => res.id === Number(id)))
-        })
+    const getPriceByLicense = (license, report) => {
+        console.log(license, report)
+        if(license=='single-user-license'){
+            return report.single_user_price?'$' + report.single_user_price:'$3700'
+        }
+        if(license=='multi-user-license'){
+            return report.multi_user_price?'$' + report.multi_user_price:'$5700'
+        }
+        if(license=='corporate-license'){
+            return report.corporate_price?'$' + report.corporate_price:'$7700'
+        }
+        if(license=='excel-spreadsheet-license'){
+            return report.excel_spreadsheet_price?'$' + report.excel_spreadsheet_price:'$1800'
+        }
+        return '2000'
     };
 
 
@@ -37,8 +48,8 @@ export default function BuyNow({ params }) {
                                 <div className='flex flex-col justify-between py-2'>
                                     <div>
                                         <div className='flex flex-col items-center gap-4 md:items-start md:flex-row'>
-                                            <div className='flex items-center justify-center object-cover w-16 h-20 font-bold text-white rounded-md bg-slate-500'>VMI</div>
-                                            {/* <img loading="lazy" src={report.cover_img} className='object-cover w-16 h-20 rounded-md bg-slate-500' alt="" /> */}
+                                            {/* <div className='flex items-center justify-center object-cover w-16 h-20 font-bold text-white rounded-md bg-slate-500'>VMI</div> */}
+                                            <img loading="lazy" src="/assets/vmi/mr1.png" className='object-cover w-16 h-full rounded-md bg-slate-500' alt="" />
                                             {/* <div className='object-fill font-semibold text-white rounded-md overflow-clip bg-slate-500'>
                                             </div> */}
                                             <div>
@@ -69,17 +80,17 @@ export default function BuyNow({ params }) {
                                             </div>
                                             <div className='flex justify-between px-4 py-4 border-b-2'>
                                                 <div>
-                                                    {license.license}
+                                                    {toCapitalCase(license)}
                                                 </div>
                                                 {
-                                                    license.price &&
+                                                    
                                                     <div className='font-bold'>
                                                         {/* {license.price} */}
                                                         <div className='relative font-bold'>
-                                                            {'$' + discountedPrice(getPriceInNumber(license.price))}
-                                                            <div className='absolute text-right text-sm font-normal w-full line-through text-red-500 top-[-16px]'>
-                                                                {license.price}
-                                                            </div>
+                                                            {report.price}
+                                                            {/* <div className='absolute text-right text-sm font-normal w-full line-through text-red-500 top-[-16px]'>
+                                                                {report.price}
+                                                            </div> */}
                                                         </div>
                                                     </div>
                                                 }
@@ -89,9 +100,8 @@ export default function BuyNow({ params }) {
                                                     Total <span className='text-xs'>(Inclusive of all taxes)</span>
                                                 </div>
                                                 {
-                                                    license.price &&
                                                     <div className='font-bold text-cyan-800'>
-                                                        {'$' + discountedPrice(getPriceInNumber(license.price))}
+                                                        {report.price}
                                                     </div>
                                                 }
                                             </div>
