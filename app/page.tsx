@@ -7,7 +7,7 @@ import TrendingReports from '@/components/TrendingReports'
 import Insights from '@/components/Insights'
 import TrendingPressRelease from '@/components/TrendingPressRelease'
 import Services from '@/components/Services'
-import CategoryMain from '@/components/CategoryMain'
+import ReportByCategory from '@/components/ReportByCategory'
 import Banner from '@/components/Banner'
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <Search />
       {/* <Banner /> */}
       <Insights />
-      <CategoryMain />
+      <ReportByCategory />
       <TrendingReports />
       <Services />
       <TrendingPressRelease />

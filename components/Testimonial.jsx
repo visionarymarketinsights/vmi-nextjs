@@ -31,25 +31,24 @@ export default function Testimonial() {
             <div className="items-center justify-center md:flex">
 
 
-                <div className="mx-4 my-8 md:m-4 md:w-1/3">
-                    <motion.div
-                        initial={{ opacity: 0, y: '-25%' }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true }}
-                    >
+                <motion.div
+                    className='flex gap-2 mx-4 my-8 md:w-1/3 md:block md:m-4'
+                    initial={{ opacity: 0, y: '-25%' }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                >
 
-                        {testimonials.map((testimonial, index) =>
-                            <div key={index} onClick={() => { changeSlider(index) }} className={`flex items-center gap-4 mb-4 duration-500 border border-b-4 rounded-md shadow-sm hover:shadow-xl cursor-pointer ${testimonial.selected && 'border-b-cyan-800'}`}>
-                                {/* <div className="rounded-full h-14 w-14 bg-slate-300"></div> */}
-                                <div className='mx-4 my-2'>
-                                    <div>{testimonial.company}</div>
-                                    <div>{testimonial.designation}</div>
-                                </div>
+                    {testimonials.map((testimonial, index) =>
+                        <div key={index} onClick={() => { changeSlider(index) }} className={`flex items-center gap-4 mb-4 duration-500 border border-b-4 rounded-md shadow-sm hover:shadow-xl cursor-pointer ${testimonial.selected && 'border-b-cyan-800'}`}>
+                            {/* <div className="rounded-full h-14 w-14 bg-slate-300"></div> */}
+                            <div className='mx-4 my-2 text-[8px] md:text-[16px]'>
+                                <div className='font-bold md:font-normal'>{testimonial.company}</div>
+                                <div>{testimonial.designation}</div>
                             </div>
-                        )}
-                    </motion.div>
-                </div>
+                        </div>
+                    )}
+                </motion.div>
                 <div className='cursor-pointer md:w-1/2'>
                     <motion.div
                         initial={{ opacity: 0, y: '25%' }}

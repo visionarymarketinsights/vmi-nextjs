@@ -56,10 +56,10 @@ const Footer = () => {
   return (
     <div>
       <div className="relative p-8 text-center text-white bg-[#37475A] md:text-left">
-        <div className="flex justify-between border-b-2">
-          <div className="mb-4 border-r-2 md:w-4/5 ">
+        <div className="flex flex-col justify-between border-b-2 md:flex-row">
+          <div className="mb-4 md:border-r-2 md:w-4/5 ">
             <div className="text-center">- Help -</div>
-            <div className="flex justify-between p-4 pr-12">
+            <div className="flex flex-col justify-between gap-2 p-4 md:gap-0 md:pr-12 md:flex-row">
               <button className="hover:underline" onClick={() => handleDetailsOpen('Terms and Conditions')} >
                 Terms Of Use
               </button>
@@ -82,14 +82,14 @@ const Footer = () => {
           </div>
           <div className="text-center md:w-1/5">
             <div>- Follow Us -</div>
-            <div className="flex justify-center p-4">
+            <div className="flex flex-col justify-center p-4 md:flex-row">
               <img src="https://www.transparencymarketresearch.com/assets/images/Socialicon.svg" alt="" />
             </div>
           </div>
         </div>
-        <div className="flex justify-between px-4 pt-12 grow">
-          <div className="md:w-1/3">
-            <div className="flex justify-center w-4/5 p-4 bg-white rounded-md">
+        <div className="flex flex-col justify-between gap-8 px-4 pt-12 md:gap-0 md:flex-row grow">
+          <div className="flex justify-center md:w-1/3">
+            <div className="flex flex-col justify-center w-4/5 p-4 bg-white rounded-md md:flex-row">
               <img src={'/assets/vmilogo.png'}  className="h-16 rounded-md" alt="vmilogo" />
             </div>
           </div>
@@ -114,9 +114,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="px-12 py-4 text-white bg-[#4E5763] flex justify-between">
-        <div>
-          Copyright © Visionary Market Insights, Inc. All Rights reserved
+      <div className="px-12 py-4 text-white bg-[#4E5763] flex flex-col md:flex-row justify-between">
+        <div className="text-center md:text-left">
+          Copyright © Visionary Market Dynamics Pvt. Ltd, All Rights reserved
         </div>
         <img src="https://www.transparencymarketresearch.com/assets/images/paypalLogo.svg" className="h-6" alt="" />
       </div>
@@ -127,9 +127,9 @@ const Footer = () => {
         aria-describedby="modal-modal-description"
       >
         <Box>
-          <div className='flex items-center justify-center'>
+          <div className='flex items-center justify-center md:flex-row'>
             <div className=' m-2 p-2 md:p-6 w-[350px] md:w-[700px] rounded-md bg-white'>
-              <div className="flex justify-between pb-2 mb-2 text-xl font-semibold text-center">
+              <div className="flex justify-between pb-2 mb-2 text-xl font-semibold text-center md:flex-row">
                 <div>{details.title}</div>
                 <svg height={24} width={24} onClick={handleDetailsClose} className="cursor-pointer" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path fillRule="evenodd" clipRule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM8.96963 8.96965C9.26252 8.67676 9.73739 8.67676 10.0303 8.96965L12 10.9393L13.9696 8.96967C14.2625 8.67678 14.7374 8.67678 15.0303 8.96967C15.3232 9.26256 15.3232 9.73744 15.0303 10.0303L13.0606 12L15.0303 13.9696C15.3232 14.2625 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2625 15.3232 13.9696 15.0303L12 13.0607L10.0303 15.0303C9.73742 15.3232 9.26254 15.3232 8.96965 15.0303C8.67676 14.7374 8.67676 14.2625 8.96965 13.9697L10.9393 12L8.96963 10.0303C8.67673 9.73742 8.67673 9.26254 8.96963 8.96965Z" fill="#1C274C" /> </g></svg>
               </div>

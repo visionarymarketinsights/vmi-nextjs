@@ -22,7 +22,10 @@ export default function About() {
                             <h1 className="mb-4 text-3xl font-extrabold tracking-tight  text-[#652E7E] text-gray-900 text-[#652E7E]">About Us</h1>
                             <div className="flex justify-center mb-2 text-xl font-light">
                                 <div className='text-lg text-gray-600 md:p-6'>
-                                    Welcome to <span className='font-semibold'>Visionary Market Insights</span>, where knowledge meets innovation and insight transforms industries. We are not just another market research company; we are your strategic partners in decoding the complexities of the market landscape and uncovering hidden opportunities that drive your business forward.
+                                    {/* Welcome to <span className='font-semibold'>Visionary Market Insights</span>, where knowledge meets innovation and insight transforms industries. We are not just another market research company; we are your strategic partners in decoding the complexities of the market landscape and uncovering hidden opportunities that drive your business forward. */}
+                                    Visionary Market Insights is a 360° market research firm provides custom and syndicated market research reports. We also offer end-to-end consulting services for 45+ Industry verticals. Our team comprises both seasoned market research analyst and consultants who have contributed across the market research and consulting spectrum. 
+                                    Our services include market research report, custom research, consulting services, market monitoring, market intelligence, procurement services, political consulting, full-time engagement analysis, competitive benchmarking, social media monitoring political consulting, public policy advisory.
+                                    We are Headquartered in Pune, India
                                 </div>
                             </div>
                         </div>
@@ -43,7 +46,7 @@ export default function About() {
                                 <div className="mb-2 font-light ">
                                     <div className='flex-wrap justify-center py-2 md:flex'>
                                         <div className='px-8 py-8 text-lg text-center md:w-1/3'>
-                                            <div className='flex justify-center h-12 mb-4'><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21 21H3.8a.8.8 0 0 1-.8-.8V3" stroke="#0E1035" stroke-width="1.5" stroke-miterlimit="10" strokeLinecap="round"></path><path d="M5.47 13.47a.75.75 0 1 0 1.06 1.06l-1.06-1.06ZM10 10l.53-.53a.75.75 0 0 0-1.06 0L10 10Zm4 4-.53.53a.75.75 0 0 0 1.06 0L14 14Zm7.53-6.47a.75.75 0 0 0-1.06-1.06l1.06 1.06Zm-15 7 4-4-1.06-1.06-4 4 1.06 1.06Zm2.94-4 4 4 1.06-1.06-4-4-1.06 1.06Zm5.06 4 7-7-1.06-1.06-7 7 1.06 1.06Z" fill="#0E1035"></path></g></svg>
+                                            <div className='flex justify-center h-12 mb-4'><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21 21H3.8a.8.8 0 0 1-.8-.8V3" stroke="#0E1035" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round"></path><path d="M5.47 13.47a.75.75 0 1 0 1.06 1.06l-1.06-1.06ZM10 10l.53-.53a.75.75 0 0 0-1.06 0L10 10Zm4 4-.53.53a.75.75 0 0 0 1.06 0L14 14Zm7.53-6.47a.75.75 0 0 0-1.06-1.06l1.06 1.06Zm-15 7 4-4-1.06-1.06-4 4 1.06 1.06Zm2.94-4 4 4 1.06-1.06-4-4-1.06 1.06Zm5.06 4 7-7-1.06-1.06-7 7 1.06 1.06Z" fill="#0E1035"></path></g></svg>
                                             </div>
                                             <div className='mb-2 font-semibold'>An Insurgent Mind-Set</div>
                                             <div className='text-sm '>

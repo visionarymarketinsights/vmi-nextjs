@@ -45,11 +45,11 @@ export default function Search() {
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-to-bl from-blue-900 to-blue-500 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-0 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-45 text-white`}>
-        <div className={`relative mx-auto py-12  bg-cover overflow-clip bg-bottom flex justify-center items-center `}>
+        <div className={`relative mx-auto py-12 bg-cover overflow-clip  flex justify-center items-center `}>
             {/* <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample.webm"} type="video/mp4" src={"/assets/sample.webm"} />
             </video> */}
-            <img loading="lazy" className='absolute bottom-0 z-10 w-full brightness-95' src={'/assets/vmi/bgn1.jpg'} alt="bg-banner-img" srcSet="" />
+            <img loading="lazy" className='absolute top-0 z-10 object-cover h-full md:w-full md:bottom-0 brightness-95' src={'/assets/vmi/bgn1.jpg'} alt="bg-banner-img" srcSet="" />
             {/* <video className='absolute top-0 z-10 block w-full brightness-[0.4] md:hidden' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample_vertical.webm"} type="video/mp4" src={"/assets/sample_vertical.webm"} />
             </video> */}
@@ -62,8 +62,8 @@ export default function Search() {
                     <div className="text-sm text-center md:w-5/6 md:text-lg" >Our Market Research and Business Consulting Solutions helps clients to build a rational strategy that can create inclusive and sustainable growth and considers impact through five dimensions: Financial & Operational, Customer, Capability, Employee, and Environmental & Social.</div>
                 </div>
                 <div className='flex items-center justify-center'>
-                    <div className='flex items-center justify-between overflow-hidden bg-white rounded-lg focus-within:shadow-lg'>
-                        <div className="flex items-center">
+                    <div className='flex items-center justify-between w-full overflow-hidden bg-white rounded-lg md:w-auto focus-within:shadow-lg'>
+                        <div className="flex items-center ">
                             <div className="grid w-12 h-full text-gray-300 place-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -96,7 +96,7 @@ export default function Search() {
                     <div className='hidden md:block w-1/2 h-[2px] bg-white'>
                     </div>
                 </div>
-                <div className='h-20'>
+                <div className='min-h-20'>
                     <motion.div initial={{ opacity: 0, y: '25%' }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.2 }} viewport={{ once: true }}>
                         <div className='grid items-start justify-center w-full grid-cols-3 gap-4 text-white sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-14'>
                             {

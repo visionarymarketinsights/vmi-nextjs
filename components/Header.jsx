@@ -168,7 +168,7 @@ export default function Header() {
                   <div className="relative">
                     <Link className='flex py-2 text-sm font-medium lg:ml-12 lg:inline-flex' onClick={() => { setMenuOpen(!isMenuOpen); setCategoryOpen(false) }} href="/about">About</Link>
                   </div>
-                  <div className={`relative ${(pathname == '/') && 'hidden'}`}>
+                  <div className={`relative hidden md:block ${(pathname == '/') && 'md:hidden'}`}>
                     <div className="flex items-center gap-4 lg:ml-12">
                       <button type="button" className="hover:border-gray-7 md:border-gray-6 flex h-5 w-5 items-center justify-start md:h-auto md:w-64 md:flex-none md:rounded-lg md:border md:bg-backgroundSecondary md:py-2 md:pl-4 md:pr-3.5 md:text-sm">
                         <input type="text" value={keyword} onKeyDown={handleEnterSearch} onChange={(e) => setKeyword(e.target.value)} className="w-full pr-4 outline-none" placeholder="Search Market Report" />
