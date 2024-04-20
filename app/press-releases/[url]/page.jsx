@@ -36,7 +36,7 @@ export default function PressReleases({ params }) {
     const { url } = params;
     const [category, setCategory] = useState({});
     const [categoryList, setCategoryList] = useState([]);
-    const [sampleList, setSampleList] = useState(["Press Release", "Blogs", "Case Studies", "Research Insights", "Analyst Notes", "Industry Tracker",]);
+    // const [sampleList, setSampleList] = useState(["Press Release", "Blogs", "Case Studies", "Research Insights", "Analyst Notes", "Industry Tracker",]);
     const [pressReleaseList, setPressReleaseList] = useState([]);
     const [reportCount, setReportCount] = useState(0);
     const [totalReportCount, setTotalReportCount] = useState(0);
@@ -53,7 +53,7 @@ export default function PressReleases({ params }) {
     }
     const getCategoryByUrl = () => {
         if (url != 'all-industries') {
-            axios.get(`${apiUrl}/category/url/${url}`).then(res => {
+            axios.get(`${apiUrl}/news_room_category/url/${url}`).then(res => {
                 setCategory(res.data.data)
             });
         }
@@ -115,16 +115,16 @@ export default function PressReleases({ params }) {
                                         {/* <Link href={`/press-releases/all-industries`} >
                                             <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${url === 'all-industries' && 'text-cyan-800'} border-b-2`}>All Industries</div>
                                         </Link> */}
-                                        {/* {categoryList.map((res, key) => { */}
-                                        {sampleList.map((res, key) => {
+                                        {categoryList.map((res, key) => {
+                                        {/* {sampleList.map((res, key) => { */}
                                             return (
-                                                // <Link key={key} href={`/press-releases/${res.category_url}`} onClick={scrollToTop}>
-                                                //     {/* <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res.category_url === url && 'text-cyan-800'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div> */}
-                                                //     <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res.category_url === url && 'text-cyan-800'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div>
-                                                // </Link>
-                                                <div key={key} onClick={scrollToTop}>
-                                                    <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res === url && 'text-cyan-800'} ${key < sampleList.length - 1 && 'border-b-2'}`} key={key}>{res}</div>
-                                                </div>
+                                                <Link key={key} href={`/press-releases/${res.category_url}`} onClick={scrollToTop}>
+                                                    {/* <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res.category_url === url && 'text-cyan-800'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div> */}
+                                                    <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res.category_url === url && 'text-cyan-800'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div>
+                                                </Link>
+                                                // <div key={key} onClick={scrollToTop}>
+                                                //     <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res === url && 'text-cyan-800'} ${key < sampleList.length - 1 && 'border-b-2'}`} key={key}>{res}</div>
+                                                // </div>
                                             )
                                         })}
                                     </div>

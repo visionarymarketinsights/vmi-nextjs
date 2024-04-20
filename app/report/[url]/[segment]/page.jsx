@@ -8,8 +8,8 @@ import { apiUrl, toCapitalCase } from '@/constants';
 
 export const dynamic = 'force-dynamic'
 
-export async function generateMetadata({ params, searchParams }, parent) {
-    const url = params.url
+export async function generateMetadata({ params }, parent) {
+    const { url, segment} = params
     const report = await fetch(apiUrl + '/reports/meta/' + url).then((res) => res.json())
     const siteURL = 'https://www.visionarymarketinsights.com';
     return {
@@ -29,10 +29,9 @@ async function getReportData(url) {
     return response.data;
 }
 
-export default async function Report({ params, searchParams }) {
+export default async function Report({ params }) {
 
-    const { url } = params;
-    const { section } = searchParams;
+    const { url, segment } = params;
     const report = await getReportData(url);
 
     return (
@@ -112,7 +111,7 @@ export default async function Report({ params, searchParams }) {
                                 }
                             </div>
                             {/* Report Details */}
-                            <ReportDetails report={report} url={url}/>
+                            <ReportDetails report={report} url={url} segment={segment} />
                         </div>
                     </div >
 
