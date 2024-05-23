@@ -4,13 +4,11 @@ import { motion } from 'framer-motion'
 export default function AboutHome() {
   return (
     <div className='relative py-12 overflow-clip'>
-      <img loading="lazy" className='absolute top-0 object-cover w-full h-full brightness-110' src={'/assets/vmi/bgn2.jpg'} alt="bg-banner-img" srcSet="" />
+      <img loading="lazy" className='absolute top-0 object-cover w-full h-full brightness-110' src={'/assets/vmi/bgn2.webp'} alt="bg-banner-img" srcSet="" />
             
       <div className='absolute bottom-0 w-full h-full -z-10 bg-gradient'>
-        {/* <img loading='lazy' src={'/assets/abstract.jpg'} alt="bgimg" className='hidden md:block' /> */}
       </div>
       <div className='mx-auto max-w-8xl sm:px-6'>
-        {/* <div className="mb-10 text-3xl font-extrabold text-center ">About Us</div> */}
         <motion.div
           initial={{ opacity: 0, y: '25%' }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,15 +19,14 @@ export default function AboutHome() {
 
             <div className="pl-4 pr-4 md:pr-8 md:pl-8 md:w-1/2">
               <div className='flex flex-col gap-4 md:flex-row'>
-                <img loading="lazy" className='object-cover object-top rounded-lg h-[440px] brightness-110 md:w-1/2' src={'/assets/vmi/ab1.jpg'} alt="about-img" srcSet="" />
+                <img loading="lazy" className='object-cover object-top rounded-lg h-[440px] brightness-110 md:w-1/2' src={'/assets/vmi/ab1.webp'} alt="about-img" srcSet="" />
                 <div className='flex flex-col gap-4 md:w-1/2'>
-                  <img loading="lazy" className='object-cover object-top rounded-lg h-[211px] brightness-110' src={'/assets/vmi/ab2.jpg'} alt="about-img" srcSet="" />
-                  <img loading="lazy" className='object-cover object-top rounded-lg h-[211px] brightness-110' src={'/assets/vmi/ab3.jpg'} alt="about-img" srcSet="" />
+                  <img loading="lazy" className='object-cover object-top rounded-lg h-[211px] brightness-110' src={'/assets/vmi/ab2.webp'} alt="about-img" srcSet="" />
+                  <img loading="lazy" className='object-cover object-top rounded-lg h-[211px] brightness-110' src={'/assets/vmi/ab3.webp'} alt="about-img" srcSet="" />
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-4 p-10 pb-0 md:p-0 md:w-1/2">
-              {/* <img loading="lazy" className='object-cover object-top w-full rounded-lg h-72 brightness-110' src={'/assets/others/vmiabout.jpg'} alt="about-img" srcSet="" /> */}
 
               {/* <div className="text-3xl font-extrabold text-slate-500">About Us</div> */}
               <h2 className="text-3xl font-bold text-white custom-underline-about">About Us</h2>

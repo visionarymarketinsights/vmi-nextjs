@@ -26,7 +26,6 @@ export default function TrendingReports() {
 
     return (
         <div className="relative flex items-center justify-center py-12 mx-auto bg-bottom bg-cover overflow-clip ">
-            {/* <img loading="lazy" className='absolute top-0 object-cover w-full h-full' src={'/assets/vmi/bg2.jpg'} alt="bg-banner-img" srcSet="" /> */}
             <CustomToastContainer />
             <div className="max-w-6xl px-4 mx-auto sm:px-6">
                 <div className="mx-auto text-center ">

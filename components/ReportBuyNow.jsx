@@ -42,7 +42,7 @@ export default function ReportBuyNow({ report }) {
 
     <div className='flex flex-col gap-2 px-4 py-6 border rounded-md shadow-lg '>
       <div className='text-slate-500'>Choose License Type</div>
-      <img loading="lazy" className='w-full h-full pb-2 brightness-110' src={'/assets/vmi/payment-modes.jpg'} alt="bg-banner-img" srcSet="" />
+      <img loading="lazy" className='w-full h-full pb-2 brightness-110' src={'/assets/vmi/payment-modes.webp'} alt="bg-banner-img" srcSet="" />
       <div onClick={() => setLicense('Single User License')} className={`flex justify-between cursor-default duration-200 bg-white py-2 hover:text-cyan-800 ${license == 'Single User License' && 'text-cyan-800 scale-[110%]'}  rounded-sm`}>
         <div className='flex gap-2 text-sm'>
           <input type="checkbox" checked={license == 'Single User License'} name="price-radio" id="" />

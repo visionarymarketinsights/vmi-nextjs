@@ -11,7 +11,8 @@ import { motion } from 'framer-motion';
 
 export default function Search() {
     const router = useRouter()
-    const [categories, setCategories] = useState([]);
+    // const [categories, setCategories] = useState([]);
+    const categories = [{ "icon": "/category_icons/defense.webp", "id": 6, "name": "Aerospace & Defense", "abr": "AAD", "url": "aerospace-and-defense", "back_cover": "/category_covers/aero.jpg" }, { "icon": "/category_icons/agriculture.webp", "id": 1, "name": "Agriculture", "abr": "AGR", "url": "agriculture", "back_cover": "/category_covers/agriculture1.jpg" }, { "icon": "/category_icons/automotive.webp", "id": 2, "name": "Automotive & Transportation", "abr": "AAT", "url": "automotive-and-transportation", "back_cover": "/category_covers/automative.jpg" }, { "icon": "/category_icons/construction.webp", "id": 3, "name": "Building & Construction", "abr": "BAC", "url": "building-and-construction", "back_cover": "/category_covers/building.jpg" }, { "icon": "/category_icons/experiment.webp", "id": 4, "name": "Chemicals & Materials", "abr": "CAM", "url": "chemicals-and-materials", "back_cover": "/category_covers/chemicals.jpg" }, { "icon": "/category_icons/box.webp", "id": 5, "name": "Consumer Goods", "abr": "CGS", "url": "consumer-goods", "back_cover": "/category_covers/consumer.jpg" }, { "icon": "/category_icons/electronics.webp", "id": 7, "name": "Electronics & Semiconductors", "abr": "EAS", "url": "electronics-and-semiconductors", "back_cover": "/category_covers/electronics.jpg" }, { "icon": "/category_icons/tools.webp", "id": 8, "name": "Energy & Natural Resources", "abr": "ENR", "url": "energy-and-natural-resources", "back_cover": "/category_covers/energy.jpg" }, { "icon": "/category_icons/carrot.webp", "id": 9, "name": "Food & Beverages", "abr": "FAB", "url": "food-and-beverages", "back_cover": "/category_covers/food.jpg" }, { "icon": "/category_icons/cross.webp", "id": 10, "name": "Healthcare & Life Sciences", "abr": "HLS", "url": "healthcare-and-life-sciences", "back_cover": "/category_covers/healthcare.jpg" }, { "icon": "/category_icons/automation.webp", "id": 11, "name": "Heavy Engineering", "abr": "HEG", "url": "heavy-engineering", "back_cover": "/category_covers/heavy_engg.jpg" }, { "icon": "/category_icons/telecom.webp", "id": 12, "name": "IT & Telecom", "abr": "IAT", "url": "it-and-telecom", "back_cover": "/category_covers/it.jpg" }, { "icon": "/category_icons/packaging.webp", "id": 13, "name": "Packaging", "abr": "PAC", "url": "packaging", "back_cover": "/category_covers/packaging.jpg" }, { "icon": "/category_icons/patient.webp", "id": 14, "name": "Pharmaceutical", "abr": "PHR", "url": "pharmaceutical", "back_cover": "/category_covers/pharma.jpg" }];
     const [keyword, setKeyword] = useState('');
 
 
@@ -30,18 +31,17 @@ export default function Search() {
     }
 
 
-    const getCategoryList = () => {
-        getCategories().then(data => {
-            setCategories(data)
-        });
-    }
-    useEffect(() => {
-        getCategoryList();
-    }, [])
+    // const getCategoryList = () => {
+    //     getCategories().then(data => {
+    //         setCategories(data)
+    //     });
+    // }
+    // useEffect(() => {
+    //     getCategoryList();
+    // }, [])
 
 
     return (
-        // <div className={`mx-auto h-[90vh] bg-cover bg-bottom flex justify-center items-center`} style={{ backgroundImage: `url(/world-background.jpg)` }}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-to-bl from-blue-900 to-blue-500 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-0 text-white`}>
         // <div className={`mx-auto py-12 bg-cover bg-bottom flex justify-center items-center bg-gradient-45 text-white`}>
@@ -49,7 +49,7 @@ export default function Search() {
             {/* <video className='absolute bottom-0 z-10 hidden w-full brightness-[0.4] md:block' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample.webm"} type="video/mp4" src={"/assets/sample.webm"} />
             </video> */}
-            <img loading="lazy" className='absolute top-0 z-10 object-cover h-full md:w-full md:bottom-0 brightness-95' src={'/assets/vmi/bgn1.jpg'} alt="bg-banner-img" srcSet="" />
+            <img loading="lazy" className='absolute top-0 z-10 object-cover h-full md:w-full md:bottom-0 brightness-95' src={'/assets/vmi/bgn1.webp'} alt="bg-banner-img" srcSet="" />
             {/* <video className='absolute top-0 z-10 block w-full brightness-[0.4] md:hidden' autoPlay muted loop id="myVideo">
                 <source data-src={"/assets/sample_vertical.webm"} type="video/mp4" src={"/assets/sample_vertical.webm"} />
             </video> */}

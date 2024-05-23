@@ -90,7 +90,7 @@ const Footer = () => {
         <div className="flex flex-col justify-between gap-8 px-4 pt-12 md:gap-0 md:flex-row grow">
           <div className="flex justify-center md:w-1/3">
             <div className="flex flex-col justify-center w-4/5 p-4 bg-white rounded-md md:flex-row">
-              <img src={'/assets/vmilogo.png'}  className="h-16 rounded-md" alt="vmilogo" />
+              <img src={'/assets/vmilogo.webp'}  className="h-16 rounded-md" alt="vmilogo" />
             </div>
           </div>
           <div className="md:w-1/3">

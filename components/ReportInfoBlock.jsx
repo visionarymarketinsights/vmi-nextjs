@@ -6,7 +6,7 @@ export default function ReportInfoBlock({ report }) {
 
     <div className='flex gap-2'>
       <div>
-        <img loading="lazy" className='h-[200px]' src={'/assets/vmi/mr1.png'} alt="about-img" srcSet="" />
+        <img loading="lazy" className='h-[200px]' src={'/assets/vmi/mr1.webp'} alt="about-img" srcSet="" />
       </div>
       <div className='flex flex-col justify-between'>
         <div className='font-semibold'>

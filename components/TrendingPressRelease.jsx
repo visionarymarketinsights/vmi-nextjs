@@ -15,7 +15,7 @@ export default function TrendingPressRelease() {
 
 
     useEffect(() => {
-        axios.get(`${apiUrl}/reports/latest?page=1&per_page=6`).then(res => {
+        axios.get(`${apiUrl}/press_release/latest?page=1&per_page=6`).then(res => {
             if (res.data.data.length) {
                 setReportList(res.data.data)
             } else {
@@ -66,15 +66,11 @@ export default function TrendingPressRelease() {
                             {reportList.map((val, index) =>
                                 <SwiperSlide key={index}>
                                     <div className="mx-2 border rounded-md md:h-44 md:flex overflow-clip">
-                                        <img loading="lazy" className='object-cover object-top h-full' src={'/assets/vmi/pr1.png'} alt="about-img" srcSet="" />
+                                        <img loading="lazy" className='object-cover object-top h-full' src={'/assets/vmi/pr1.webp'} alt="about-img" srcSet="" />
                                         <div className="flex flex-col justify-between p-4 text-xs md:text-justify">
                                             <div>
-                                                <div className='mb-2 font-bold'>
-                                                    {/* {toCapitalCase(val.url)} */}
-                                                    {val.title?.split('Market')[0] + ' Market'}
-                                                </div>
-                                                <div className='pb-4 max-h-[100px] overflow-hidden'>
-                                                    {val.summary.split('...')[0].split(' ').filter((r, i) => i < 15).join(' ')}...
+                                                <div className='pb-4 line-clamp-4 max-h-[100px] overflow-hidden'>
+                                                    {val.summary}
                                                 </div>
                                             </div>
                                             <div className='flex justify-center mt-8 md:mt-0 md:justify-end'>

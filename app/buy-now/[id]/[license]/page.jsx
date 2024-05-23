@@ -49,7 +49,7 @@ export default function BuyNow({ params }) {
                                     <div>
                                         <div className='flex flex-col items-center gap-4 md:items-start md:flex-row'>
                                             {/* <div className='flex items-center justify-center object-cover w-16 h-20 font-bold text-white rounded-md bg-slate-500'>VMI</div> */}
-                                            <img loading="lazy" src="/assets/vmi/mr1.png" className='object-cover w-16 h-full rounded-md bg-slate-500' alt="" />
+                                            <img loading="lazy" src="/assets/vmi/mr1.webp" className='object-cover w-16 h-full rounded-md bg-slate-500' alt="" />
                                             {/* <div className='object-fill font-semibold text-white rounded-md overflow-clip bg-slate-500'>
                                             </div> */}
                                             <div>
