@@ -4,7 +4,7 @@ import axios from "axios"
 // export const apiUrl = 'https://railwayfastapi.onrender.com'
 export const apiUrl = process.env.server
 
-export const reCaptchaKey = '6Ldr4ucoAAAAAKwW2FX-bCJIo6YHztxzf97Y_Tl8'
+export const reCaptchaKey = '6LccBOwpAAAAAPWxR5QSMgwqa8XzYQ9eRCnV0PYx'
 
 export const constConfig =
 {
