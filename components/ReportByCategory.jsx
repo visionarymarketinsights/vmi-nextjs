@@ -55,10 +55,12 @@ export default function ReportByCategory() {
             <div className='grid grid-cols-1 gap-1 p-4 md:grid-cols-2 md:gap-2'>
               {reportList.map((r, i) => {
                 return (
-                  <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-cyan-800 border-slate-200'>
-                    <div className="font-semibold text-cyan-800">{toCapitalCase(r.url)}</div>
-                    <div className="text-sm overflow-clip">{r.summary.split(' ').filter((r, i) => i < 10).join(' ')}...</div>
-                  </div>
+                  <Link href={`/report/${r.url}`}>
+                    <div className='p-4 mx-3 my-2 duration-150 bg-white border cursor-pointer hover:text-cyan-800 border-slate-200'>
+                      <div className="font-semibold text-cyan-800">{toCapitalCase(r.url)}</div>
+                      <div className="text-sm overflow-clip">{r.summary.split(' ').filter((r, i) => i < 10).join(' ')}...</div>
+                    </div>
+                  </Link>
                 )
               })
               }
