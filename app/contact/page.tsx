@@ -45,17 +45,17 @@ export default function Contact() {
                     </h4>
 
                     <p className="pb-1 text-base text-body-color">
-                      <span className='mr-1 font-semibold'>
+                      {/* <span className='mr-1 font-semibold'>
                         US Sales Office:
-                      </span>
-                      530 Lytton Ave, Palo Alto, California 94301, United States
+                      </span> */}
+                      Zen Business Center, Above Cafe Coffee Day Shankar Kalat Nagar Wakad  Pune 411057
                     </p>
-                    <p className="text-base text-body-color">
+                    {/* <p className="text-base text-body-color">
                       <span className='mr-1 font-semibold'>
                         Pune Delivery Center:
                       </span>
                       203, Madhukund Terraces, Ramnagar, Bavdhan, Pune, India, 411021
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 <div className="mb-8 flex w-full max-w-[370px]">

@@ -98,8 +98,8 @@ const Footer = () => {
               Corporate Headquarter
             </div>
             <div className="text-sm">
-              Downtown, 1000 N. West Street, Suite 1200,
-              <br /> Wilmington, Delaware 19801 USA
+              Zen Business Center, Above Cafe Coffee Day 
+              <br /> Shankar Kalat Nagar Wakad  Pune 411057
             </div>
           </div>
           <div className="md:w-1/3">
