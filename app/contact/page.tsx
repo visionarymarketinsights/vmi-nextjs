@@ -5,11 +5,11 @@ export const revalidate = 3600 //every 1 hr
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Get in Touch with Visionary Market Insights',
-    description: 'Connect with Visionary Market Insights through our Contact page. Reach out for inquiries, collaborations, or tailored market solutions.',
-    keywords: 'Contact Us, Inquiry Form, Collaboration Requests, Market Solutions, Business Consultation, Reach Out, Communication, Inquiry Submission, Assistance, Business Partnership, Contact Information, Inquiry Process, Connect, Customer Support',
-    alternates: {
-      canonical: 'https://www.visionarymarketinsights.com/contact',
+  title: 'Get in Touch with Visionary Market Insights',
+  description: 'Connect with Visionary Market Insights through our Contact page. Reach out for inquiries, collaborations, or tailored market solutions.',
+  keywords: 'Contact Us, Inquiry Form, Collaboration Requests, Market Solutions, Business Consultation, Reach Out, Communication, Inquiry Submission, Assistance, Business Partnership, Contact Information, Inquiry Process, Connect, Customer Support',
+  alternates: {
+    canonical: 'https://www.visionarymarketinsights.com/contact',
   },
 }
 
@@ -26,7 +26,7 @@ export default function Contact() {
                   GET IN TOUCH WITH <br /> VISIONARY MARKET INSIGHTS
                 </h1>
                 <p className="text-base leading-relaxed mb-9 text-body-color">
-                At Visionary Market Insights, we believe in open communication. We value your inquiries, feedback, and the opportunity to connect with you. If you have questions, require information, or wish to explore potential collaborations, we are here to assist you.
+                  At Visionary Market Insights, we believe in open communication. We value your inquiries, feedback, and the opportunity to connect with you. If you have questions, require information, or wish to explore potential collaborations, we are here to assist you.
                 </p>
                 <div className="mb-8 flex w-full max-w-[500px]">
                   <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-cyan-800 sm:h-[70px] sm:max-w-[70px]">
@@ -45,17 +45,8 @@ export default function Contact() {
                     </h4>
 
                     <p className="pb-1 text-base text-body-color">
-                      {/* <span className='mr-1 font-semibold'>
-                        US Sales Office:
-                      </span> */}
                       Zen Business Center, Above Cafe Coffee Day Shankar Kalat Nagar Wakad  Pune 411057
                     </p>
-                    {/* <p className="text-base text-body-color">
-                      <span className='mr-1 font-semibold'>
-                        Pune Delivery Center:
-                      </span>
-                      203, Madhukund Terraces, Ramnagar, Bavdhan, Pune, India, 411021
-                    </p> */}
                   </div>
                 </div>
                 <div className="mb-8 flex w-full max-w-[370px]">
