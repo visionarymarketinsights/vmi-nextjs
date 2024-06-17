@@ -14,80 +14,11 @@ export default function ReportBuyNow({ report, url, segment }) {
 
   const [localReport, setLocalReport] = useState(report);
 
-  const [img1, setImg1] = useState('');
-  const [img2, setImg2] = useState('');
-
-
   useEffect(() => {
-    setBlankImage(report);
+    if (!report) return;
+    setLocalReport(report);
   }, [url])
 
-  useEffect(() => {
-    if (img1 && !segment) {
-      setDescriptionImages(img1, img2)
-    }
-  }, [segment])
-
-
-
-
-  const setBlankImage = (reportData) => {
-    if (!reportData) return;
-    const parser = new DOMParser();
-
-    // For Description
-    const descriptionDoc = parser.parseFromString(reportData.description, "text/html");
-    const imgToModify1 = descriptionDoc.querySelectorAll("img")[0];
-    const imgToModify2 = descriptionDoc.querySelectorAll("img")[1];
-    if (imgToModify1) {
-      imgToModify1.setAttribute("src", '');
-      imgToModify1.style.height = '0px';
-    }
-    if (imgToModify2) {
-      imgToModify2.setAttribute("src", '');
-      imgToModify2.style.height = '0px';
-    }
-    reportData.description = descriptionDoc.documentElement.outerHTML;
-
-    // For Methodology
-    const methodologyDoc = parser.parseFromString(reportData?.methodology, "text/html");
-    const methodologyImgToModify1 = methodologyDoc.querySelectorAll("img")[0];
-    if (methodologyImgToModify1) {
-      methodologyImgToModify1.setAttribute("src", '');
-      methodologyImgToModify1.style.height = '0px';
-    }
-    reportData.methodology = methodologyDoc.documentElement.outerHTML;
-
-    setLocalReport(reportData);
-    getReportImages(reportData.id);
-  }
-
-  const getReportImages = (repId) => {
-    axios.get(`${apiUrl}/report_images/RP${repId}`).then((response) => {
-      let image1 = response.data.data.find(res => res.img_name.includes('_1'))?.img_file || '';
-      let image2 = response.data.data.find(res => res.img_name.includes('_2'))?.img_file || '';
-
-      setImg1(image1);
-      setImg2(image2);
-      setTimeout(() => {
-        setDescriptionImages(image1, image2);
-      }, 500);
-    })
-  }
-  const setDescriptionImages = (image1, image2) => {
-
-    const descriptionImages = document.querySelectorAll('.description-content p span img');
-
-    if (descriptionImages.length > 0) {
-      descriptionImages[0].src = image1 ? image1 : img1;
-      descriptionImages[0].style.height = 'auto';
-
-      if (descriptionImages.length > 1) {
-        descriptionImages[1].src = image2 ? image2 : img2;
-        descriptionImages[1].style.height = 'auto';
-      }
-    }
-  }
   return (
     <div>
       <div className={`${segment !== 'request-sample' && 'md:sticky top-0'} pt-4 relative justify-between gap-2 bg-white border-b-2 md:flex px-4`}>

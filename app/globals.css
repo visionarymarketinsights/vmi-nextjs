@@ -214,9 +214,10 @@ img {
   background-color: grey;
 }
 
-span img {
+/* Hiding image from report data */
+/* span img {
   display: none;
-}
+} */
 
 .custom-underline:after{
   content: '';
