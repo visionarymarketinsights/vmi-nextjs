@@ -117,11 +117,6 @@
 }
 
 
-.html-content td {
-  min-width: 240px;
-}
-
-
 .html-content {
   border-collapse: collapse;
   width: 100%;
@@ -150,9 +145,15 @@
   padding: 0 24px 24px 24px;
 }
 
+.html-content table {
+  width: 880px !important;
+}
 
 .html-content p img {
   margin: 24px 0 24px 160px;
+}
+.html-content p {
+  text-indent: 0 !important;
 }
 
 @media screen and (max-width:1300px) {
@@ -162,6 +163,9 @@
 
   .html-content td {
     min-width: 50%;
+  }
+  .html-content table {
+    width: 100% !important;
   }
 }
 

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from "framer-motion"
+import Link from 'next/link'
 export default function Services() {
     return (
         <div className='relative overflow-clip'>
@@ -136,9 +137,11 @@ export default function Services() {
                                 </div>
                             </div>
                             <div className='flex items-center justify-center mt-8 text-center'>
-                                <button type="button" className="inline-flex items-center justify-center gap-2 px-16 py-2 font-semibold transition-all bg-white border border-transparent rounded-md text-cyan-800 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:ring-offset-2">
-                                    Browse All Services
-                                </button>
+                                <Link href='/services'>
+                                    <button type="button" className="inline-flex items-center justify-center gap-2 px-16 py-2 font-semibold transition-all bg-white border border-transparent rounded-md text-cyan-800 focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:ring-offset-2">
+                                        Browse All Services
+                                    </button>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>
