@@ -59,7 +59,7 @@ export default function Search() {
                     We Analyze and Anticipate the Global Market 
                 </div>
                 <div className='flex justify-center'>
-                    <div className="text-sm text-center md:w-5/6 md:text-lg" >Our Market Research and Business Consulting Solutions helps clients to build a rational strategy that can create inclusive and sustainable growth and considers impact through five dimensions: Financial & Operational, Customer, Capability, Employee, and Environmental & Social.</div>
+                    <div className="text-sm text-center md:w-5/6 md:text-lg" >Our Market Research and Business Consulting Solutions help clients to build a rational strategy that can create inclusive and sustainable growth and considers impact through five dimensions: Financial & Operational, Customer, Capability, Employee, and Environmental & Social.</div>
                 </div>
                 <div className='flex items-center justify-center'>
                     <div className='flex items-center justify-between w-full overflow-hidden bg-white rounded-lg md:w-auto focus-within:shadow-lg'>
