@@ -154,6 +154,7 @@
 }
 .html-content p {
   text-indent: 0 !important;
+  font-size: 16px !important;
 }
 
 @media screen and (max-width:1300px) {
@@ -250,4 +251,9 @@ input[type=checkbox] {
   accent-color: #155E75;
   height: 24px;
   width: 24px;
+}
+
+/* Report Page Overflow X issue*/
+html{
+  overflow-x: hidden;
 }
