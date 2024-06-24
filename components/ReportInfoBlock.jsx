@@ -4,33 +4,36 @@ import moment from 'moment';
 export default function ReportInfoBlock({ report }) {
   return (
 
-    <div className='flex gap-2'>
-      <div>
-        <img loading="lazy" className='h-[200px]' src={'/assets/vmi/mr1.webp'} alt="about-img" srcSet="" />
-      </div>
-      <div className='flex flex-col justify-between'>
-        <div className='font-semibold'>
-          Rep ID:
+    <div className='flex flex-col gap-4 p-4 border rounded-md shadow-lg '>
+      <div className='flex items-center gap-4'>
+        <div className='w-2 h-2 rounded-full bg-slate-500'>
+
         </div>
-        <div className='text-sm'>
-          VMI{report.category_abr}{report.id}
-        </div>
-        <div className='font-semibold'>
-          Published On:
-        </div>
-        <div className='text-sm'>
+        <div>
           {moment(report.created_date).format('MMMM YYYY')}
         </div>
-        <div className='font-semibold'>
-          Pages:
+      </div>
+      <div className='flex items-center gap-4'>
+        <div className='w-2 h-2 rounded-full bg-slate-500'>
+
         </div>
-        <div className='text-sm'>
-          {report.pages}
+        <div>
+          VMI{report.category_abr}{report.id}
         </div>
-        <div className='font-semibold'>
-          Format:
+      </div>
+      <div className='flex items-center gap-4'>
+        <div className='w-2 h-2 rounded-full bg-slate-500'>
+
         </div>
-        <div className='text-sm'>
+        <div>
+          {report.pages} Pages
+        </div>
+      </div>
+      <div className='flex items-center gap-4'>
+        <div className='w-2 h-2 rounded-full bg-slate-500'>
+
+        </div>
+        <div>
           PPT, Excel, PDF
         </div>
       </div>

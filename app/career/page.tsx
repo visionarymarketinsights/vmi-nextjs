@@ -94,7 +94,7 @@ export default function Careers() {
                     </div>
                     <div className='md:flex'>
                         <div className='pr-8 md:w-1/2 text-slate-500'>
-                            To express your interest in joining our team, please send your resume and a cover letter detailing your relevant experience and skills to <a href="mailto:hr@visionarymarketinsights.com" className='text-blue-500 underline cursor-pointer'>hr@visionarymarketinsights.com</a> Be sure to mention the position you are applying for in the subject line.
+                            To express your interest in joining our team, please send your resume and a cover letter detailing your relevant experience and skills to <a href="mailto:support@visionarymarketinsights.com" className='text-blue-500 underline cursor-pointer'>support@visionarymarketinsights.com</a> Be sure to mention the position you are applying for in the subject line.
                         </div>
                         <div className='pr-8 md:w-1/2 text-slate-500'>
                             Join Visionary Market Insights and embark on a journey where your career aspirations meet limitless possibilities. Together, we can shape the future of market research.

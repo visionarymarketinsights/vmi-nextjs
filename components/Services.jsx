@@ -46,7 +46,7 @@ export default function Services() {
                                                 Market Intelligence
                                             </div>
                                             <div className='mb-2 text-xs text-black md:text-justify '>
-                                            Market Intelligence are crucial in turning companies into modern, data-driven organizations, empowering their daily reporting, operations, and insights sharing. We offer our expertise and Market Intelligence services to assess the business environment with respect to external and internal factors and enable strategic decision-making. Our, Market Intelligence solutions provide actionable insights into various business-critical factors and custom research for informed decision-making.
+                                            Market Intelligence is crucial in turning companies into modern, data-driven organizations, empowering their daily reporting, operations, and insights sharing. We offer our expertise and Market Intelligence services to assess the business environment with respect to external and internal factors and enable strategic decision-making. Our, Market Intelligence solutions provide actionable insights into various business-critical factors and custom research for informed decision-making.
                                             </div>
                                         </div>
                                     </div>
@@ -62,7 +62,7 @@ export default function Services() {
                                                 Competitive Benchmarking
                                             </div>
                                             <div className='mb-2 text-xs text-black md:text-justify '>
-                                            Through our Competitive Benchmarking Dashboards, we insights and techniques we evaluate company's performance by comparing its performance and productivity metrics with those of its competitors. We prepare our competitive benchmarking dashboards on various parameters such as Product/Services Benchmarking, Strategy Benchmarking, Financial Benchmarking, Process Benchmarking, Customer Benchmarking, Operational Benchmarking, Marketing Benchmarking, Pricing Benchmarking, Production Capacity Benchmarking, etc.
+                                            Through our Competitive Benchmarking Dashboards,  we evaluate company's performance by comparing its performance and productivity metrics with those of its competitors. We prepare our competitive benchmarking dashboards on various parameters such as Product/Services Benchmarking, Strategy Benchmarking, Financial Benchmarking, Process Benchmarking, Customer Benchmarking, Operational Benchmarking, Marketing Benchmarking, Pricing Benchmarking, Production Capacity Benchmarking, etc.
                                             </div>
                                         </div>
                                     </div>
@@ -96,7 +96,7 @@ export default function Services() {
                                                 Market Research Reports
                                             </div>
                                             <div className='mb-2 text-xs text-black md:text-justify '>
-                                            Visionary Market Insights provides data driven and insights full market research reports, publishing over 1000+ reports each year, covering 100+ industries, on a global, regional and country level. We track and analyze various industries to identify key markets trends & emerging market opportunities, understand competitive landscape, estimate and forecast market sizes. 
+                                            Visionary Market Insights provides data driven insights and full market research reports, publishing over 1000+ reports each year, covering 100+ industries, on a global, regional and country level. We track and analyze various industries to identify key markets trends & emerging market opportunities, understand competitive landscape, estimate and forecast market sizes.
                                             </div>
                                         </div>
                                     </div>

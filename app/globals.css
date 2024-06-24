@@ -8,7 +8,7 @@
 
 * {
   /* font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  */
   /* font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif; */
   /* font-family: 'Monolith', Tahoma, Geneva, Verdana, sans-serif; */
