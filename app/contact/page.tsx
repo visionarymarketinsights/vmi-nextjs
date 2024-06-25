@@ -67,7 +67,7 @@ export default function Contact() {
                       Phone Number
                     </h4>
                     <p className="text-base text-body-color">
-                      (+1) 650-646-2623
+                    (+91) 952-906-7763
                     </p>
                   </div>
                 </div>

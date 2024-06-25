@@ -108,7 +108,7 @@ const Footer = () => {
             </div>
             <div className="text-sm">
 
-              +1-518-618-1030,  866-552-3453 (US-Canada Toll Free)
+              (+91) 952-906-7763
               <br /> support@visionarymarketinsights.com
             </div>
           </div>

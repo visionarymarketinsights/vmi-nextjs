@@ -26,7 +26,7 @@ export default class HowToOrder extends Component {
                 </div>
 
                 <div className='mb-4'>
-                    •	For placing an order via telephone, contact our customer service representative at (Phone Number). In case you want to place an order via email, write us at support@visionarymarketinsights.com with all your requirements and queries. Make sure that you provide us all your details including billing and delivery details along with the chosen mode of payment.
+                    •	For placing an order via telephone, contact our customer service representative at (+91) 952-906-7763. In case you want to place an order via email, write us at support@visionarymarketinsights.com with all your requirements and queries. Make sure that you provide us all your details including billing and delivery details along with the chosen mode of payment.
                 </div>
 
             </div>
