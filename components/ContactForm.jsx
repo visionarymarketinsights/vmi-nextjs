@@ -30,8 +30,10 @@ export default function ContactForm() {
             const data = {
                 // subject: enquiryType + ' - ' + reportTitle,
                 subject: 'Contact Us Request',
-                content: CreateEmail('Contact Us Request', formData),
+                admin_content: CreateEmail('Contact Us Request', formData),
                 response_token: captchaToken,
+                client_email: formData.email,
+                client_content: getClientEmail(formData.name),
             };
 
             axios.post(url, data, {

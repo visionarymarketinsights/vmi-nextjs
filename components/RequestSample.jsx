@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReCAPTCHA from "react-google-recaptcha";
-import { apiUrl, reCaptchaKey, toCapitalCase, countryList } from '@/constants';
+import { apiUrl, reCaptchaKey, toCapitalCase, countryList, getClientEmail } from '@/constants';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
@@ -40,7 +40,9 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
             const url = `${apiUrl}/email`;
             const data = {
                 subject: enquiryType + ' - ' + toCapitalCase(reportTitle),
-                content: CreateEmail(enquiryType, formData),
+                admin_content: CreateEmail(enquiryType, formData),
+                client_email: formData.email,
+                client_content: getClientEmail(formData.name),
                 response_token: captchaToken,
             };
             // console.log(data)
@@ -114,7 +116,7 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
                         </div>
                     </div>
                     <div className='flex justify-center'>
-                        <motion.button type="submit" className="inline-flex items-center justify-center gap-2 px-4 py-3 mt-6 font-semibold text-white transition-all bg-cyan-800 border border-transparent rounded-md hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2"
+                        <motion.button type="submit" className="inline-flex items-center justify-center gap-2 px-4 py-3 mt-6 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >

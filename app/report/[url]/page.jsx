@@ -85,7 +85,6 @@ export default async function Report({ params, searchParams }) {
                                     <div>
                                         <div className='mb-2 font-semibold text-justify'>{report.title}</div>
                                         <div className='gap-4 py-4 text-sm text-center md:py-2 md:text-left md:flex '>
-                                            <div className='pr-4 border-cyan-959 md:border-r-[1px]'><span>Region:</span> Global</div>
                                             <div className='pr-4 border-cyan-959 md:border-r-[1px]'><span>Published:</span> {moment(report.created_date).format('MMMM YYYY')}</div>
                                             <div className='pr-4 border-cyan-959 md:border-r-[1px]'><span>Report Code:</span> VMI{report.category_abr}{report.id}</div>
                                             <div ><span>Pages:</span> {report.pages}</div>

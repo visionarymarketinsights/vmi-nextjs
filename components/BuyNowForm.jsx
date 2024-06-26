@@ -44,8 +44,10 @@ export default function BuyNowForm({ reportTitle, license }) {
             const url = `${apiUrl}/email`;
             const data = {
                 subject: 'Buy Now' + ' - ' + reportTitle,
-                content: CreateEmail('Buy Now', formData),
+                admin_content: CreateEmail('Buy Now', formData),
                 response_token: captchaToken,
+                client_email: formData.email,
+                client_content: getClientEmail(formData.name),
             };
             // console.log(data)
             // return;
@@ -115,7 +117,7 @@ export default function BuyNowForm({ reportTitle, license }) {
                         </div>
                     </div>
                     <div className='flex justify-center'>
-                        <motion.button type="submit" className="inline-flex items-center justify-center gap-2 px-4 py-3 mt-6 font-semibold text-white transition-all bg-cyan-800 border border-transparent rounded-md hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2"
+                        <motion.button type="submit" className="inline-flex items-center justify-center gap-2 px-4 py-3 mt-6 font-semibold text-white transition-all border border-transparent rounded-md bg-cyan-800 hover:bg-cyan-950 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:ring-offset-2"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
 
