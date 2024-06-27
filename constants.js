@@ -154,7 +154,7 @@ export const getClientEmail = (clientName) => {
                                                                 <tbody>
                                                                     <tr>
                                                                         <td align="left" class="esd-block-text">
-                                                                            <h1>Hi `+{clientName}+`, <br><br></h1>
+                                                                            <h1>Hi `+ clientName +`, <br><br></h1>
                                                                             </td>
                                                                             </tr>
                                                                         </tbody>
