@@ -182,7 +182,7 @@ export const getClientEmail = (clientName) => {
                                                                                                     Can you confirm the actual requirement so that we can share the scope of the report in sample itself. <br>
                                                                                                         Appreciate your soonest response.<br><br></p>
                                                                                                             <p>Best regards,</p>
-                                                                                                            <p>Research Envision</p>
+                                                                                                            <p>Visionary Market Insights</p>
                                                                                                         </td>
                                                                                                     </tr>
                                                                                                 </tbody>
