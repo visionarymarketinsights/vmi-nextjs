@@ -7,7 +7,8 @@ import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
 import CustomToastContainer from '@/utils/CustomToastContainer';
 import CreateEmail from '../utils/CreateEmail';
 import axios from 'axios';
-
+import ThankYou from '@/components/ThankYou';
+import CustomModal from '@/components/CustomModal';
 
 export default function BuyNowForm({ reportTitle, license }) {
 
@@ -17,6 +18,11 @@ export default function BuyNowForm({ reportTitle, license }) {
         reset,
         // formState: { errors },
     } = useForm();
+
+    
+    const [thankYouOpen, setThankYouOpen] = useState(false);
+    const handleThankYouOpen = () => setThankYouOpen(true);
+    const handleThankYouClose = () => setThankYouOpen(false);
 
 
     const [captchaChecked, setCaptcha] = useState(false)
@@ -58,7 +64,8 @@ export default function BuyNowForm({ reportTitle, license }) {
             })
                 .then(response => {
                     reset();
-                    notifySuccess("We'll contact you soon!!!");
+                    // notifySuccess("We'll contact you soon!!!");
+                    handleThankYouOpen();
                 })
                 .catch(error => {
                     console.error('Error:', error);
@@ -130,6 +137,7 @@ export default function BuyNowForm({ reportTitle, license }) {
                     </div>
                 </form>
             </div>
+            <CustomModal open={thankYouOpen} handleClose={handleThankYouClose} title={'Thank You!'} component={<ThankYou title={reportTitle}/>}  isModalCustomSize={true}/>
         </section>
     )
 }
