@@ -128,7 +128,7 @@ export default function BuyNow({ params }) {
                         <div className="border rounded-md shadow-md md:w-3/5">
                             <div className='relative p-4'>
                                 <div className='flex flex-col gap-2 '>
-                                    <BuyNowForm license={license} reportTitle={report.title?.split('Market')[0] + 'Market'} />
+                                    <BuyNowForm license={{license:license, price:report.price}} reportTitle={report.title?.split('Market')[0] + 'Market'} />
                                 </div>
                             </div>
                         </div>
