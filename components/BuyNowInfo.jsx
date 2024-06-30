@@ -37,7 +37,7 @@ export default function BuyNowInfo() {
       {detailsList.map((r, i) => {
         return <div key={i} onClick={() => handleDetailsOpen(r.title)} className={`px-3 cursor-pointer ${r.id < 3 && 'border-r-2'} `}>{r.title}</div>
       })}
-      <CustomModal open={detailsOpen} handleClose={handleDetailsClose} title={details.title} component={details.title === 'Return Policy' ? <ReturnPolicy /> : details.title === 'Terms & Conditions' ? <Terms /> : <Privacy />}/>
+      <CustomModal open={detailsOpen} handleClose={handleDetailsClose} title={details.title} isModalCustomSize={false} component={details.title === 'Return Policy' ? <ReturnPolicy /> : details.title === 'Terms & Conditions' ? <Terms /> : <Privacy />}/>
     </>
   )
 }

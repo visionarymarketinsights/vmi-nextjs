@@ -90,7 +90,7 @@ export default function ReportBuyNow({ report }) {
           Enquire Now
         </button>
       </div>
-      <CustomModal open={discountFormOpen} handleClose={handleDiscountFormClose} component={<RequestSample reportTitle={report?.title.split('Market')[0] + 'Market'} enquiryType='Enquire Now' closeModal={handleDiscountFormClose} />} title='Enquire Now'/>
+      <CustomModal open={discountFormOpen} handleClose={handleDiscountFormClose} isModalCustomSize={true} component={<RequestSample reportTitle={report?.title.split('Market')[0] + 'Market'} enquiryType='Enquire Now' closeModal={handleDiscountFormClose} />} title='Enquire Now'/>
     </div>
   )
 }

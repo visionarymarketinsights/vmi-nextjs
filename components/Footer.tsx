@@ -136,7 +136,7 @@ const Footer = () => {
         </div>
         <img src="https://www.transparencymarketresearch.com/assets/images/paypalLogo.svg" className="h-6" alt="" />
       </div>
-      <CustomModal open={detailsOpen} handleClose={handleDetailsClose} title={details.title} component={getModalComponent(details.title)} />
+      <CustomModal open={detailsOpen} handleClose={handleDetailsClose} title={details.title} isModalCustomSize={true} component={getModalComponent(details.title)} />
     </div>
   );
 };

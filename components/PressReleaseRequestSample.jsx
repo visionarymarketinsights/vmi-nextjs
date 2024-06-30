@@ -17,7 +17,7 @@ export default function PressReleaseRequestSample({ reportTitle, pressReleaseTit
                     {enquiryType}
                 </span>
             </button>
-            <CustomModal open={formOpen} onClose={handleFormClose} title={enquiryType} component={<RequestSample reportTitle={reportTitle} pressReleaseTitle={pressReleaseTitle} />} />
+            <CustomModal open={formOpen} onClose={handleFormClose} title={enquiryType} isModalCustomSize={true} component={<RequestSample reportTitle={reportTitle} pressReleaseTitle={pressReleaseTitle} />} />
         </>
     )
 }
