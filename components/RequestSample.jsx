@@ -8,7 +8,7 @@ import CustomToastContainer from '@/utils/CustomToastContainer';
 import CustomModal from '@/components/CustomModal';
 import axios from 'axios';
 import CreateEmail from '@/utils/CreateEmail';
-import ThanKYou from '@/components/ThanKYou';
+import ThankYou from '@/components/ThankYou';
 
 
 export default function RequestSample({ reportTitle, enquiryType, closeModal }) {
@@ -140,7 +140,7 @@ export default function RequestSample({ reportTitle, enquiryType, closeModal }) 
                     </div>
                 </form>
             </div>
-            <CustomModal open={thankYouOpen} handleClose={handleThankYouClose} title={'Thank You!'} component={<ThanKYou title={reportTitle}/>}  isModalCustomSize={true}/>
+            <CustomModal open={thankYouOpen} handleClose={handleThankYouClose} title={'Thank You!'} component={<ThankYou title={reportTitle}/>}  isModalCustomSize={true}/>
         </section>
     )
 }
