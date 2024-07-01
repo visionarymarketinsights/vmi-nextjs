@@ -3,46 +3,20 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { apiUrl, toCapitalCase } from '@/constants'
 import axios from 'axios';
-import { notifyError, notifySuccess } from '@/utils/CustomToastContainer';
+import { notifyError } from '@/utils/CustomToastContainer';
 import CustomToastContainer from '@/utils/CustomToastContainer';
 import moment from 'moment';
-// import type { Metadata } from 'next';
 
-// export async function generateMetadata({ params, searchParams }, parent) {
-//     const url = params.url
-//     return {
-//         title: 'Press Releases - Latest News and Updates | Visionary Market Insights',
-//         description: 'Stay informed with our latest press releases. Explore news and updates across various categories, showcasing our commitment to delivering valuable insights.',
-//         keywords: 'Press Releases, Latest News, Company Updates, Press Release Categories, Corporate Announcements, Market Insights, Industry News, Business Reports, Press Release Archive',
-//         alternates: {
-//             canonical: 'https://www.visionarymarketinsights.com/press-releases/' + url
-//         },
-//     }
-// }
+export default function AllPressRelease({ url }: any) {
 
-
-// export const metadata: Metadata = {
-//     title: 'Syndicate, Custom and Consulting Report Services from Visionary Market Insights',
-//     description: 'Unlock strategic advantages with Visionary Market Insights—your partner for syndicate reports, custom research, and consulting services.',
-//     keywords: 'Syndicate Reports, Custom Research, Consulting Services, Market Insights, Strategic Analysis, Tailored Solutions, Business Intelligence, Industry Trends, Data-driven Insights, Competitive Landscape, Emerging Markets, Comprehensive Research, Market Dynamics, Strategic Consulting, Customized Reports',
-//     alternates: {
-//         canonical: 'https://www.visionarymarketinsights.com/offering',
-//     },
-// }
-
-
-export default function PressReleases({ params }) {
-
-    const { url } = params;
-    const [category, setCategory] = useState({});
+    const [category, setCategory] = useState({} as any);
     const [categoryList, setCategoryList] = useState([]);
-    // const [sampleList, setSampleList] = useState(["Press Release", "Blogs", "Case Studies", "Research Insights", "Analyst Notes", "Industry Tracker",]);
     const [pressReleaseList, setPressReleaseList] = useState([]);
     const [reportCount, setReportCount] = useState(0);
     const [totalReportCount, setTotalReportCount] = useState(0);
     const [page, setPage] = useState(1);
 
-    const setPagination = (val) => {
+    const setPagination = (val: any) => {
         setPage(val);
         scrollToTop();
     }
@@ -64,7 +38,7 @@ export default function PressReleases({ params }) {
         axios.get(`${apiUrl}/press_release/category/category_count`).then(res => {
             let tempCount = 0;
             let totalCount = 0;
-            let categoryList = res.data.data.map(res => {
+            let categoryList = res.data.data.map((res: any) => {
                 if (url === res.category_url) {
                     tempCount = res.count;
                 }
@@ -115,8 +89,8 @@ export default function PressReleases({ params }) {
                                         {/* <Link href={`/press-releases/all-industries`} >
                                             <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${url === 'all-industries' && 'text-cyan-800'} border-b-2`}>All Industries</div>
                                         </Link> */}
-                                        {categoryList.map((res, key) => {
-                                        {/* {sampleList.map((res, key) => { */}
+                                        {categoryList.map((res: any, key) => {
+                                            {/* {sampleList.map((res, key) => { */ }
                                             return (
                                                 <Link key={key} href={`/press-releases/${res.category_url}`} onClick={scrollToTop}>
                                                     {/* <div className={`py-2 text-sm cursor-pointer hover:text-cyan-800 ${res.category_url === url && 'text-cyan-800'} ${key < categoryList.length - 1 && 'border-b-2'}`} key={key}>{res.category_name}</div> */}
@@ -169,7 +143,7 @@ export default function PressReleases({ params }) {
                                     </nav>
                                 </div>
                                 {/* <div className="px-4 mb-4 text-xl font-semibold">Press Release in {heading}</div> */}
-                                {pressReleaseList.map((res, key) => {
+                                {pressReleaseList.map((res: any, key) => {
                                     return (
                                         // <Link to='/report' key={key}>
                                         //   </Link>

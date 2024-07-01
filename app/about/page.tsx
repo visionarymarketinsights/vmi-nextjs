@@ -2,9 +2,9 @@ import React from 'react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Who We are - Visionary Market Insights',
-    description: 'At CMI, we\'re more than a market research company. Learn about our mission, values, and commitment to delivering valuable insights.',
-    keywords: 'About Us, Company Overview, Mission Statement, Values, Market Research Firm, Insights Provider, Corporate Culture, Team Profiles, Company History, Vision Statement, Business Philosophy, Our Story, Leadership Team, Company Mission, Values and Vision',
+    title: 'About Us: Visionary Market Insights',
+    description: 'Visionary Market Insights is a leading publisher of business market research reports. Obtain the latest, high-quality industry analysis and business intelligence reports',
+    keywords: 'market research company, market research, about us, our story, mission statement, company values, team expertise, client-centric approach, market research solutions',
     alternates: {
         canonical: `https://www.visionarymarketinsights.com/about`,
     },

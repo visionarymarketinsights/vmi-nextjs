@@ -5,9 +5,9 @@ export const revalidate = 3600 //every 1 hr
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Get in Touch with Visionary Market Insights',
-  description: 'Connect with Visionary Market Insights through our Contact page. Reach out for inquiries, collaborations, or tailored market solutions.',
-  keywords: 'Contact Us, Inquiry Form, Collaboration Requests, Market Solutions, Business Consultation, Reach Out, Communication, Inquiry Submission, Assistance, Business Partnership, Contact Information, Inquiry Process, Connect, Customer Support',
+  title: 'Contact us | Visionary Market Insights',
+  description: '',
+  keywords: 'Global Market Research Reports, Market Research, US Market Research Report, North America Market Research Trends, South Korea Business Market Research Report, Europe Industry Analysis, Industry Reports, Business Research Reports, Competitive Analysis, Industry Analysis, Market Research Trends, Industry Analysis Report, Market Research Analysis',
   alternates: {
     canonical: 'https://www.visionarymarketinsights.com/contact',
   },

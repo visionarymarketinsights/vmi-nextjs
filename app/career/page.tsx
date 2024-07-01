@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'Join Our Team - Careers at Visionary Market Insights',
-    description: 'Explore exciting career opportunities at CMI. Learn about our mission, values, and join us in delivering valuable insights to the world.',
-    keywords: 'Careers, Job Opportunities, Join Our Team, Employment, Work with Us, Company Culture, Team Profiles, Career Growth, Job Openings, Recruitment, Hiring, Professional Development, Employee Benefits',
+    description: 'Explore exciting career opportunities and personal development wherein careers are built',
+    keywords: 'Global Market Research Reports, Market Research, US Market Research Report, North America Market Research Trends, South Korea Business Market Research Report, Europe Industry Analysis, Industry Reports, Business Research Reports, Competitive Analysis, Industry Analysis, Market Research Trends, Industry Analysis Report, Market Research Analysis',
     alternates: {
         canonical: 'https://www.visionarymarketinsights.com/career',
     },

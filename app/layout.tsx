@@ -6,15 +6,17 @@ const inter = Inter({ subsets: ['latin'] })
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { GoogleTagManager } from '@next/third-parties/google'
- 
+import { GoogleTagManager, GoogleAnalytics  } from '@next/third-parties/google' 
 
 export const metadata: Metadata = {
-  title: 'Visionary Market Insights - Market Research & Consulting',
-  description: 'Visionary Market Insights is your trusted partner in navigating emerging opportunities and challenges through high-quality, tailored market research reports.',
-  keywords: 'Visionary Market Insights, CMI, Market Research, Industry Analysis, Market Analysis, Global Market Trends, Business Intelligence, Custom Market Research, Strategic Insights, Market Dynamics, Emerging Opportunities, Competitive Landscape, Data-driven Decision Making, Market Forecast, Industry Reports, Tailored Research Solutions, Market Intelligence Services',
+  title: 'Visionary Market Insights - Market Research and Consulting',
+  description: 'Visionary Market Insights is an expert market research and consulting firm providing global market research reports, market share analysis, and research reports',
+  keywords: 'Global Market Research Reports, Market Research, US Market Research Report, North America Market Research Trends, South Korea Business Market Research Report, Europe Industry Analysis, Industry Reports, Business Research Reports, Competitive Analysis, Industry Analysis, Market Research Trends, Industry Analysis Report, Market Research Analysis',
   alternates: {
     canonical: `https://www.visionarymarketinsights.com/`,
+  },
+  verification: {
+    google: 'kUkeAveUD0oKGBcoByBimJ1qqos-vufLCM5Y7L64H7c',
   },
 }
 
@@ -30,7 +32,8 @@ export default function RootLayout({
         {children}
         <Footer></Footer>
       </body>
-      <GoogleTagManager gtmId="GTM-PLCKML74" />
+      <GoogleTagManager gtmId="G-BQS4XEDWBW" />
+      {/* <GoogleAnalytics gaId="GTM-PLCKML74" /> */}
     </html>
   )
 }
