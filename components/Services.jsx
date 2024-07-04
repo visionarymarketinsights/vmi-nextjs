@@ -4,11 +4,11 @@ import { motion } from "framer-motion"
 import Link from 'next/link'
 export default function Services() {
     return (
-        <div className='relative overflow-clip'>
+        <div className='relative overflow-clip bg-mono'>
 
-            <div className='absolute flex items-center justify-between w-full h-full -z-10 bg-gradient'>
+            <div className='absolute flex items-center justify-between w-full h-full -z-10'>
             </div>
-            <img loading="lazy" className='absolute top-0 object-cover w-full h-full brightness-50' src={'/assets/vmi/bgn1.webp'} alt="bg-banner-img" srcSet="" />
+            {/* <img loading="lazy" className='absolute top-0 object-cover w-full h-full brightness-50' src={'/assets/vmi/bgn1.webp'} alt="bg-banner-img" srcSet="" /> */}
             <div className="px-4 mx-auto max-w-7xl sm:px-6 ">
                 <div className="pt-12 md:py-12 md:pt-10">
                     <div className="pb-12 mx-auto text-center md:pb-0">

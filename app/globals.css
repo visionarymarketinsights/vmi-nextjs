@@ -109,6 +109,10 @@
   background-color: rgb(243, 248, 255);
 }
 
+.bg-mono{
+  background-color: #061A3E;
+}
+
 .html-content {
   pointer-events: none;
   -webkit-user-select: none;
