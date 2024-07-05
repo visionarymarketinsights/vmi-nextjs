@@ -7,7 +7,7 @@ import { apiUrl, toCapitalCase } from '@/constants';
 export default function ReportByCategory() {
 
 
-  const [url, setUrl] = useState('agriculture');
+  const [url, setUrl] = useState('aerospace-and-defense');
   const [reportList, setReportList] = useState([]);
 
   useEffect(() => {
@@ -19,13 +19,27 @@ export default function ReportByCategory() {
           setReportList(reportList)
         } else {
           setReportList([])
-          notifyError('No reports for this category')
         }
       })
     }
   }, [url]);
 
-  const categoryList = [{ "icon": "/category_icons/defense.webp", "id": 6, "name": "Aerospace & Defense", "abr": "AAD", "url": "aerospace-and-defense", "back_cover": "/category_covers/aero.jpg" }, { "icon": "/category_icons/agriculture.webp", "id": 1, "name": "Agriculture", "abr": "AGR", "url": "agriculture", "back_cover": "/category_covers/agriculture1.jpg" }, { "icon": "/category_icons/automotive.webp", "id": 2, "name": "Automotive & Transportation", "abr": "AAT", "url": "automotive-and-transportation", "back_cover": "/category_covers/automative.jpg" }, { "icon": "/category_icons/construction.webp", "id": 3, "name": "Building & Construction", "abr": "BAC", "url": "building-and-construction", "back_cover": "/category_covers/building.jpg" }, { "icon": "/category_icons/experiment.webp", "id": 4, "name": "Chemicals & Materials", "abr": "CAM", "url": "chemicals-and-materials", "back_cover": "/category_covers/chemicals.jpg" }, { "icon": "/category_icons/box.webp", "id": 5, "name": "Consumer Goods", "abr": "CGS", "url": "consumer-goods", "back_cover": "/category_covers/consumer.jpg" }, { "icon": "/category_icons/electronics.webp", "id": 7, "name": "Electronics & Semiconductors", "abr": "EAS", "url": "electronics-and-semiconductors", "back_cover": "/category_covers/electronics.jpg" }, { "icon": "/category_icons/tools.webp", "id": 8, "name": "Energy & Natural Resources", "abr": "ENR", "url": "energy-and-natural-resources", "back_cover": "/category_covers/energy.jpg" }, { "icon": "/category_icons/carrot.webp", "id": 9, "name": "Food & Beverages", "abr": "FAB", "url": "food-and-beverages", "back_cover": "/category_covers/food.jpg" }, { "icon": "/category_icons/cross.webp", "id": 10, "name": "Healthcare & Life Sciences", "abr": "HLS", "url": "healthcare-and-life-sciences", "back_cover": "/category_covers/healthcare.jpg" }, { "icon": "/category_icons/automation.webp", "id": 11, "name": "Heavy Engineering", "abr": "HEG", "url": "heavy-engineering", "back_cover": "/category_covers/heavy_engg.jpg" }, { "icon": "/category_icons/telecom.webp", "id": 12, "name": "IT & Telecom", "abr": "IAT", "url": "it-and-telecom", "back_cover": "/category_covers/it.jpg" }, { "icon": "/category_icons/packaging.webp", "id": 13, "name": "Packaging", "abr": "PAC", "url": "packaging", "back_cover": "/category_covers/packaging.jpg" }, { "icon": "/category_icons/patient.webp", "id": 14, "name": "Pharmaceutical", "abr": "PHR", "url": "pharmaceutical", "back_cover": "/category_covers/pharma.jpg" }];
+  const categoryList = [
+    { "icon": "/category_icons/defense.webp", "id": 6, "name": "Aerospace & Defense", "abr": "AAD", "url": "aerospace-and-defense", "back_cover": "/category_covers/aero.jpg" }, 
+    { "icon": "/category_icons/automotive.webp", "id": 2, "name": "Automotive & Transportation", "abr": "AAT", "url": "automotive-and-transportation", "back_cover": "/category_covers/automative.jpg" },
+    { "icon": "/category_icons/carrot.webp", "id": 9, "name": "Food & Beverages", "abr": "FAB", "url": "food-and-beverages", "back_cover": "/category_covers/food.jpg" }, 
+    { "icon": "/category_icons/box.webp", "id": 5, "name": "Consumer Goods", "abr": "CGS", "url": "consumer-goods", "back_cover": "/category_covers/consumer.jpg" },
+    { "icon": "/category_icons/experiment.webp", "id": 4, "name": "Chemicals & Materials", "abr": "CAM", "url": "chemicals-and-materials", "back_cover": "/category_covers/chemicals.jpg" },
+    { "icon": "/category_icons/telecom.webp", "id": 12, "name": "IT & Telecom", "abr": "IAT", "url": "it-and-telecom", "back_cover": "/category_covers/it.jpg" }, 
+    { "icon": "/category_icons/cross.webp", "id": 10, "name": "Healthcare & Life Sciences", "abr": "HLS", "url": "healthcare-and-life-sciences", "back_cover": "/category_covers/healthcare.jpg" }, 
+    { "icon": "/category_icons/agriculture.webp", "id": 1, "name": "Agriculture", "abr": "AGR", "url": "agriculture", "back_cover": "/category_covers/agriculture1.jpg" },
+    { "icon": "/category_icons/electronics.webp", "id": 7, "name": "Electronics & Semiconductors", "abr": "EAS", "url": "electronics-and-semiconductors", "back_cover": "/category_covers/electronics.jpg" },
+    // { "icon": "/category_icons/construction.webp", "id": 3, "name": "Building & Construction", "abr": "BAC", "url": "building-and-construction", "back_cover": "/category_covers/building.jpg" },
+    // { "icon": "/category_icons/tools.webp", "id": 8, "name": "Energy & Natural Resources", "abr": "ENR", "url": "energy-and-natural-resources", "back_cover": "/category_covers/energy.jpg" }, 
+    // { "icon": "/category_icons/automation.webp", "id": 11, "name": "Heavy Engineering", "abr": "HEG", "url": "heavy-engineering", "back_cover": "/category_covers/heavy_engg.jpg" }, 
+    // { "icon": "/category_icons/packaging.webp", "id": 13, "name": "Packaging", "abr": "PAC", "url": "packaging", "back_cover": "/category_covers/packaging.jpg" }, 
+    // { "icon": "/category_icons/patient.webp", "id": 14, "name": "Pharmaceutical", "abr": "PHR", "url": "pharmaceutical", "back_cover": "/category_covers/pharma.jpg" },
+  ];
   return (
     <div className='relative py-12 overflow-clip bg-mono'>
       {/* <img loading="lazy" className='absolute top-0 object-cover w-full h-full -z-10 brightness-110' src={'/assets/vmi/bgn1.webp'} alt="bg-banner-img" srcSet="" /> */}
@@ -38,7 +52,6 @@ export default function ReportByCategory() {
             {
               categoryList.map((r, i) => {
                 return (
-                  i < 7 &&
                   <div key={i} onClick={() => setUrl(r.url)} className={`relative flex items-center w-full gap-2 p-3  font-semibold text-center text-sm text-black duration-150 border rounded-sm cursor-pointer hover:shadow-lg hover:bg-white hover:text-cyan-800 hover:border-cyan-800 ${(r.url == url ? 'bg-white text-cyan-800 border-cyan-800 shadow-lg' : 'bg-gradient')}`}>
                     <div className='p-1 rounded-md bg-slate-500'>
                       <img loading="lazy" src={'/assets/' + r.icon} alt='category-icon' className="flex justify-center w-6 duration-100 "></img>
