@@ -35,4 +35,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Readme changes ping
 
-# IDGAF about this as well
+# IDGAF updated
