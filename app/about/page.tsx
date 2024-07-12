@@ -36,7 +36,7 @@ export default function About() {
                             <div className="">
                                 <h2 className="mb-4 text-3xl text-center font-extrabold tracking-tight text-[#652E7E] text-gray-900">Who We Are</h2>
                                 <div className="mb-2 text-right md:text-left">
-                                    Visionary Market Dynamics is India based leading global market research and business consulting company provides data driven market research insights and consulting solutions to businesses across the globe. We are headquartered in India, having offices in U.S. & Canada. We have channel partners in Japan, United Kingdom.
+                                    Visionary Market Insights is India based leading global market research and business consulting company provides data driven market research insights and consulting solutions to businesses across the globe. We are headquartered in India, having offices in U.S. & Canada. We have channel partners in Japan, United Kingdom.
                                 </div>
                                 <div className="mb-2 text-right md:text-left">
                                     We provide syndicated market research reports, customized market research reports, market intelligence, and consulting services to renowned institutions, fortune 500 companies, startups and governments to understand macro and micro level global business scenario.

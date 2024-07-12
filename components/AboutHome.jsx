@@ -24,7 +24,7 @@ export default function AboutHome() {
               {/* <div className="text-3xl font-extrabold text-slate-500">About Us</div> */}
               <h2 className="text-3xl font-bold text-white custom-underline-about">About Us</h2>
               {/* <div className="text-2xl italic md:w-3/4">We deliver the most advanced strategies for your business</div> */}
-              <div className="text-white text-md">Visionary Market Dynamics is a leading global market research company dedicated to providing in-depth research insights and strategic solutions to businesses across the globe. </div>
+              <div className="text-white text-md">Visionary Market Insights is a leading global market research company dedicated to providing in-depth research insights and strategic solutions to businesses across the globe. </div>
               <div className="text-white text-md">We help companies across 150+ countries in 6 continents, we work alongside our clients as one team with a shared ambition and vision to analyze and anticipate markets, outperform the competition, and redefine industries. We complement our tailored, integrated expertise with a holistic approach to identify growth opportunities in hundreds of sectors using a powerful understanding of how value chains operate on a global level.</div>
               <div className='flex flex-col gap-4 mt-4 md:flex-row'>
                 <div className='flex gap-8 px-4 py-4 rounded-md md:w-2/5 bg-slate-200'>

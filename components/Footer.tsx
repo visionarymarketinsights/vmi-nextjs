@@ -123,16 +123,16 @@ const Footer = () => {
               Reach Us
             </div>
             <div className="text-sm">
-
-              (+91) 952-906-7763
-              <br /> support@visionarymarketinsights.com
+              {/* (+91) 952-906-7763
+              <br />  */}
+              support@visionarymarketinsights.com
             </div>
           </div>
         </div>
       </div>
       <div className="px-12 py-4 text-white bg-[#4E5763] flex flex-col md:flex-row justify-between">
         <div className="text-center md:text-left">
-          Copyright © Visionary Market Dynamics Pvt. Ltd, All Rights reserved
+          Copyright © Visionary Market Insights, All Rights reserved
         </div>
         <img src="https://www.transparencymarketresearch.com/assets/images/paypalLogo.svg" className="h-6" alt="" />
       </div>

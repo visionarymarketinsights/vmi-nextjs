@@ -49,7 +49,7 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-                <div className="mb-8 flex w-full max-w-[370px]">
+                {/* <div className="mb-8 flex w-full max-w-[370px]">
                   <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-cyan-800 sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width={24}
@@ -70,7 +70,7 @@ export default function Contact() {
                     (+91) 952-906-7763
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <a href="mailto:support@visionarymarketinsights.com">
                   <div className="mb-8 flex w-full max-w-[500px]">
                     <div className="hidden md:flex mr-6  h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-cyan-800 sm:h-[70px] sm:max-w-[70px]">
