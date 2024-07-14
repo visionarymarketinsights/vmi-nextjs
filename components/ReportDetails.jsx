@@ -12,12 +12,34 @@ import Methodology from '@/components/Methodology';
 
 export default function ReportBuyNow({ report, url, segment }) {
 
-  const [localReport, setLocalReport] = useState(report);
+  const [localReport, setLocalReport] = useState('');
 
   useEffect(() => {
     if (!report) return;
+    report.description = addTableWrapper(report.description)
     setLocalReport(report);
-  }, [url])
+  }, [url, report])
+
+  const addTableWrapper = (htmlString) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlString, 'text/html');
+
+    // Find all tables (consider using a more robust selector if needed)
+    const tables = doc.querySelectorAll('table');
+    // Wrap each table with a div and apply CSS class dynamically
+    tables.forEach((table) => {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('overflow-auto'); // Adjust class name as needed
+      // Optionally, append additional elements or styles to the wrapper
+      
+      table.parentNode.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
+    
+    console.log(doc.body.innerHTML)
+    // Return the modified HTML as a string
+    return doc.body.innerHTML;
+  };
 
   return (
     <div>

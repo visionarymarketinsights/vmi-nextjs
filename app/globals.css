@@ -172,6 +172,13 @@
   .html-content table {
     width: 100% !important;
   }
+
+  .html-content {
+    pointer-events: auto;
+    -webkit-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+  }
 }
 
 @media screen and (max-width:900px) {
